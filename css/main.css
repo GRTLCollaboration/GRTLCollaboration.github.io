@@ -1,53 +1,58 @@
-body {
-    margin: 40px auto;
-    width: 50%;
-}
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 1px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 3px;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5px;
-    line-height: 1.4px;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8px;
+.nav a {
+  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5px;
+.nav li {
+  display: inline;
 }
 
-ul.posts li {
-    list-style: none;
+.Home .container {
+  position: relative;
+  top:1px;
+  
 }
-.Home {
-    position:relative;
-    top:1px;
-    color: #5;
-    font-size: 20px;  
-    font-family: 'Shift', sans-serif;
-    font-weight: bold;
-    padding: 10px 5px
-    border-left: 1px solid;
+
+.Home h1 {
+  color: #5;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+  padding: 14px 10px
+  border-left: 1px solid;
 }
+
+.Home p {
+  font-size: 20px;
+  color: #5;
+}
+
+.About {
+  background-color: #f7f7f7;
+}
+
+.About h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.About a {
+  color: #00b0ff;
+}
+.Movies {
+    background-color:#efecef;
+    border-bottom:1px solid #dbdbdb;
+}
+.Movies h2 {
+    color:#393c3d;
+    font-size:24px;
+}
+.Movies p{
+    font-size:15px;
+    margin-bottom:13px;
+}
+
