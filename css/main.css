@@ -41,3 +41,13 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+.Home {
+    position:relative;
+    top:1px;
+    color: #5;
+    font-size: 48px;  
+    font-family: 'Shift', sans-serif;
+    font-weight: bold;
+    padding: 14px 10px
+    border-left: 1px solid;
+}
