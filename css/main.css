@@ -45,9 +45,9 @@ ul.posts li {
     position:relative;
     top:1px;
     color: #5;
-    font-size: 48px;  
+    font-size: 20px;  
     font-family: 'Shift', sans-serif;
     font-weight: bold;
-    padding: 14px 10px
+    padding: 10px 5px
     border-left: 1px solid;
 }
