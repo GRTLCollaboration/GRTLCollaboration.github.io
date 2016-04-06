@@ -9,4 +9,4 @@ When contributing to the project please make your own branch and then issue a pu
 * Any spaces in branch names should be replaced with underscores
 * Please use `feature/your_branch_name` for any general code improvements
 
-These guidlines are in place due to the website's code being sourced from the master branch
+These guidelines are in place due to the website's code being sourced from the master branch
