@@ -22,9 +22,8 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GRChombo
-   &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">NumericalRelativitywithAdaptiveMeshRefinement</div>
+   <div id="projectbrief">Numerical Relativity with Adaptive Mesh Refinement</div>
   </td>
  </tr>
  </tbody>
@@ -88,8 +87,14 @@ Inheritance diagram for CCZ4:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_c_z4_1_1_diff2_vars.html">Diff2Vars</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">2nd derivatives are only calculated for a small subset defined by Deriv2Vars  <a href="struct_c_c_z4_1_1_diff2_vars.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_c_z4_1_1params__t.html">params_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameters for <a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a>.  <a href="struct_c_c_z4_1_1params__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_c_z4_1_1_vars.html">Vars</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> variables.  <a href="struct_c_c_z4_1_1_vars.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -98,14 +103,6 @@ Public Types</h2></td></tr>
 <a class="el" href="class_c_c_z4.html#a7a3757f936760acbb7918e915d04c432a8bbf95693ddf1481adc28b6e6f8a0f69">USE_BSSN</a>
  }</td></tr>
 <tr class="separator:a7a3757f936760acbb7918e915d04c432"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3e86e61a80e42ce9cade1d1c629692d"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
-<tr class="memitem:aa3e86e61a80e42ce9cade1d1c629692d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_c_z4.html#aa3e86e61a80e42ce9cade1d1c629692d">Vars</a> = <a class="el" href="struct_c_c_z4_vars_1_1_vars_with_gauge.html">CCZ4Vars::VarsWithGauge</a>&lt; data_t &gt;</td></tr>
-<tr class="memdesc:aa3e86e61a80e42ce9cade1d1c629692d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> variables.  <a href="#aa3e86e61a80e42ce9cade1d1c629692d">More...</a><br /></td></tr>
-<tr class="separator:aa3e86e61a80e42ce9cade1d1c629692d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a5278bf96a61c3421d3db9f0f65d512"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
-<tr class="memitem:a1a5278bf96a61c3421d3db9f0f65d512"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_c_z4.html#a1a5278bf96a61c3421d3db9f0f65d512">Diff2Vars</a> = <a class="el" href="struct_c_c_z4_vars_1_1_diff2_vars_with_gauge.html">CCZ4Vars::Diff2VarsWithGauge</a>&lt; data_t &gt;</td></tr>
-<tr class="memdesc:a1a5278bf96a61c3421d3db9f0f65d512"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> variables.  <a href="#a1a5278bf96a61c3421d3db9f0f65d512">More...</a><br /></td></tr>
-<tr class="separator:a1a5278bf96a61c3421d3db9f0f65d512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -141,45 +138,8 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Compute class to calculate the <a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> right hand side. </p>
-<p>This compute class implements the <a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> right hand side equations. Use it by handing it to a loop in the <a class="el" href="namespace_box_loops.html">BoxLoops</a> namespace. <a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> includes two classes in its scope: <a class="el" href="class_c_c_z4.html#aa3e86e61a80e42ce9cade1d1c629692d" title="CCZ4 variables. ">CCZ4::Vars</a> (the <a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> variables like conformal factor, conformal metric, extrinsic curvature, etc) and CCZ4::Params (parameters necessary for <a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> like gauge and damping parameters). </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a1a5278bf96a61c3421d3db9f0f65d512"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a5278bf96a61c3421d3db9f0f65d512">&sect;&nbsp;</a></span>Diff2Vars</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class data_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="class_c_c_z4.html#a1a5278bf96a61c3421d3db9f0f65d512">CCZ4::Diff2Vars</a> =  <a class="el" href="struct_c_c_z4_vars_1_1_diff2_vars_with_gauge.html">CCZ4Vars::Diff2VarsWithGauge</a>&lt;data_t&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> variables. </p>
-
-</div>
-</div>
-<a id="aa3e86e61a80e42ce9cade1d1c629692d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3e86e61a80e42ce9cade1d1c629692d">&sect;&nbsp;</a></span>Vars</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class data_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="class_c_c_z4.html#aa3e86e61a80e42ce9cade1d1c629692d">CCZ4::Vars</a> =  <a class="el" href="struct_c_c_z4_vars_1_1_vars_with_gauge.html">CCZ4Vars::VarsWithGauge</a>&lt;data_t&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> variables. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
+<p>This compute class implements the <a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> right hand side equations. Use it by handing it to a loop in the <a class="el" href="namespace_box_loops.html">BoxLoops</a> namespace. <a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> includes two classes in its scope: <a class="el" href="struct_c_c_z4_1_1_vars.html" title="CCZ4 variables. ">CCZ4::Vars</a> (the <a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> variables like conformal factor, conformal metric, extrinsic curvature, etc) and CCZ4::Params (parameters necessary for <a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> like gauge and damping parameters). </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a7a3757f936760acbb7918e915d04c432"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a3757f936760acbb7918e915d04c432">&sect;&nbsp;</a></span>anonymous enum</h2>
 
@@ -344,7 +304,7 @@ template&lt;class data_t , template&lt; typename &gt; class vars_t, template&lt;
 </div><div class="memdoc">
 
 <p>Calculates the rhs for <a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a>. </p>
-<p>Calculates the right hand side for <a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> with slicing <img class="formulaInl" alt="$- n \alpha^m (K *- 2\Theta)$" src="form_2.png"/> and Gamma-Driver shift condition. The variables (the template argument <a class="el" href="structvars__t.html">vars_t</a>) must contain at least the members: chi, h[i][j], Gamma[i], A[i][j], Theta, lapse and shift[i]. </p>
+<p>Calculates the right hand side for <a class="el" href="class_c_c_z4.html" title="Compute class to calculate the CCZ4 right hand side. ">CCZ4</a> with slicing <img class="formulaInl" alt="$- n \alpha^m (K *- 2\Theta)$" src="form_0.png"/> and Gamma-Driver shift condition. The variables (the template argument <a class="el" href="structvars__t.html">vars_t</a>) must contain at least the members: chi, h[i][j], Gamma[i], A[i][j], Theta, lapse and shift[i]. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rhs</td><td>Reference to the variables into which the output right hand side is written </td></tr>
@@ -474,8 +434,8 @@ template&lt;class data_t , template&lt; typename &gt; class vars_t, template&lt;
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/katycui/Google Drive/Work/Github/CambridgeGRChombo/GRChombo/Source/CCZ4/<a class="el" href="_c_c_z4_8hpp_source.html">CCZ4.hpp</a></li>
-<li>/Users/katycui/Google Drive/Work/Github/CambridgeGRChombo/GRChombo/Source/CCZ4/<a class="el" href="_c_c_z4_8impl_8hpp_source.html">CCZ4.impl.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/master/Source/CCZ4/<a class="el" href="_c_c_z4_8hpp_source.html">CCZ4.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/master/Source/CCZ4/<a class="el" href="_c_c_z4_8impl_8hpp_source.html">CCZ4.impl.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

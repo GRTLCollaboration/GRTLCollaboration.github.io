@@ -1,0 +1,7 @@
+\form#0:$- n \alpha^m (K *- 2\Theta)$
+\form#1:$\chi //!(K_{ij})^{\mathrm{TF}}$
+\form#2:$B^i = \partial_t \beta^i$
+\form#3:$\partial_t //! \beta^i = F B^i$
+\form#4:$\partial_t B^i = \partial_t \tilde //!\Gamma - \eta B^i$
+\form#5:$\partial_t \alpha = - c //!\alpha^p(K-2\Theta)$
+\form#6:$\partial_t \alpha //!= -c \alpha^p(K-2\Theta)$

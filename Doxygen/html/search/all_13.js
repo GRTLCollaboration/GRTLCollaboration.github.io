@@ -7,15 +7,13 @@ var searchData=
   ['use_5fccz4',['USE_CCZ4',['../class_c_c_z4.html#a7a3757f936760acbb7918e915d04c432a0b0ba760d0a5f1c5b8912235c1dbaa25',1,'CCZ4']]],
   ['uservariables',['UserVariables',['../namespace_user_variables.html',1,'']]],
   ['uservariables_2ehpp',['UserVariables.hpp',['../_tests_2_variable_store_test_2_user_variables_8hpp.html',1,'']]],
-  ['uservariables_2ehpp',['UserVariables.hpp',['../_tests_2_spherical_harmonic_test_2_user_variables_8hpp.html',1,'']]],
   ['uservariables_2ehpp',['UserVariables.hpp',['../_tests_2_set_value_unit_test_2_user_variables_8hpp.html',1,'']]],
   ['uservariables_2ehpp',['UserVariables.hpp',['../_tests_2_positive_chi_and_alpha_unit_test_2_user_variables_8hpp.html',1,'']]],
   ['uservariables_2ehpp',['UserVariables.hpp',['../_examples_2_scalar_field_2_user_variables_8hpp.html',1,'']]],
-  ['uservariables_2ehpp',['UserVariables.hpp',['../_examples_2_binary_b_h_2_user_variables_8hpp.html',1,'']]],
   ['uservariables_2ehpp',['UserVariables.hpp',['../_tests_2_kcl_bssn_tests_2_user_variables_8hpp.html',1,'']]],
-  ['uservariables_2ehpp',['UserVariables.hpp',['../_tests_2_cpp_ch_f_comparison_2_user_variables_8hpp.html',1,'']]],
-  ['uservariables_2ehpp',['UserVariables.hpp',['../_tests_2_basic_a_m_r_interpolator_test_2_user_variables_8hpp.html',1,'']]],
-  ['uservariables_2ehpp',['UserVariables.hpp',['../_tests_2_derivative_unit_tests_2_user_variables_8hpp.html',1,'']]],
   ['uservariables_2ehpp',['UserVariables.hpp',['../_tests_2_cpp_ch_f_constraint_comparison_2_user_variables_8hpp.html',1,'']]],
+  ['uservariables_2ehpp',['UserVariables.hpp',['../_tests_2_basic_a_m_r_interpolator_test_2_user_variables_8hpp.html',1,'']]],
+  ['uservariables_2ehpp',['UserVariables.hpp',['../_examples_2_binary_b_h_2_user_variables_8hpp.html',1,'']]],
+  ['uservariables_2ehpp',['UserVariables.hpp',['../_tests_2_cpp_ch_f_comparison_2_user_variables_8hpp.html',1,'']]],
   ['uservariables_2ehpp',['UserVariables.hpp',['../_examples_2_kerr_b_h_2_user_variables_8hpp.html',1,'']]]
 ];

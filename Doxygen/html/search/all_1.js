@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['b',['B',['../struct_b_s_s_n_vars_1_1_vars_with_gauge.html#a3d07b25084e9804392f99fb9d506730d',1,'BSSNVars::VarsWithGauge']]],
+  ['b',['B',['../struct_c_c_z4_1_1_vars.html#aa97223c11bc26a153e027f4d70310178',1,'CCZ4::Vars']]],
   ['begin',['begin',['../struct_g_r_interval.html#a52c7e13e2727ec70b56dd363829594b9',1,'GRInterval']]],
   ['bh1',['bh1',['../class_binary_b_h.html#a3a35f1ec2ffae82214c50748cb984108',1,'BinaryBH']]],
   ['bh1_5fparams',['bh1_params',['../class_simulation_parameters.html#ad0bd6c7325cc21b64584cac12a0906d9',1,'SimulationParameters']]],
@@ -11,6 +11,7 @@ var searchData=
   ['binarybh_2eimpl_2ehpp',['BinaryBH.impl.hpp',['../_binary_b_h_8impl_8hpp.html',1,'']]],
   ['binarybhlevel',['BinaryBHLevel',['../class_binary_b_h_level.html',1,'']]],
   ['binarybhlevel_2ecpp',['BinaryBHLevel.cpp',['../_binary_b_h_level_8cpp.html',1,'']]],
+  ['binarybhlevel_2ed',['BinaryBHLevel.d',['../_binary_b_h_level_8d.html',1,'']]],
   ['binarybhlevel_2ehpp',['BinaryBHLevel.hpp',['../_binary_b_h_level_8hpp.html',1,'']]],
   ['boostedbh',['BoostedBH',['../class_boosted_b_h.html',1,'BoostedBH'],['../class_boosted_b_h.html#a7443136c9155a45352d75ee2f794dbde',1,'BoostedBH::BoostedBH()']]],
   ['boostedbh_2ehpp',['BoostedBH.hpp',['../_boosted_b_h_8hpp.html',1,'']]],
@@ -22,6 +23,5 @@ var searchData=
   ['boxpointers',['BoxPointers',['../class_box_pointers.html',1,'BoxPointers'],['../class_box_pointers.html#acd31b3e493f45dac1643f9bd9b37600e',1,'BoxPointers::BoxPointers()']]],
   ['boxpointers_2ehpp',['BoxPointers.hpp',['../_box_pointers_8hpp.html',1,'']]],
   ['bssntest_2ecpp',['BSSNTest.cpp',['../_b_s_s_n_test_8cpp.html',1,'']]],
-  ['bssnvars',['BSSNVars',['../namespace_b_s_s_n_vars.html',1,'']]],
-  ['bssnvars_2ehpp',['BSSNVars.hpp',['../_b_s_s_n_vars_8hpp.html',1,'']]]
+  ['bssntest_2ed',['BSSNTest.d',['../_b_s_s_n_test_8d.html',1,'']]]
 ];
