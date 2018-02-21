@@ -1,10 +1,10 @@
 var searchData=
 [
+  ['params_5ft',['params_t',['../struct_c_c_z4_1_1params__t.html',1,'CCZ4']]],
+  ['params_5ft',['params_t',['../struct_kerr_b_h_1_1params__t.html',1,'KerrBH']]],
+  ['params_5ft',['params_t',['../struct_boosted_b_h_1_1params__t.html',1,'BoostedBH']]],
   ['params_5ft',['params_t',['../struct_scalar_bubble_1_1params__t.html',1,'ScalarBubble']]],
   ['params_5ft',['params_t',['../struct_potential_1_1params__t.html',1,'Potential']]],
-  ['params_5ft',['params_t',['../struct_boosted_b_h_1_1params__t.html',1,'BoostedBH']]],
-  ['params_5ft',['params_t',['../struct_kerr_b_h_1_1params__t.html',1,'KerrBH']]],
-  ['params_5ft',['params_t',['../struct_c_c_z4_1_1params__t.html',1,'CCZ4']]],
   ['parmparsetranslator',['ParmParseTranslator',['../struct_parm_parse_translator.html',1,'']]],
   ['parmparsetranslator_3c_20bool_20_3e',['ParmParseTranslator&lt; bool &gt;',['../struct_parm_parse_translator_3_01bool_01_4.html',1,'']]],
   ['parmparsetranslator_3c_20double_20_3e',['ParmParseTranslator&lt; double &gt;',['../struct_parm_parse_translator_3_01double_01_4.html',1,'']]],
@@ -17,6 +17,7 @@ var searchData=
   ['positivechiandalpha',['PositiveChiAndAlpha',['../class_positive_chi_and_alpha.html',1,'']]],
   ['positivechiandalpha_2ehpp',['PositiveChiAndAlpha.hpp',['../_positive_chi_and_alpha_8hpp.html',1,'']]],
   ['positivechiandalphaunittest_2ecpp',['PositiveChiAndAlphaUnitTest.cpp',['../_positive_chi_and_alpha_unit_test_8cpp.html',1,'']]],
+  ['positivechiandalphaunittest_2ed',['PositiveChiAndAlphaUnitTest.d',['../_positive_chi_and_alpha_unit_test_8d.html',1,'']]],
   ['postinitialize',['postInitialize',['../class_g_r_a_m_r_level.html#ac89386886a2a0aba2d2c139760f7b80d',1,'GRAMRLevel']]],
   ['posttimestep',['postTimeStep',['../class_g_r_a_m_r_level.html#a9e45e927072264c119356d4cf02634a9',1,'GRAMRLevel']]],
   ['potential',['Potential',['../class_potential.html',1,'Potential'],['../class_potential.html#a584bbcc7e12bdcff14884c15193d2c4d',1,'Potential::Potential(params_t a_params)'],['../class_potential.html#a584bbcc7e12bdcff14884c15193d2c4d',1,'Potential::Potential(params_t a_params)']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sphericalharmonics',['SphericalHarmonics',['../namespace_spherical_harmonics.html',1,'']]]
+  ['tensoralgebra',['TensorAlgebra',['../namespace_tensor_algebra.html',1,'']]]
 ];

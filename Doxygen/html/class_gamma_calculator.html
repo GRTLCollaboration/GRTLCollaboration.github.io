@@ -22,9 +22,8 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GRChombo
-   &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">NumericalRelativitywithAdaptiveMeshRefinement</div>
+   <div id="projectbrief">Numerical Relativity with Adaptive Mesh Refinement</div>
   </td>
  </tr>
  </tbody>
@@ -61,9 +60,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
 <a href="class_gamma_calculator-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">GammaCalculator Class Reference</div>  </div>
@@ -72,11 +71,6 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_gamma_calculator_8hpp_source.html">GammaCalculator.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gamma_calculator_1_1_vars.html">Vars</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a39aaa60513757a5064b47aa4ecff7dec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gamma_calculator.html#a39aaa60513757a5064b47aa4ecff7dec">GammaCalculator</a> (double a_dx)</td></tr>
@@ -90,7 +84,38 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ac71620cb4821c4c1ac1a1021836f5a6a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_fourth_order_derivatives.html">FourthOrderDerivatives</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gamma_calculator.html#ac71620cb4821c4c1ac1a1021836f5a6a">m_deriv</a></td></tr>
 <tr class="memdesc:ac71620cb4821c4c1ac1a1021836f5a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">An object for calculating derivatives of the variables.  <a href="#ac71620cb4821c4c1ac1a1021836f5a6a">More...</a><br /></td></tr>
 <tr class="separator:ac71620cb4821c4c1ac1a1021836f5a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:adf7160a9a73c12bf3310f9084631bb00"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
+<tr class="memitem:adf7160a9a73c12bf3310f9084631bb00"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_gamma_calculator.html#adf7160a9a73c12bf3310f9084631bb00">Vars</a> = <a class="el" href="struct_c_c_z4_1_1_vars.html">CCZ4::Vars</a>&lt; data_t &gt;</td></tr>
+<tr class="separator:adf7160a9a73c12bf3310f9084631bb00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="adf7160a9a73c12bf3310f9084631bb00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf7160a9a73c12bf3310f9084631bb00">&sect;&nbsp;</a></span>Vars</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class data_t &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_gamma_calculator.html#adf7160a9a73c12bf3310f9084631bb00">GammaCalculator::Vars</a> =  <a class="el" href="struct_c_c_z4_1_1_vars.html">CCZ4::Vars</a>&lt;data_t&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a39aaa60513757a5064b47aa4ecff7dec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a39aaa60513757a5064b47aa4ecff7dec">&sect;&nbsp;</a></span>GammaCalculator()</h2>
@@ -173,7 +198,7 @@ template&lt;class data_t &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/katycui/Google Drive/Work/Github/CambridgeGRChombo/GRChombo/Source/CCZ4/<a class="el" href="_gamma_calculator_8hpp_source.html">GammaCalculator.hpp</a></li>
+<li>/Users/markusk/Documents/New_Chombo/GRChombo_public/Source/CCZ4/<a class="el" href="_gamma_calculator_8hpp_source.html">GammaCalculator.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

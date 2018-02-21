@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['quinticconvolution_2ehpp',['QuinticConvolution.hpp',['../_quintic_convolution_8hpp.html',1,'']]],
-  ['quinticconvolution_2eimpl_2ehpp',['QuinticConvolution.impl.hpp',['../_quintic_convolution_8impl_8hpp.html',1,'']]]
+  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
 ];

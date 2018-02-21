@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['admconformalvars',['ADMConformalVars',['../namespace_a_d_m_conformal_vars.html',1,'']]]
+  ['boxloops',['BoxLoops',['../namespace_box_loops.html',1,'']]]
 ];

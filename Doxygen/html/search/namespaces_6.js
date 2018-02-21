@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uservariables',['UserVariables',['../namespace_user_variables.html',1,'']]]
+  ['varstools',['VarsTools',['../namespace_vars_tools.html',1,'']]]
 ];

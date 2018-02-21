@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tensoralgebra',['TensorAlgebra',['../namespace_tensor_algebra.html',1,'']]]
+  ['uservariables',['UserVariables',['../namespace_user_variables.html',1,'']]]
 ];

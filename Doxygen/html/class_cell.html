@@ -22,9 +22,8 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GRChombo
-   &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">NumericalRelativitywithAdaptiveMeshRefinement</div>
+   <div id="projectbrief">Numerical Relativity with Adaptive Mesh Refinement</div>
   </td>
  </tr>
  </tbody>
@@ -115,7 +114,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a33505d3d8c5370006ba582c8b7040f0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell.html#a33505d3d8c5370006ba582c8b7040f0b">load_vars</a> (data_t &amp;out, int ivar) const</td></tr>
 <tr class="memdesc:a33505d3d8c5370006ba582c8b7040f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the variable of a given variable from the Chombo grid into out.  <a href="#a33505d3d8c5370006ba582c8b7040f0b">More...</a><br /></td></tr>
 <tr class="separator:a33505d3d8c5370006ba582c8b7040f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fcbb0df72394278a8875e45fea8d14c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell.html#a7fcbb0df72394278a8875e45fea8d14c">load_vars</a> (data_t(&amp;out)[<a class="el" href="_tests_2_variable_store_test_2_user_variables_8hpp.html#a05589fbab0657f08285ebdfe93f5ec9eabcb9ee3caaa88f1cfa1afece3c401e76">NUM_VARS</a>]) const</td></tr>
+<tr class="memitem:a7fcbb0df72394278a8875e45fea8d14c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell.html#a7fcbb0df72394278a8875e45fea8d14c">load_vars</a> (data_t(&amp;out)[<a class="el" href="_tests_2_variable_store_test_2_user_variables_8hpp.html#abc5c98fcc1211af2b80116dd6e0a035dabcb9ee3caaa88f1cfa1afece3c401e76">NUM_VARS</a>]) const</td></tr>
 <tr class="memdesc:a7fcbb0df72394278a8875e45fea8d14c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads all variables into an array.  <a href="#a7fcbb0df72394278a8875e45fea8d14c">More...</a><br /></td></tr>
 <tr class="separator:a7fcbb0df72394278a8875e45fea8d14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8cf4101faf3f6966162bd4347bdf78b"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class vars_t&gt; </td></tr>
@@ -133,7 +132,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abfb2f513a376513b503cc27c9906f6d5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_cell.html#abfb2f513a376513b503cc27c9906f6d5">store_vars</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, <a class="el" href="struct_g_r_interval.html">GRInterval</a>&lt; start_var, end_var &gt;::size()&gt; &amp;values, const <a class="el" href="struct_g_r_interval.html">GRInterval</a>&lt; start_var, end_var &gt; interval) const</td></tr>
 <tr class="memdesc:abfb2f513a376513b503cc27c9906f6d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores a value of a <a class="el" href="class_tensor.html" title="This class implements a Tensor with given rank, element data type, and dimension. ...">Tensor</a> into a variable range on the chombo grid.  <a href="#abfb2f513a376513b503cc27c9906f6d5">More...</a><br /></td></tr>
 <tr class="separator:abfb2f513a376513b503cc27c9906f6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf7a011d2f64d788f2b61c6c9fe68378"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell.html#aaf7a011d2f64d788f2b61c6c9fe68378">store_vars</a> (const std::array&lt; data_t, <a class="el" href="_tests_2_variable_store_test_2_user_variables_8hpp.html#a05589fbab0657f08285ebdfe93f5ec9eabcb9ee3caaa88f1cfa1afece3c401e76">NUM_VARS</a> &gt; &amp;values) const</td></tr>
+<tr class="memitem:aaf7a011d2f64d788f2b61c6c9fe68378"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell.html#aaf7a011d2f64d788f2b61c6c9fe68378">store_vars</a> (const std::array&lt; data_t, <a class="el" href="_tests_2_variable_store_test_2_user_variables_8hpp.html#abc5c98fcc1211af2b80116dd6e0a035dabcb9ee3caaa88f1cfa1afece3c401e76">NUM_VARS</a> &gt; &amp;values) const</td></tr>
 <tr class="memdesc:aaf7a011d2f64d788f2b61c6c9fe68378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores an array of all variables to the chombo grid.  <a href="#aaf7a011d2f64d788f2b61c6c9fe68378">More...</a><br /></td></tr>
 <tr class="separator:aaf7a011d2f64d788f2b61c6c9fe68378"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64fa72cf5fc3ee2fc0f76e316bbc1b42"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class vars_t&gt; </td></tr>
@@ -789,7 +788,7 @@ template&lt;class data_t &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> void <a class="el" href="class_cell.html">Cell</a>&lt; data_t &gt;::store_vars </td>
           <td>(</td>
-          <td class="paramtype">const std::array&lt; data_t, <a class="el" href="_tests_2_variable_store_test_2_user_variables_8hpp.html#a05589fbab0657f08285ebdfe93f5ec9eabcb9ee3caaa88f1cfa1afece3c401e76">NUM_VARS</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::array&lt; data_t, <a class="el" href="_tests_2_variable_store_test_2_user_variables_8hpp.html#abc5c98fcc1211af2b80116dd6e0a035dabcb9ee3caaa88f1cfa1afece3c401e76">NUM_VARS</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>values</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -930,8 +929,8 @@ template&lt;class data_t&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/katycui/Google Drive/Work/Github/CambridgeGRChombo/GRChombo/Source/BoxUtils/<a class="el" href="_cell_8hpp_source.html">Cell.hpp</a></li>
-<li>/Users/katycui/Google Drive/Work/Github/CambridgeGRChombo/GRChombo/Source/BoxUtils/<a class="el" href="_cell_8impl_8hpp_source.html">Cell.impl.hpp</a></li>
+<li>/Users/markusk/Documents/New_Chombo/GRChombo_public/Source/BoxUtils/<a class="el" href="_cell_8hpp_source.html">Cell.hpp</a></li>
+<li>/Users/markusk/Documents/New_Chombo/GRChombo_public/Source/BoxUtils/<a class="el" href="_cell_8impl_8hpp_source.html">Cell.impl.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

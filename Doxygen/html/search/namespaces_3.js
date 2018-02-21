@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initialdatatools',['InitialDataTools',['../namespace_initial_data_tools.html',1,'']]]
+  ['sphericalharmonics',['SphericalHarmonics',['../namespace_spherical_harmonics.html',1,'']]]
 ];

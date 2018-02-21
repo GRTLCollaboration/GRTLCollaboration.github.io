@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GRChombo: /Users/katycui/Google Drive/Work/Github/CambridgeGRChombo/GRChombo/Source/Matter/MatterConstraints.impl.hpp Source File</title>
+<title>GRChombo: /Users/markusk/Documents/New_Chombo/GRChombo_public/Source/Matter/MatterConstraints.impl.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,9 +22,8 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GRChombo
-   &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">NumericalRelativitywithAdaptiveMeshRefinement</div>
+   <div id="projectbrief">Numerical Relativity with Adaptive Mesh Refinement</div>
   </td>
  </tr>
  </tbody>
@@ -73,9 +72,9 @@ $(function() {
 <div class="ttc" id="_dimension_definitions_8hpp_html_aaed06ce1dc9b24d57d774941257e5b84"><div class="ttname"><a href="_dimension_definitions_8hpp.html#aaed06ce1dc9b24d57d774941257e5b84">FOR1</a></div><div class="ttdeci">#define FOR1(IDX)</div><div class="ttdef"><b>Definition:</b> DimensionDefinitions.hpp:17</div></div>
 <div class="ttc" id="class_cell_html"><div class="ttname"><a href="class_cell.html">Cell</a></div><div class="ttdoc">Encapsulates information about the position of a cell. </div><div class="ttdef"><b>Definition:</b> Cell.hpp:22</div></div>
 <div class="ttc" id="_examples_2_binary_b_h_2_user_variables_8hpp_html_a06fc87d81c62e9abb8790b6e5713c55ba77bf14b2add3907dce8cfcd0796ca4ab"><div class="ttname"><a href="_examples_2_binary_b_h_2_user_variables_8hpp.html#a06fc87d81c62e9abb8790b6e5713c55ba77bf14b2add3907dce8cfcd0796ca4ab">c_Ham</a></div><div class="ttdef"><b>Definition:</b> UserVariables.hpp:47</div></div>
-<div class="ttc" id="class_constraints_html"><div class="ttname"><a href="class_constraints.html">Constraints</a></div><div class="ttdef"><b>Definition:</b> Constraints.hpp:22</div></div>
+<div class="ttc" id="class_constraints_html"><div class="ttname"><a href="class_constraints.html">Constraints</a></div><div class="ttdef"><b>Definition:</b> Constraints.hpp:21</div></div>
 <div class="ttc" id="struct_g_r_interval_html"><div class="ttname"><a href="struct_g_r_interval.html">GRInterval</a></div><div class="ttdoc">A templated version of Chombo&amp;#39;s Interval - allows compile time checking. </div><div class="ttdef"><b>Definition:</b> GRInterval.hpp:13</div></div>
-<div class="ttc" id="struct_constraints_1_1constraints__t_html"><div class="ttname"><a href="struct_constraints_1_1constraints__t.html">Constraints::constraints_t</a></div><div class="ttdef"><b>Definition:</b> Constraints.hpp:32</div></div>
+<div class="ttc" id="struct_constraints_1_1constraints__t_html"><div class="ttname"><a href="struct_constraints_1_1constraints__t.html">Constraints::constraints_t</a></div><div class="ttdef"><b>Definition:</b> Constraints.hpp:38</div></div>
 <div class="ttc" id="_dimension_definitions_8hpp_html"><div class="ttname"><a href="_dimension_definitions_8hpp.html">DimensionDefinitions.hpp</a></div></div>
 <div class="ttc" id="namespace_tensor_algebra_html_abc8085bd5fe46352d42d68321da5f94d"><div class="ttname"><a href="namespace_tensor_algebra.html#abc8085bd5fe46352d42d68321da5f94d">TensorAlgebra::compute_christoffel</a></div><div class="ttdeci">chris_t&lt; data_t &gt; compute_christoffel(const Tensor&lt; 2, Tensor&lt; 1, data_t &gt;&gt; &amp;d1_metric, const Tensor&lt; 2, data_t &gt; &amp;h_UU)</div><div class="ttdoc">Computes the conformal christoffel symbol. </div><div class="ttdef"><b>Definition:</b> TensorAlgebra.hpp:239</div></div>
 <div class="ttc" id="class_matter_constraints_html_a3a6c84d429b12a80df339cfc31a35f87"><div class="ttname"><a href="class_matter_constraints.html#a3a6c84d429b12a80df339cfc31a35f87">MatterConstraints::my_matter</a></div><div class="ttdeci">matter_t my_matter</div><div class="ttdoc">The matter object, e.g. a scalar field. </div><div class="ttdef"><b>Definition:</b> MatterConstraints.hpp:61</div></div>
@@ -83,7 +82,7 @@ $(function() {
 <div class="ttc" id="namespace_tensor_algebra_html_ad534cf6b25df368e33d1668f519129a5"><div class="ttname"><a href="namespace_tensor_algebra.html#ad534cf6b25df368e33d1668f519129a5">TensorAlgebra::compute_inverse_sym</a></div><div class="ttdeci">Tensor&lt; 2, data_t &gt; compute_inverse_sym(const Tensor&lt; 2, data_t, 3 &gt; &amp;matrix)</div><div class="ttdoc">Computes the inverse of a symmetric 3x3 matrix directly. </div><div class="ttdef"><b>Definition:</b> TensorAlgebra.hpp:52</div></div>
 <div class="ttc" id="class_constraints_html_a5ce91106e0c13c65c9e3b9f5cfc62181"><div class="ttname"><a href="class_constraints.html#a5ce91106e0c13c65c9e3b9f5cfc62181">Constraints::constraint_equations</a></div><div class="ttdeci">constraints_t&lt; data_t &gt; constraint_equations(const vars_t&lt; data_t &gt; &amp;vars, const vars_t&lt; Tensor&lt; 1, data_t &gt;&gt; &amp;d1, const diff2_vars_t&lt; Tensor&lt; 2, data_t &gt;&gt; &amp;d2) const</div><div class="ttdef"><b>Definition:</b> Constraints.impl.hpp:39</div></div>
 <div class="ttc" id="class_cell_html_a5cc44e34dea9fd7e9ca497a5edf2b8ce"><div class="ttname"><a href="class_cell.html#a5cc44e34dea9fd7e9ca497a5edf2b8ce">Cell::store_vars</a></div><div class="ttdeci">void store_vars(const data_t &amp;value, const int ivar) const</div><div class="ttdoc">Stores a value into a given componenent of the chombo grid. </div><div class="ttdef"><b>Definition:</b> Cell.impl.hpp:57</div></div>
-<div class="ttc" id="class_constraints_html_aab3c7aaf7ae9ee4d2c2ea4b841243144"><div class="ttname"><a href="class_constraints.html#aab3c7aaf7ae9ee4d2c2ea4b841243144">Constraints::m_deriv</a></div><div class="ttdeci">const FourthOrderDerivatives m_deriv</div><div class="ttdef"><b>Definition:</b> Constraints.hpp:43</div></div>
+<div class="ttc" id="class_constraints_html_aab3c7aaf7ae9ee4d2c2ea4b841243144"><div class="ttname"><a href="class_constraints.html#aab3c7aaf7ae9ee4d2c2ea4b841243144">Constraints::m_deriv</a></div><div class="ttdeci">const FourthOrderDerivatives m_deriv</div><div class="ttdef"><b>Definition:</b> Constraints.hpp:49</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
