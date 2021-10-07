@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sphericalharmonics',['SphericalHarmonics',['../namespace_spherical_harmonics.html',1,'']]]
+  ['diagnosticvariables_1280',['DiagnosticVariables',['../namespace_diagnostic_variables.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pre_5fcollapsed',['PRE_COLLAPSED',['../_binary_b_h_8hpp.html#aa9d3912d28541d5cac1fe9d89b8dc230a8d2f1259ce84fb9b1e97d84f2b096267',1,'BinaryBH.hpp']]]
+  ['fill_5fghost_5fcells_2313',['FILL_GHOST_CELLS',['../_box_loops_8hpp.html#a726ca809ffd3d67ab4b8476646f26635ae75e287a7e5f24b3f1996c86eb38acfc',1,'BoxLoops.hpp']]]
 ];

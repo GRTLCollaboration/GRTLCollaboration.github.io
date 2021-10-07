@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['scalarfieldwithpotential',['ScalarFieldWithPotential',['../class_scalar_field_level.html#ac7775aedb05d0c549880ffa22a85aa8a',1,'ScalarFieldLevel']]],
-  ['simd_5fdata_5ft',['simd_data_t',['../structsimd__base.html#af0effbf4d3a88857cb74fb969b349df4',1,'simd_base']]],
-  ['simd_5ft',['simd_t',['../structsimd__proxy.html#abe1c9361c7f3669b547dfce9da366e58',1,'simd_proxy']]],
-  ['stencil_5fcollection_5ft',['stencil_collection_t',['../class_lagrange.html#a24ea44b232ea6baf24867e5df710ba61',1,'Lagrange']]]
+  ['mask_5ft_2238',['mask_t',['../structsimd__traits.html#a80c75cd485de827e466b55aaf0b8aa62',1,'simd_traits']]],
+  ['matterccz4_2239',['MatterCCZ4',['../_matter_c_c_z4_8hpp.html#aec16b218d6f6c11fcb76795ee0d75477',1,'MatterCCZ4():&#160;MatterCCZ4.hpp'],['../_matter_c_c_z4_r_h_s_8hpp.html#aec16b218d6f6c11fcb76795ee0d75477',1,'MatterCCZ4():&#160;MatterCCZ4RHS.hpp']]],
+  ['matterdiff2vars_2240',['MatterDiff2Vars',['../class_matter_c_c_z4_r_h_s.html#a0850711248cf8621a2ba0fe7df841f59',1,'MatterCCZ4RHS::MatterDiff2Vars()'],['../class_matter_c_c_z4_r_h_s.html#a0850711248cf8621a2ba0fe7df841f59',1,'MatterCCZ4RHS::MatterDiff2Vars()']]],
+  ['mattervars_2241',['MatterVars',['../class_matter_c_c_z4_r_h_s.html#ae4b2b4719dfdd8af18a5f83ef8bf5163',1,'MatterCCZ4RHS::MatterVars()'],['../class_matter_c_c_z4_r_h_s.html#ae4b2b4719dfdd8af18a5f83ef8bf5163',1,'MatterCCZ4RHS::MatterVars()'],['../class_matter_constraints.html#a7e0673c8dc778524d40a1a4644a0058b',1,'MatterConstraints::MatterVars()'],['../class_matter_constraints.html#a7e0673c8dc778524d40a1a4644a0058b',1,'MatterConstraints::MatterVars()'],['../class_chi_and_phi_tagging_criterion.html#a5f2bf52351725465ed013b5d711e79a5',1,'ChiAndPhiTaggingCriterion::MatterVars()']]],
+  ['metricvars_2242',['MetricVars',['../class_constraints.html#a9b6b0fcd3ec814d30c809ad86fb1ca16',1,'Constraints']]]
 ];

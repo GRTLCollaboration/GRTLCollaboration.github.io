@@ -1,9 +1,26 @@
 var searchData=
 [
-  ['tensor',['Tensor',['../class_tensor.html',1,'']]],
-  ['tensor_3c_200_2c_20data_5ft_2c_20size_20_3e',['Tensor&lt; 0, data_t, size &gt;',['../class_tensor_3_010_00_01data__t_00_01size_01_4.html',1,'']]],
-  ['tensor_3c_201_2c_20data_5ft_20_3e',['Tensor&lt; 1, data_t &gt;',['../class_tensor.html',1,'']]],
-  ['tensor_3c_202_2c_20data_5ft_20_3e',['Tensor&lt; 2, data_t &gt;',['../class_tensor.html',1,'']]],
-  ['tensor_3c_203_2c_20data_5ft_20_3e',['Tensor&lt; 3, data_t &gt;',['../class_tensor.html',1,'']]],
-  ['tracearemoval',['TraceARemoval',['../class_trace_a_removal.html',1,'']]]
+  ['scalarbubble_1236',['ScalarBubble',['../class_scalar_bubble.html',1,'']]],
+  ['scalarfield_1237',['ScalarField',['../class_scalar_field.html',1,'']]],
+  ['scalarfieldlevel_1238',['ScalarFieldLevel',['../class_scalar_field_level.html',1,'']]],
+  ['setharmonic_1239',['SetHarmonic',['../class_set_harmonic.html',1,'']]],
+  ['setvalue_1240',['SetValue',['../class_set_value.html',1,'']]],
+  ['simd_1241',['simd',['../structsimd.html',1,'']]],
+  ['simd_5farray_5fwrapper_1242',['simd_array_wrapper',['../structsimd__array__wrapper.html',1,'']]],
+  ['simd_5fbase_1243',['simd_base',['../structsimd__base.html',1,'']]],
+  ['simd_5fproxy_1244',['simd_proxy',['../structsimd__proxy.html',1,'']]],
+  ['simd_5ftraits_1245',['simd_traits',['../structsimd__traits.html',1,'']]],
+  ['simulationparameters_1246',['SimulationParameters',['../class_simulation_parameters.html',1,'']]],
+  ['simulationparametersbase_1247',['SimulationParametersBase',['../class_simulation_parameters_base.html',1,'']]],
+  ['sixthorderderivatives_1248',['SixthOrderDerivatives',['../class_sixth_order_derivatives.html',1,'']]],
+  ['smalldataio_1249',['SmallDataIO',['../class_small_data_i_o.html',1,'']]],
+  ['sphericalextraction_1250',['SphericalExtraction',['../class_spherical_extraction.html',1,'']]],
+  ['sphericalextractiontestlevel_1251',['SphericalExtractionTestLevel',['../class_spherical_extraction_test_level.html',1,'']]],
+  ['sphericalgeometry_1252',['SphericalGeometry',['../class_spherical_geometry.html',1,'']]],
+  ['stencil_1253',['Stencil',['../struct_lagrange_1_1_stencil.html',1,'Lagrange']]],
+  ['strip_5fnested_5ftemplate_1254',['strip_nested_template',['../struct_vars_tools_1_1strip__nested__template.html',1,'VarsTools']]],
+  ['strip_5fnested_5ftemplate_3c_20outermost_5flayer_3c_20inner_5fpart_20_3e_20_3e_1255',['strip_nested_template&lt; outermost_layer&lt; inner_part &gt; &gt;',['../struct_vars_tools_1_1strip__nested__template_3_01outermost__layer_3_01inner__part_01_4_01_4.html',1,'VarsTools']]],
+  ['surfaceextraction_1256',['SurfaceExtraction',['../class_surface_extraction.html',1,'']]],
+  ['surfaceextraction_3c_20cylindricalgeometry_20_3e_1257',['SurfaceExtraction&lt; CylindricalGeometry &gt;',['../class_surface_extraction.html',1,'']]],
+  ['surfaceextraction_3c_20sphericalgeometry_20_3e_1258',['SurfaceExtraction&lt; SphericalGeometry &gt;',['../class_surface_extraction.html',1,'']]]
 ];
