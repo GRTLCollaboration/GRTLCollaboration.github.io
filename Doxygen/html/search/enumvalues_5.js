@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['skip_5fghost_5fcells',['SKIP_GHOST_CELLS',['../_box_loops_8hpp.html#abc6126af1d45847bc59afa0aa3216b04a744c9d7d1d58155827dd9bde448a892d',1,'BoxLoops.hpp']]]
+  ['include_5fghost_5fcells_2314',['INCLUDE_GHOST_CELLS',['../_box_loops_8hpp.html#a726ca809ffd3d67ab4b8476646f26635aba80695a280ddfe76d53a7790efd1cd7',1,'BoxLoops.hpp']]]
 ];

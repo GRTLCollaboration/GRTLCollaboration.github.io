@@ -1,17 +1,10 @@
 var searchData=
 [
-  ['s',['S',['../structemtensor__t.html#aa9795040e8f9b86ebe7969ccf74830f8',1,'emtensor_t']]],
-  ['scalar',['scalar',['../structricci__t.html#aa46f0b09ceffc1fba5c9bbcd7a748cd1',1,'ricci_t']]],
-  ['scalar_5fmass',['scalar_mass',['../struct_potential_1_1params__t.html#a654c5e4dc24d17bd69870c745b6609b6',1,'Potential::params_t::scalar_mass()'],['../class_simulation_parameters.html#aadcabc9314ad10c03fa050b0be7ab1ce',1,'SimulationParameters::scalar_mass()']]],
-  ['shift',['shift',['../struct_c_c_z4_1_1_vars.html#a664db80a2da6cacfa3e2779e81b4f036',1,'CCZ4::Vars::shift()'],['../struct_c_c_z4_1_1_diff2_vars.html#aa6a8e8561f9d534fa0c39bb2aef746db',1,'CCZ4::Diff2Vars::shift()']]],
-  ['shift_5fadvec_5fcoeff',['shift_advec_coeff',['../class_simulation_parameters.html#a44c4572928a59d5f9347db7598bd3c8a',1,'SimulationParameters::shift_advec_coeff()'],['../struct_c_c_z4_1_1params__t.html#a439988c9d1552b285f30f4db9a8d2c14',1,'CCZ4::params_t::shift_advec_coeff()']]],
-  ['shift_5fgamma_5fcoeff',['shift_Gamma_coeff',['../class_simulation_parameters.html#a27f00c0978d7aac398f4e759212df8ae',1,'SimulationParameters::shift_Gamma_coeff()'],['../struct_c_c_z4_1_1params__t.html#a486cb8065e224d893c87d3e817261973',1,'CCZ4::params_t::shift_Gamma_coeff()']]],
-  ['si',['Si',['../structemtensor__t.html#a33217ab60c7610dc3a3700df1203eed4',1,'emtensor_t']]],
-  ['sigma',['sigma',['../class_simulation_parameters.html#a1750cc7dffe22a2b6e854822976c4e1b',1,'SimulationParameters']]],
-  ['sij',['Sij',['../structemtensor__t.html#a9d6124b810821b40e43e52b1af815dc8',1,'emtensor_t']]],
-  ['simd_5flen',['simd_len',['../structsimd__traits.html#ad0768af61329507b587c77bac58d4d41',1,'simd_traits::simd_len()'],['../structsimd__base.html#a4d9f3ebd35924a64e75851f50ae46639',1,'simd_base::simd_len()']]],
-  ['spatialbetadriverradius',['SpatialBetaDriverRadius',['../class_simulation_parameters.html#ac6588c0211d4d3134a1da24596eaa44d',1,'SimulationParameters']]],
-  ['spin',['spin',['../struct_kerr_b_h_1_1params__t.html#a36d8273b7bd3dc77e102de985269be26',1,'KerrBH::params_t']]],
-  ['symmetric_5fvar_5f1',['symmetric_var_1',['../struct_vars.html#a183902c9ecb61d0135e54db70232ae47',1,'Vars']]],
-  ['symmetric_5fvar_5f2',['symmetric_var_2',['../struct_vars.html#a558dca28918ccce9f38b686380d9528e',1,'Vars']]]
+  ['phi_2158',['phi',['../struct_scalar_field_1_1_vars.html#adf49933f38e4833134192389c4f5dc50',1,'ScalarField::Vars::phi()'],['../struct_scalar_field_1_1_diff2_vars.html#a8d975adf0c97b67a87cd3416f54b4ce6',1,'ScalarField::Diff2Vars::phi()']]],
+  ['pi_2159',['Pi',['../struct_scalar_field_1_1_vars.html#a34fac15f8526fd3bf1ef5d46ce3bfd08',1,'ScalarField::Vars']]],
+  ['plot_5finterval_2160',['plot_interval',['../class_chombo_parameters.html#afc311ecb70134baa0c35a297bcca320b',1,'ChomboParameters']]],
+  ['potential_5fparams_2161',['potential_params',['../class_simulation_parameters.html#ab5aea36ba78c026bb1bc36642532c4b5',1,'SimulationParameters']]],
+  ['pp_5ftype_2162',['pp_type',['../struct_parm_parse_translator_3_01double_01_4.html#a28dd36a1ce521e521880610f6063523f',1,'ParmParseTranslator&lt; double &gt;::pp_type()'],['../struct_parm_parse_translator_3_01int_01_4.html#a779e439bbe88337ccffcc1a99a17cfec',1,'ParmParseTranslator&lt; int &gt;::pp_type()'],['../struct_parm_parse_translator_3_01bool_01_4.html#a25497d64383716835eacd99ca9e57a43',1,'ParmParseTranslator&lt; bool &gt;::pp_type()']]],
+  ['print_5fprogress_5fonly_5fto_5frank_5f0_2163',['print_progress_only_to_rank_0',['../class_chombo_parameters.html#a5b84c0762908f2f0430478d2a6c53a6c',1,'ChomboParameters']]],
+  ['puncture_5ftracking_5flevel_2164',['puncture_tracking_level',['../class_simulation_parameters.html#adeec2b2998ffffb4fa3e425fa903af78',1,'SimulationParameters']]]
 ];

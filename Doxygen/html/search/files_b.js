@@ -1,9 +1,20 @@
 var searchData=
 [
-  ['phiandktaggingcriterion_2ehpp',['PhiAndKTaggingCriterion.hpp',['../_phi_and_k_tagging_criterion_8hpp.html',1,'']]],
-  ['positivechiandalpha_2ehpp',['PositiveChiAndAlpha.hpp',['../_positive_chi_and_alpha_8hpp.html',1,'']]],
-  ['positivechiandalphaunittest_2ecpp',['PositiveChiAndAlphaUnitTest.cpp',['../_positive_chi_and_alpha_unit_test_8cpp.html',1,'']]],
-  ['positivechiandalphaunittest_2ed',['PositiveChiAndAlphaUnitTest.d',['../_positive_chi_and_alpha_unit_test_8d.html',1,'']]],
-  ['potential_2ehpp',['Potential.hpp',['../_examples_2_scalar_field_2_potential_8hpp.html',1,'']]],
-  ['potential_2ehpp',['Potential.hpp',['../_tests_2_kcl_bssn_tests_2_potential_8hpp.html',1,'']]]
+  ['main_5fbinarybh_2ecpp_1380',['Main_BinaryBH.cpp',['../_main___binary_b_h_8cpp.html',1,'']]],
+  ['main_5fkerrbh_2ecpp_1381',['Main_KerrBH.cpp',['../_main___kerr_b_h_8cpp.html',1,'']]],
+  ['main_5fscalarfield_2ecpp_1382',['Main_ScalarField.cpp',['../_main___scalar_field_8cpp.html',1,'']]],
+  ['matterccz4_2ehpp_1383',['MatterCCZ4.hpp',['../_matter_c_c_z4_8hpp.html',1,'']]],
+  ['matterccz4rhs_2ehpp_1384',['MatterCCZ4RHS.hpp',['../_matter_c_c_z4_r_h_s_8hpp.html',1,'']]],
+  ['matterccz4rhs_2eimpl_2ehpp_1385',['MatterCCZ4RHS.impl.hpp',['../_matter_c_c_z4_r_h_s_8impl_8hpp.html',1,'']]],
+  ['matterconstraints_2ehpp_1386',['MatterConstraints.hpp',['../_matter_constraints_8hpp.html',1,'']]],
+  ['matterconstraints_2eimpl_2ehpp_1387',['MatterConstraints.impl.hpp',['../_matter_constraints_8impl_8hpp.html',1,'']]],
+  ['matterweyl4_2ehpp_1388',['MatterWeyl4.hpp',['../_matter_weyl4_8hpp.html',1,'']]],
+  ['matterweyl4_2eimpl_2ehpp_1389',['MatterWeyl4.impl.hpp',['../_matter_weyl4_8impl_8hpp.html',1,'']]],
+  ['matterweyl4test_2ecpp_1390',['MatterWeyl4Test.cpp',['../_matter_weyl4_test_8cpp.html',1,'']]],
+  ['movingpuncturegauge_2ehpp_1391',['MovingPunctureGauge.hpp',['../_moving_puncture_gauge_8hpp.html',1,'']]],
+  ['mpicontext_2ehpp_1392',['MPIContext.hpp',['../_m_p_i_context_8hpp.html',1,'']]],
+  ['mpicontext_2eimpl_2ehpp_1393',['MPIContext.impl.hpp',['../_m_p_i_context_8impl_8hpp.html',1,'']]],
+  ['mpilayout_2ehpp_1394',['MPILayout.hpp',['../_m_p_i_layout_8hpp.html',1,'']]],
+  ['mpilayout_2eimpl_2ehpp_1395',['MPILayout.impl.hpp',['../_m_p_i_layout_8impl_8hpp.html',1,'']]],
+  ['multileveltask_2ehpp_1396',['MultiLevelTask.hpp',['../_multi_level_task_8hpp.html',1,'']]]
 ];

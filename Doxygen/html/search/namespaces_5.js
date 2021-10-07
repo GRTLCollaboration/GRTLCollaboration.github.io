@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uservariables',['UserVariables',['../namespace_user_variables.html',1,'']]]
+  ['sphericalharmonics_1282',['SphericalHarmonics',['../namespace_spherical_harmonics.html',1,'']]]
 ];

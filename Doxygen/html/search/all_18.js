@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['z',['z',['../class_coordinates.html#a0060e190cc1d519f4f57ee796de031a2',1,'Coordinates']]],
-  ['z_5fover_5fchi',['Z_over_chi',['../values1_8hpp.html#a40364da5a2613855c201d51566e283bb',1,'values1.hpp']]]
+  ['y_1136',['y',['../class_coordinates.html#a507ec57814a9832170f5157459dca11b',1,'Coordinates']]],
+  ['y_5flm_5ft_1137',['Y_lm_t',['../struct_spherical_harmonics_1_1_y__lm__t.html',1,'SphericalHarmonics']]]
 ];

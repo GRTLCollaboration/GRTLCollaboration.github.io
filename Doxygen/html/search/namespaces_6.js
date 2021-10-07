@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['varstools',['VarsTools',['../namespace_vars_tools.html',1,'']]]
+  ['tensoralgebra_1283',['TensorAlgebra',['../namespace_tensor_algebra.html',1,'']]]
 ];

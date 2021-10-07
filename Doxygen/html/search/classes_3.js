@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['defaultlevelfactory',['DefaultLevelFactory',['../class_default_level_factory.html',1,'']]],
-  ['defaultpotential',['DefaultPotential',['../class_default_potential.html',1,'']]],
-  ['derivative',['Derivative',['../class_derivative.html',1,'']]],
-  ['detector',['Detector',['../struct_fourth_order_derivatives_1_1_detector.html',1,'FourthOrderDerivatives']]],
-  ['diff2vars',['Diff2Vars',['../struct_c_c_z4_1_1_diff2_vars.html',1,'CCZ4']]],
-  ['diff2vars',['Diff2Vars',['../struct_scalar_field_1_1_diff2_vars.html',1,'ScalarField']]],
-  ['diff2vars',['Diff2Vars',['../struct_matter_c_c_z4_1_1_diff2_vars.html',1,'MatterCCZ4']]],
-  ['disable_5fsimd',['disable_simd',['../structdisable__simd.html',1,'']]]
+  ['defaultlevelfactory_1175',['DefaultLevelFactory',['../class_default_level_factory.html',1,'']]],
+  ['defaultpotential_1176',['DefaultPotential',['../class_default_potential.html',1,'']]],
+  ['derivative_1177',['Derivative',['../class_derivative.html',1,'']]],
+  ['derivativetestscompute_1178',['DerivativeTestsCompute',['../class_derivative_tests_compute.html',1,'']]],
+  ['detector_1179',['Detector',['../struct_fourth_order_derivatives_1_1_detector.html',1,'FourthOrderDerivatives::Detector&lt; data_t &gt;'],['../struct_sixth_order_derivatives_1_1_detector.html',1,'SixthOrderDerivatives::Detector&lt; data_t &gt;']]],
+  ['diff2vars_1180',['Diff2Vars',['../struct_matter_c_c_z4_r_h_s_1_1_diff2_vars.html',1,'MatterCCZ4RHS&lt; matter_t, gauge_t, deriv_t &gt;::Diff2Vars&lt; data_t &gt;'],['../struct_scalar_field_1_1_diff2_vars.html',1,'ScalarField&lt; potential_t &gt;::Diff2Vars&lt; data_t &gt;']]],
+  ['diff2varsnogauge_1181',['Diff2VarsNoGauge',['../struct_a_d_m_conformal_vars_1_1_diff2_vars_no_gauge.html',1,'ADMConformalVars::Diff2VarsNoGauge&lt; data_t &gt;'],['../struct_b_s_s_n_vars_1_1_diff2_vars_no_gauge.html',1,'BSSNVars::Diff2VarsNoGauge&lt; data_t &gt;'],['../struct_c_c_z4_vars_1_1_diff2_vars_no_gauge.html',1,'CCZ4Vars::Diff2VarsNoGauge&lt; data_t &gt;']]],
+  ['diff2varswithgauge_1182',['Diff2VarsWithGauge',['../struct_a_d_m_conformal_vars_1_1_diff2_vars_with_gauge.html',1,'ADMConformalVars::Diff2VarsWithGauge&lt; data_t &gt;'],['../struct_b_s_s_n_vars_1_1_diff2_vars_with_gauge.html',1,'BSSNVars::Diff2VarsWithGauge&lt; data_t &gt;'],['../struct_c_c_z4_vars_1_1_diff2_vars_with_gauge.html',1,'CCZ4Vars::Diff2VarsWithGauge&lt; data_t &gt;']]],
+  ['disable_5fsimd_1183',['disable_simd',['../structdisable__simd.html',1,'']]]
 ];

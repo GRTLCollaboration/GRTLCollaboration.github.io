@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ricci_5ft',['ricci_t',['../structricci__t.html',1,'']]]
+  ['quinticconvolution_1234',['QuinticConvolution',['../class_quintic_convolution.html',1,'']]]
 ];

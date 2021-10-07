@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mpicontext',['MPIContext',['../class_m_p_i_layout.html#a024b42a8d2b797571fc83048b112ebf0',1,'MPILayout']]]
+  ['expandgridstoboundaries_2343',['ExpandGridsToBoundaries',['../class_boundary_conditions.html#ac3ca61b274e8cf203709d05e8ce44dfe',1,'BoundaryConditions']]]
 ];
