@@ -76,28 +76,14 @@ $(function() {
 <p>Compute class to calculate the CCZ4 right hand side.  
  <a href="class_c_c_z4_r_h_s.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_c_c_z4_8hpp_source.html">CCZ4.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_c_c_z4_r_h_s_8hpp_source.html">CCZ4RHS.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a093eef14ff149d677a4260770d74958b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_c_c_z4_r_h_s.html#a7e4de72b352f316f10c37184d216d382a8613a1b2a00bb20f6184d222b3988e26">USE_CCZ4</a>
-, <a class="el" href="class_c_c_z4_r_h_s.html#a7e4de72b352f316f10c37184d216d382a3ecd7281e52069fa7acaa577593cbf54">USE_BSSN</a>
+<tr class="memitem:a093eef14ff149d677a4260770d74958b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_c_c_z4_r_h_s.html#a093eef14ff149d677a4260770d74958bab2a6d11fab531eb53b9330b89d202e88">USE_CCZ4</a>
+, <a class="el" href="class_c_c_z4_r_h_s.html#a093eef14ff149d677a4260770d74958ba93df5b82c4becd3310287a4707b36467">USE_BSSN</a>
  }</td></tr>
 <tr class="separator:a093eef14ff149d677a4260770d74958b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e4de72b352f316f10c37184d216d382"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_c_c_z4_r_h_s.html#a7e4de72b352f316f10c37184d216d382a8613a1b2a00bb20f6184d222b3988e26">USE_CCZ4</a>
-, <a class="el" href="class_c_c_z4_r_h_s.html#a7e4de72b352f316f10c37184d216d382a3ecd7281e52069fa7acaa577593cbf54">USE_BSSN</a>
- }</td></tr>
-<tr class="separator:a7e4de72b352f316f10c37184d216d382"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedfa3736a2d362a84a2f4a19c7639122"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_c_z4_r_h_s.html#aedfa3736a2d362a84a2f4a19c7639122">params_t</a> = <a class="el" href="struct_c_c_z4__params__t.html">CCZ4_params_t</a>&lt; typename gauge_t::params_t &gt;</td></tr>
-<tr class="separator:aedfa3736a2d362a84a2f4a19c7639122"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0888c396bd6f42618c81e424a6097c0b"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
-<tr class="memitem:a0888c396bd6f42618c81e424a6097c0b"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_c_z4_r_h_s.html#a0888c396bd6f42618c81e424a6097c0b">Vars</a> = <a class="el" href="struct_c_c_z4_vars_1_1_vars_with_gauge.html">CCZ4Vars::VarsWithGauge</a>&lt; data_t &gt;</td></tr>
-<tr class="memdesc:a0888c396bd6f42618c81e424a6097c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCZ4 variables.  <a href="class_c_c_z4_r_h_s.html#a0888c396bd6f42618c81e424a6097c0b">More...</a><br /></td></tr>
-<tr class="separator:a0888c396bd6f42618c81e424a6097c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a945790a3d994a3d09f046aeed3635ce1"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
-<tr class="memitem:a945790a3d994a3d09f046aeed3635ce1"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_c_z4_r_h_s.html#a945790a3d994a3d09f046aeed3635ce1">Diff2Vars</a> = <a class="el" href="struct_c_c_z4_vars_1_1_diff2_vars_with_gauge.html">CCZ4Vars::Diff2VarsWithGauge</a>&lt; data_t &gt;</td></tr>
-<tr class="memdesc:a945790a3d994a3d09f046aeed3635ce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCZ4 variables.  <a href="class_c_c_z4_r_h_s.html#a945790a3d994a3d09f046aeed3635ce1">More...</a><br /></td></tr>
-<tr class="separator:a945790a3d994a3d09f046aeed3635ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedfa3736a2d362a84a2f4a19c7639122"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_c_z4_r_h_s.html#aedfa3736a2d362a84a2f4a19c7639122">params_t</a> = <a class="el" href="struct_c_c_z4__params__t.html">CCZ4_params_t</a>&lt; typename gauge_t::params_t &gt;</td></tr>
 <tr class="separator:aedfa3736a2d362a84a2f4a19c7639122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0888c396bd6f42618c81e424a6097c0b"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
@@ -111,14 +97,7 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a819fe2a01524ca389a27e0034fe09f90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_c_z4_r_h_s.html#a819fe2a01524ca389a27e0034fe09f90">CCZ4RHS</a> (<a class="el" href="class_c_c_z4_r_h_s.html#aedfa3736a2d362a84a2f4a19c7639122">params_t</a> a_params, double a_dx, double a_sigma, int a_formulation=<a class="el" href="class_c_c_z4_r_h_s.html#a7e4de72b352f316f10c37184d216d382a8613a1b2a00bb20f6184d222b3988e26">USE_CCZ4</a>, double a_cosmological_constant=0)</td></tr>
-<tr class="memdesc:a819fe2a01524ca389a27e0034fe09f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="class_c_c_z4_r_h_s.html#a819fe2a01524ca389a27e0034fe09f90">More...</a><br /></td></tr>
-<tr class="separator:a819fe2a01524ca389a27e0034fe09f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61af734efa2af51879c646bb238ba3fd"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
-<tr class="memitem:a61af734efa2af51879c646bb238ba3fd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_c_z4_r_h_s.html#a61af734efa2af51879c646bb238ba3fd">compute</a> (<a class="el" href="class_cell.html">Cell</a>&lt; data_t &gt; current_cell) const</td></tr>
-<tr class="memdesc:a61af734efa2af51879c646bb238ba3fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute function.  <a href="class_c_c_z4_r_h_s.html#a61af734efa2af51879c646bb238ba3fd">More...</a><br /></td></tr>
-<tr class="separator:a61af734efa2af51879c646bb238ba3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a819fe2a01524ca389a27e0034fe09f90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_c_z4_r_h_s.html#a819fe2a01524ca389a27e0034fe09f90">CCZ4RHS</a> (<a class="el" href="class_c_c_z4_r_h_s.html#aedfa3736a2d362a84a2f4a19c7639122">params_t</a> a_params, double a_dx, double a_sigma, int a_formulation=<a class="el" href="class_c_c_z4_r_h_s.html#a7e4de72b352f316f10c37184d216d382a8613a1b2a00bb20f6184d222b3988e26">USE_CCZ4</a>, double a_cosmological_constant=0)</td></tr>
+<tr class="memitem:a819fe2a01524ca389a27e0034fe09f90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_c_z4_r_h_s.html#a819fe2a01524ca389a27e0034fe09f90">CCZ4RHS</a> (<a class="el" href="class_c_c_z4_r_h_s.html#aedfa3736a2d362a84a2f4a19c7639122">params_t</a> a_params, double a_dx, double a_sigma, int a_formulation=<a class="el" href="class_c_c_z4_r_h_s.html#a093eef14ff149d677a4260770d74958bab2a6d11fab531eb53b9330b89d202e88">USE_CCZ4</a>, double a_cosmological_constant=0)</td></tr>
 <tr class="memdesc:a819fe2a01524ca389a27e0034fe09f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="class_c_c_z4_r_h_s.html#a819fe2a01524ca389a27e0034fe09f90">More...</a><br /></td></tr>
 <tr class="separator:a819fe2a01524ca389a27e0034fe09f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61af734efa2af51879c646bb238ba3fd"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
@@ -128,10 +107,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:abd709f2ccbefba83d04bf1ff7cba12b9"><td class="memTemplParams" colspan="2">template&lt;class data_t , template&lt; typename &gt; class vars_t, template&lt; typename &gt; class diff2_vars_t&gt; </td></tr>
-<tr class="memitem:abd709f2ccbefba83d04bf1ff7cba12b9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_c_z4_r_h_s.html#abd709f2ccbefba83d04bf1ff7cba12b9">rhs_equation</a> (<a class="el" href="structvars__t.html">vars_t</a>&lt; data_t &gt; &amp;rhs, const <a class="el" href="structvars__t.html">vars_t</a>&lt; data_t &gt; &amp;vars, const <a class="el" href="structvars__t.html">vars_t</a>&lt; <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt; &gt; &amp;d1, const diff2_vars_t&lt; <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t &gt; &gt; &amp;d2, const <a class="el" href="structvars__t.html">vars_t</a>&lt; data_t &gt; &amp;advec) const</td></tr>
-<tr class="memdesc:abd709f2ccbefba83d04bf1ff7cba12b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the rhs for CCZ4.  <a href="class_c_c_z4_r_h_s.html#abd709f2ccbefba83d04bf1ff7cba12b9">More...</a><br /></td></tr>
-<tr class="separator:abd709f2ccbefba83d04bf1ff7cba12b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd709f2ccbefba83d04bf1ff7cba12b9"><td class="memTemplParams" colspan="2">template&lt;class data_t , template&lt; typename &gt; class vars_t, template&lt; typename &gt; class diff2_vars_t&gt; </td></tr>
 <tr class="memitem:abd709f2ccbefba83d04bf1ff7cba12b9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_c_z4_r_h_s.html#abd709f2ccbefba83d04bf1ff7cba12b9">rhs_equation</a> (<a class="el" href="structvars__t.html">vars_t</a>&lt; data_t &gt; &amp;rhs, const <a class="el" href="structvars__t.html">vars_t</a>&lt; data_t &gt; &amp;vars, const <a class="el" href="structvars__t.html">vars_t</a>&lt; <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt; &gt; &amp;d1, const diff2_vars_t&lt; <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t &gt; &gt; &amp;d2, const <a class="el" href="structvars__t.html">vars_t</a>&lt; data_t &gt; &amp;advec) const</td></tr>
 <tr class="memdesc:abd709f2ccbefba83d04bf1ff7cba12b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the rhs for CCZ4.  <a href="class_c_c_z4_r_h_s.html#abd709f2ccbefba83d04bf1ff7cba12b9">More...</a><br /></td></tr>
@@ -161,27 +136,7 @@ class CCZ4RHS&lt; gauge_t, deriv_t &gt;</div><p >Compute class to calculate the 
 <p >This compute class implements the CCZ4 right hand side equations. Use it by handing it to a loop in the <a class="el" href="namespace_box_loops.html">BoxLoops</a> namespace. <a class="el" href="class_c_c_z4_r_h_s.html" title="Compute class to calculate the CCZ4 right hand side.">CCZ4RHS</a> includes a struct in its scope: <a class="el" href="class_c_c_z4_r_h_s.html#a0888c396bd6f42618c81e424a6097c0b" title="CCZ4 variables.">CCZ4RHS::Vars</a> (the CCZ4 variables like conformal factor, conformal metric, extrinsic curvature, etc). </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a945790a3d994a3d09f046aeed3635ce1" name="a945790a3d994a3d09f046aeed3635ce1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a945790a3d994a3d09f046aeed3635ce1">&#9670;&nbsp;</a></span>Diff2Vars <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class gauge_t  = MovingPunctureGauge, class deriv_t  = FourthOrderDerivatives&gt; </div>
-<div class="memtemplate">
-template&lt;class data_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="class_c_c_z4_r_h_s.html">CCZ4RHS</a>&lt; gauge_t, deriv_t &gt;::Diff2Vars =  <a class="el" href="struct_c_c_z4_vars_1_1_diff2_vars_with_gauge.html">CCZ4Vars::Diff2VarsWithGauge</a>&lt;data_t&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>CCZ4 variables. </p>
-
-</div>
-</div>
-<a id="a945790a3d994a3d09f046aeed3635ce1" name="a945790a3d994a3d09f046aeed3635ce1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a945790a3d994a3d09f046aeed3635ce1">&#9670;&nbsp;</a></span>Diff2Vars <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a945790a3d994a3d09f046aeed3635ce1">&#9670;&nbsp;</a></span>Diff2Vars</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,23 +156,7 @@ template&lt;class data_t &gt; </div>
 </div>
 </div>
 <a id="aedfa3736a2d362a84a2f4a19c7639122" name="aedfa3736a2d362a84a2f4a19c7639122"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedfa3736a2d362a84a2f4a19c7639122">&#9670;&nbsp;</a></span>params_t <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class gauge_t  = MovingPunctureGauge, class deriv_t  = FourthOrderDerivatives&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="class_c_c_z4_r_h_s.html">CCZ4RHS</a>&lt; gauge_t, deriv_t &gt;::params_t =  <a class="el" href="struct_c_c_z4__params__t.html">CCZ4_params_t</a>&lt;typename gauge_t::params_t&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aedfa3736a2d362a84a2f4a19c7639122" name="aedfa3736a2d362a84a2f4a19c7639122"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedfa3736a2d362a84a2f4a19c7639122">&#9670;&nbsp;</a></span>params_t <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aedfa3736a2d362a84a2f4a19c7639122">&#9670;&nbsp;</a></span>params_t</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,27 +172,7 @@ template&lt;class gauge_t  = MovingPunctureGauge, class deriv_t  = FourthOrderDe
 </div>
 </div>
 <a id="a0888c396bd6f42618c81e424a6097c0b" name="a0888c396bd6f42618c81e424a6097c0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0888c396bd6f42618c81e424a6097c0b">&#9670;&nbsp;</a></span>Vars <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class gauge_t  = MovingPunctureGauge, class deriv_t  = FourthOrderDerivatives&gt; </div>
-<div class="memtemplate">
-template&lt;class data_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="class_c_c_z4_r_h_s.html">CCZ4RHS</a>&lt; gauge_t, deriv_t &gt;<a class="el" href="struct_vars.html">::Vars</a> =  <a class="el" href="struct_c_c_z4_vars_1_1_vars_with_gauge.html">CCZ4Vars::VarsWithGauge</a>&lt;data_t&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>CCZ4 variables. </p>
-
-</div>
-</div>
-<a id="a0888c396bd6f42618c81e424a6097c0b" name="a0888c396bd6f42618c81e424a6097c0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0888c396bd6f42618c81e424a6097c0b">&#9670;&nbsp;</a></span>Vars <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0888c396bd6f42618c81e424a6097c0b">&#9670;&nbsp;</a></span>Vars</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,40 +206,23 @@ template&lt;class gauge_t  = MovingPunctureGauge, class deriv_t  = FourthOrderDe
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7e4de72b352f316f10c37184d216d382a8613a1b2a00bb20f6184d222b3988e26" name="a7e4de72b352f316f10c37184d216d382a8613a1b2a00bb20f6184d222b3988e26"></a>USE_CCZ4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a7e4de72b352f316f10c37184d216d382a3ecd7281e52069fa7acaa577593cbf54" name="a7e4de72b352f316f10c37184d216d382a3ecd7281e52069fa7acaa577593cbf54"></a>USE_BSSN&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<a id="a7e4de72b352f316f10c37184d216d382" name="a7e4de72b352f316f10c37184d216d382"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e4de72b352f316f10c37184d216d382">&#9670;&nbsp;</a></span>anonymous enum</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class gauge_t  = MovingPunctureGauge, class deriv_t  = FourthOrderDerivatives&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">anonymous enum</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7e4de72b352f316f10c37184d216d382a8613a1b2a00bb20f6184d222b3988e26" name="a7e4de72b352f316f10c37184d216d382a8613a1b2a00bb20f6184d222b3988e26"></a>USE_CCZ4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a7e4de72b352f316f10c37184d216d382a3ecd7281e52069fa7acaa577593cbf54" name="a7e4de72b352f316f10c37184d216d382a3ecd7281e52069fa7acaa577593cbf54"></a>USE_BSSN&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a093eef14ff149d677a4260770d74958bab2a6d11fab531eb53b9330b89d202e88" name="a093eef14ff149d677a4260770d74958bab2a6d11fab531eb53b9330b89d202e88"></a>USE_CCZ4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a093eef14ff149d677a4260770d74958ba93df5b82c4becd3310287a4707b36467" name="a093eef14ff149d677a4260770d74958ba93df5b82c4becd3310287a4707b36467"></a>USE_BSSN&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a819fe2a01524ca389a27e0034fe09f90" name="a819fe2a01524ca389a27e0034fe09f90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a819fe2a01524ca389a27e0034fe09f90">&#9670;&nbsp;</a></span>CCZ4RHS() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a819fe2a01524ca389a27e0034fe09f90">&#9670;&nbsp;</a></span>CCZ4RHS()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class gauge_t  = MovingPunctureGauge, class deriv_t  = FourthOrderDerivatives&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_c_c_z4_r_h_s.html">CCZ4RHS</a>&lt; gauge_t, deriv_t &gt;<a class="el" href="class_c_c_z4_r_h_s.html">::CCZ4RHS</a> </td>
@@ -344,7 +246,7 @@ template&lt;class gauge_t  = MovingPunctureGauge, class deriv_t  = FourthOrderDe
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>a_formulation</em> = <code><a class="el" href="class_c_c_z4_r_h_s.html#a7e4de72b352f316f10c37184d216d382a8613a1b2a00bb20f6184d222b3988e26">USE_CCZ4</a></code>, </td>
+          <td class="paramname"><em>a_formulation</em> = <code><a class="el" href="class_c_c_z4_r_h_s.html#a093eef14ff149d677a4260770d74958bab2a6d11fab531eb53b9330b89d202e88">USE_CCZ4</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -358,66 +260,11 @@ template&lt;class gauge_t  = MovingPunctureGauge, class deriv_t  = FourthOrderDe
           <td></td><td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Constructor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a_params</td><td>The CCZ4 parameters </td></tr>
-    <tr><td class="paramname">a_dx</td><td>The grid spacing </td></tr>
-    <tr><td class="paramname">a_sigma</td><td>Kreiss-Oliger dissipation coefficient </td></tr>
-    <tr><td class="paramname">a_formulation</td><td>Switches between CCZ4, BSSN,... </td></tr>
-    <tr><td class="paramname">a_cosmological_constant</td><td>Value of the cosmological const. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a819fe2a01524ca389a27e0034fe09f90" name="a819fe2a01524ca389a27e0034fe09f90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a819fe2a01524ca389a27e0034fe09f90">&#9670;&nbsp;</a></span>CCZ4RHS() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class gauge_t  = MovingPunctureGauge, class deriv_t  = FourthOrderDerivatives&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_c_c_z4_r_h_s.html">CCZ4RHS</a>&lt; gauge_t, deriv_t &gt;<a class="el" href="class_c_c_z4_r_h_s.html">::CCZ4RHS</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_c_c_z4_r_h_s.html#aedfa3736a2d362a84a2f4a19c7639122">params_t</a>&#160;</td>
-          <td class="paramname"><em>a_params</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>a_dx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>a_sigma</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>a_formulation</em> = <code><a class="el" href="class_c_c_z4_r_h_s.html#a7e4de72b352f316f10c37184d216d382a8613a1b2a00bb20f6184d222b3988e26">USE_CCZ4</a></code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>a_cosmological_constant</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
@@ -436,7 +283,7 @@ template&lt;class gauge_t  = MovingPunctureGauge, class deriv_t  = FourthOrderDe
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a61af734efa2af51879c646bb238ba3fd" name="a61af734efa2af51879c646bb238ba3fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61af734efa2af51879c646bb238ba3fd">&#9670;&nbsp;</a></span>compute() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a61af734efa2af51879c646bb238ba3fd">&#9670;&nbsp;</a></span>compute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -460,109 +307,13 @@ template&lt;class data_t &gt; </div>
 
 </div>
 </div>
-<a id="a61af734efa2af51879c646bb238ba3fd" name="a61af734efa2af51879c646bb238ba3fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61af734efa2af51879c646bb238ba3fd">&#9670;&nbsp;</a></span>compute() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class gauge_t  = MovingPunctureGauge, class deriv_t  = FourthOrderDerivatives&gt; </div>
-<div class="memtemplate">
-template&lt;class data_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="class_c_c_z4_r_h_s.html">CCZ4RHS</a>&lt; gauge_t, deriv_t &gt;::compute </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_cell.html">Cell</a>&lt; data_t &gt;&#160;</td>
-          <td class="paramname"><em>current_cell</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compute function. </p>
-<p >This function orchestrates the calculation of the rhs for one specific grid cell. This function is called by the <a class="el" href="namespace_box_loops.html#ab668f8a8768c5b0680465761e6f80439" title="Performs loop insde the box loop_box and calls compute(...) for all compute classes in the compute_pa...">BoxLoops::loop</a> for each grid cell; there should rarely be a need to call it directly. </p>
-
-</div>
-</div>
 <a id="abd709f2ccbefba83d04bf1ff7cba12b9" name="abd709f2ccbefba83d04bf1ff7cba12b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd709f2ccbefba83d04bf1ff7cba12b9">&#9670;&nbsp;</a></span>rhs_equation() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abd709f2ccbefba83d04bf1ff7cba12b9">&#9670;&nbsp;</a></span>rhs_equation()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class gauge_t , class deriv_t &gt; </div>
-<div class="memtemplate">
-template&lt;class data_t , template&lt; typename &gt; class vars_t, template&lt; typename &gt; class diff2_vars_t&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="class_c_c_z4_r_h_s.html">CCZ4RHS</a>&lt; gauge_t, deriv_t &gt;::rhs_equation </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structvars__t.html">vars_t</a>&lt; data_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>rhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structvars__t.html">vars_t</a>&lt; data_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>vars</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structvars__t.html">vars_t</a>&lt; <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>d1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const diff2_vars_t&lt; <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>d2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structvars__t.html">vars_t</a>&lt; data_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>advec</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Calculates the rhs for CCZ4. </p>
-<p >Calculates the right hand side for CCZ4 and calls rhs_gauge for the gauge conditions The variables (the template argument <a class="el" href="structvars__t.html">vars_t</a>) must contain at least the members: chi, h[i][j], Gamma[i], A[i][j], Theta, lapse and shift[i]. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rhs</td><td>Reference to the variables into which the output right hand side is written </td></tr>
-    <tr><td class="paramname">vars</td><td>The values of the current variables </td></tr>
-    <tr><td class="paramname">d1</td><td>First derivative of the variables </td></tr>
-    <tr><td class="paramname">d2</td><td>The second derivative the variables </td></tr>
-    <tr><td class="paramname">advec</td><td>The advection derivatives of the variables </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="abd709f2ccbefba83d04bf1ff7cba12b9" name="abd709f2ccbefba83d04bf1ff7cba12b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd709f2ccbefba83d04bf1ff7cba12b9">&#9670;&nbsp;</a></span>rhs_equation() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class gauge_t  = MovingPunctureGauge, class deriv_t  = FourthOrderDerivatives&gt; </div>
 <div class="memtemplate">
 template&lt;class data_t , template&lt; typename &gt; class vars_t, template&lt; typename &gt; class diff2_vars_t&gt; </div>
 <table class="mlabels">
@@ -779,9 +530,8 @@ template&lt;class gauge_t  = MovingPunctureGauge, class deriv_t  = FourthOrderDe
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/231753c7556494c0059437b9ced155396c91596e/Source/CCZ4/<a class="el" href="_c_c_z4_8hpp_source.html">CCZ4.hpp</a></li>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/231753c7556494c0059437b9ced155396c91596e/Source/CCZ4/<a class="el" href="_c_c_z4_r_h_s_8hpp_source.html">CCZ4RHS.hpp</a></li>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/231753c7556494c0059437b9ced155396c91596e/Source/CCZ4/<a class="el" href="_c_c_z4_r_h_s_8impl_8hpp_source.html">CCZ4RHS.impl.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/2eb8949839ce945a951ddb37f377d982f7950888/Source/CCZ4/<a class="el" href="_c_c_z4_r_h_s_8hpp_source.html">CCZ4RHS.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/2eb8949839ce945a951ddb37f377d982f7950888/Source/CCZ4/<a class="el" href="_c_c_z4_r_h_s_8impl_8hpp_source.html">CCZ4RHS.impl.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
