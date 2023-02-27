@@ -13,7 +13,7 @@ var searchData=
   ['si_10',['Si',['../structemtensor__t.html#a33217ab60c7610dc3a3700df1203eed4',1,'emtensor_t']]],
   ['sigma_11',['sigma',['../class_simulation_parameters_base.html#afc0eb1a376563591a77ed59a388ec58a',1,'SimulationParametersBase']]],
   ['sij_12',['Sij',['../structemtensor__t.html#a9d6124b810821b40e43e52b1af815dc8',1,'emtensor_t']]],
-  ['simd_5flen_13',['simd_len',['../structsimd__traits.html#ad0768af61329507b587c77bac58d4d41',1,'simd_traits::simd_len()'],['../structsimd__base.html#a4d9f3ebd35924a64e75851f50ae46639',1,'simd_base::simd_len()']]],
+  ['simd_5flen_13',['simd_len',['../structsimd__traits.html#ad0768af61329507b587c77bac58d4d41',1,'simd_traits::simd_len()'],['../structsimd.html#abca7132459ead009b1adeca33abcc03b',1,'simd::simd_len()'],['../structsimd__base.html#a4d9f3ebd35924a64e75851f50ae46639',1,'simd_base::simd_len()']]],
   ['simpson_14',['simpson',['../class_integration_method.html#a271f91f13dadc1f691303e37ad229c7b',1,'IntegrationMethod']]],
   ['sommerfeld_5fboundaries_5fexist_15',['sommerfeld_boundaries_exist',['../struct_boundary_conditions_1_1params__t.html#a33def61f0656a852bf53a1dec7ad0fad',1,'BoundaryConditions::params_t']]],
   ['spin_16',['spin',['../struct_kerr_b_h_1_1params__t.html#a36d8273b7bd3dc77e102de985269be26',1,'KerrBH::params_t']]],
