@@ -7,7 +7,8 @@ var searchData=
   ['amrinterpolatortest_2ecpp_4',['AMRInterpolatorTest.cpp',['../_a_m_r_interpolator_test_8cpp.html',1,'']]],
   ['amrreductions_2ehpp_5',['AMRReductions.hpp',['../_a_m_r_reductions_8hpp.html',1,'']]],
   ['amrreductions_2eimpl_2ehpp_6',['AMRReductions.impl.hpp',['../_a_m_r_reductions_8impl_8hpp.html',1,'']]],
-  ['arraytools_2ehpp_7',['ArrayTools.hpp',['../_array_tools_8hpp.html',1,'']]],
-  ['avx_2ehpp_8',['avx.hpp',['../avx_8hpp.html',1,'']]],
-  ['avx512_2ehpp_9',['avx512.hpp',['../avx512_8hpp.html',1,'']]]
+  ['arm_2ehpp_7',['arm.hpp',['../arm_8hpp.html',1,'']]],
+  ['arraytools_2ehpp_8',['ArrayTools.hpp',['../_array_tools_8hpp.html',1,'']]],
+  ['avx_2ehpp_9',['avx.hpp',['../avx_8hpp.html',1,'']]],
+  ['avx512_2ehpp_10',['avx512.hpp',['../avx512_8hpp.html',1,'']]]
 ];
