@@ -89,12 +89,15 @@ Inheritance diagram for GRAMRLevel:</div>
  <div class="center">
   <img src="class_g_r_a_m_r_level.png" usemap="#GRAMRLevel_map" alt=""/>
   <map id="GRAMRLevel_map" name="GRAMRLevel_map">
-<area href="class_interp_source.html" alt="InterpSource" shape="rect" coords="465,0,641,24"/>
-<area href="class_binary_b_h_level.html" alt="BinaryBHLevel" shape="rect" coords="0,112,176,136"/>
-<area href="class_interpolator_test_level.html" alt="InterpolatorTestLevel" shape="rect" coords="186,112,362,136"/>
-<area href="class_kerr_b_h_level.html" alt="KerrBHLevel" shape="rect" coords="372,112,548,136"/>
-<area href="class_scalar_field_level.html" title="A class for the evolution of a scalar field, minimally coupled to gravity." alt="ScalarFieldLevel" shape="rect" coords="558,112,734,136"/>
-<area href="class_spherical_extraction_test_level.html" alt="SphericalExtractionTestLevel" shape="rect" coords="744,112,920,136"/>
+<area href="class_interp_source.html" alt="InterpSource&lt; N_DIMS &gt;" shape="rect" coords="188,0,366,24"/>
+<area href="class_apparent_horizon_test2_d_level.html" alt="ApparentHorizonTest2DLevel" shape="rect" coords="282,112,460,136"/>
+<area href="class_apparent_horizon_test3_d_level.html" alt="ApparentHorizonTest3DLevel" shape="rect" coords="282,168,460,192"/>
+<area href="class_binary_b_h_level.html" alt="BinaryBHLevel" shape="rect" coords="282,224,460,248"/>
+<area href="class_interpolator_test_level.html" alt="InterpolatorTestLevel" shape="rect" coords="282,280,460,304"/>
+<area href="class_kerr_b_h_level.html" alt="KerrBHLevel" shape="rect" coords="282,336,460,360"/>
+<area href="class_scalar_field_level.html" title="A class for the evolution of a scalar field, minimally coupled to gravity." alt="ScalarFieldLevel" shape="rect" coords="282,392,460,416"/>
+<area href="class_spherical_extraction_test_level.html" alt="SphericalExtractionTestLevel" shape="rect" coords="282,448,460,472"/>
+<area href="class_spherical_extraction_test_level.html" alt="SphericalExtractionTestLevel" shape="rect" coords="282,504,460,528"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -142,18 +145,23 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa7c768f5ff87617b79f61974431ab718"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac50ec29e5720c6494d16bf98a5e1a1c4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r_level.html#ac50ec29e5720c6494d16bf98a5e1a1c4">specificUpdateODE</a> (<a class="el" href="class_g_r_level_data.html">GRLevelData</a> &amp;a_soln, const <a class="el" href="class_g_r_level_data.html">GRLevelData</a> &amp;a_rhs, Real a_dt)</td></tr>
 <tr class="separator:ac50ec29e5720c6494d16bf98a5e1a1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91539c8fd9fce3689636a7d467a1747d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r_level.html#a91539c8fd9fce3689636a7d467a1747d">get_dx</a> () const</td></tr>
-<tr class="separator:a91539c8fd9fce3689636a7d467a1747d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc760757540082319cad5345d351d375"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r_level.html#afc760757540082319cad5345d351d375">get_dx</a> (int dir=0) const</td></tr>
+<tr class="separator:afc760757540082319cad5345d351d375"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a216e12c98bdfe2b2f1472861d0e4e69f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r_level.html#a216e12c98bdfe2b2f1472861d0e4e69f">at_level_timestep_multiple</a> (int a_level) const</td></tr>
 <tr class="memdesc:a216e12c98bdfe2b2f1472861d0e4e69f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if m_time is the same as the time at the end of the current timestep on level a_level and false otherwise Useful to check whether to calculate something in postTimeStep (which might only be needed at the end of a_level's timestep)  <a href="class_g_r_a_m_r_level.html#a216e12c98bdfe2b2f1472861d0e4e69f">More...</a><br /></td></tr>
 <tr class="separator:a216e12c98bdfe2b2f1472861d0e4e69f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2296c8a960bcfaa8f6a690b191fdd79"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r_level.html#af2296c8a960bcfaa8f6a690b191fdd79">fillAllGhosts</a> (const <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a> var_type=VariableType::evolution, const Interval &amp;a_comps=Interval(0, std::numeric_limits&lt; int &gt;::max()))</td></tr>
 <tr class="memdesc:af2296c8a960bcfaa8f6a690b191fdd79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill all [either] evolution or diagnostic ghost cells.  <a href="class_g_r_a_m_r_level.html#af2296c8a960bcfaa8f6a690b191fdd79">More...</a><br /></td></tr>
 <tr class="separator:af2296c8a960bcfaa8f6a690b191fdd79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b78ebdd77e4edff70c2068f094d6a18"><td class="memItemLeft" align="right" valign="top">virtual const LevelData&lt; FArrayBox &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#a6b78ebdd77e4edff70c2068f094d6a18">getLevelData</a> (const <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a> var_type=VariableType::evolution) const =0</td></tr>
-<tr class="separator:a6b78ebdd77e4edff70c2068f094d6a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1621b9fe04678231e5fabf0d9c025cd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#aa1621b9fe04678231e5fabf0d9c025cd">contains</a> (const std::array&lt; double, CH_SPACEDIM &gt; &amp;point) const =0</td></tr>
-<tr class="separator:aa1621b9fe04678231e5fabf0d9c025cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_interp_source"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_interp_source')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_interp_source.html">InterpSource&lt; N_DIMS &gt;</a></td></tr>
+<tr class="memitem:a43f5a10f228ed66f154b686c30aabc8a inherit pub_methods_class_interp_source"><td class="memItemLeft" align="right" valign="top">virtual const LevelData&lt; FArrayBox &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#a43f5a10f228ed66f154b686c30aabc8a">getLevelData</a> (const <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a> var_type=VariableType::evolution) const =0</td></tr>
+<tr class="separator:a43f5a10f228ed66f154b686c30aabc8a inherit pub_methods_class_interp_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7e2140fffb24b4616ae3bc4f8dd80c inherit pub_methods_class_interp_source"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#abd7e2140fffb24b4616ae3bc4f8dd80c">contains</a> (const std::array&lt; double, N_DIMS &gt; &amp;point) const =0</td></tr>
+<tr class="separator:abd7e2140fffb24b4616ae3bc4f8dd80c inherit pub_methods_class_interp_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a434a951a185ba7b058fb28f36ec194fe inherit pub_methods_class_interp_source"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#a434a951a185ba7b058fb28f36ec194fe">get_dx</a> (int dir) const =0</td></tr>
+<tr class="separator:a434a951a185ba7b058fb28f36ec194fe inherit pub_methods_class_interp_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae1e33b3c1959a48a5aac6463193d217 inherit pub_methods_class_interp_source"><td class="memItemLeft" align="right" valign="top">virtual std::array&lt; double, N_DIMS &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#aae1e33b3c1959a48a5aac6463193d217">get_dxs</a> () const</td></tr>
+<tr class="separator:aae1e33b3c1959a48a5aac6463193d217 inherit pub_methods_class_interp_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -481,7 +489,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Virtual function which tags cells for refinement based on just evolution variables state. </p>
 
-<p>Reimplemented in <a class="el" href="class_interpolator_test_level.html#a3934877af4eb511e76c8002b4c00cc29">InterpolatorTestLevel</a>, and <a class="el" href="class_spherical_extraction_test_level.html#afe85f2d37e2a0fb111454f207d91721d">SphericalExtractionTestLevel</a>.</p>
+<p>Reimplemented in <a class="el" href="class_interpolator_test_level.html#a3934877af4eb511e76c8002b4c00cc29">InterpolatorTestLevel</a>, <a class="el" href="class_apparent_horizon_test2_d_level.html#a2d0ede77c705a7368eb4bb22d2cf6da1">ApparentHorizonTest2DLevel</a>, <a class="el" href="class_apparent_horizon_test3_d_level.html#abfd0fb280b7c040bc066b713c4e013fb">ApparentHorizonTest3DLevel</a>, <a class="el" href="class_spherical_extraction_test_level.html#afe85f2d37e2a0fb111454f207d91721d">SphericalExtractionTestLevel</a>, and <a class="el" href="class_spherical_extraction_test_level.html#afe85f2d37e2a0fb111454f207d91721d">SphericalExtractionTestLevel</a>.</p>
 
 </div>
 </div>
@@ -536,9 +544,6 @@ Private Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool GRAMRLevel::contains </td>
@@ -548,14 +553,7 @@ Private Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Implements <a class="el" href="class_interp_source.html#aa1621b9fe04678231e5fabf0d9c025cd">InterpSource</a>.</p>
 
 </div>
 </div>
@@ -1066,20 +1064,31 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a91539c8fd9fce3689636a7d467a1747d" name="a91539c8fd9fce3689636a7d467a1747d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91539c8fd9fce3689636a7d467a1747d">&#9670;&#160;</a></span>get_dx()</h2>
+<a id="afc760757540082319cad5345d351d375" name="afc760757540082319cad5345d351d375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc760757540082319cad5345d351d375">&#9670;&#160;</a></span>get_dx()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double GRAMRLevel::get_dx </td>
+          <td class="memname"><a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double GRAMRLevel::get_dx </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dir</em> = <code>0</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_interp_source.html#a434a951a185ba7b058fb28f36ec194fe">InterpSource&lt; N_DIMS &gt;</a>.</p>
 
 </div>
 </div>
@@ -1107,7 +1116,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_interp_source.html#a6b78ebdd77e4edff70c2068f094d6a18">InterpSource</a>.</p>
+<p>Implements <a class="el" href="class_interp_source.html#a43f5a10f228ed66f154b686c30aabc8a">InterpSource&lt; N_DIMS &gt;</a>.</p>
 
 </div>
 </div>
@@ -1192,7 +1201,7 @@ Private Member Functions</h2></td></tr>
 
 <p>(Pure) virtual function for the initial data calculation </p>
 
-<p>Implemented in <a class="el" href="class_scalar_field_level.html#aadd8f17da69e76e2d0d16c482eed3b96">ScalarFieldLevel</a>, <a class="el" href="class_interpolator_test_level.html#a129e4498f679f5ad36995a0fbc8be499">InterpolatorTestLevel</a>, <a class="el" href="class_spherical_extraction_test_level.html#ae61ba7f5de73aa90fabcef7cdb8117a6">SphericalExtractionTestLevel</a>, <a class="el" href="class_binary_b_h_level.html#a8dc0c3fbfec641da9e3517c1b801afc0">BinaryBHLevel</a>, and <a class="el" href="class_kerr_b_h_level.html#a125d87c9fac23841cc19132cde860b4e">KerrBHLevel</a>.</p>
+<p>Implemented in <a class="el" href="class_interpolator_test_level.html#a129e4498f679f5ad36995a0fbc8be499">InterpolatorTestLevel</a>, <a class="el" href="class_apparent_horizon_test2_d_level.html#aef894ef2d4a55cf39797b3e94ed189d0">ApparentHorizonTest2DLevel</a>, <a class="el" href="class_apparent_horizon_test3_d_level.html#ab52fb1f157414abc5c13308a93a29693">ApparentHorizonTest3DLevel</a>, <a class="el" href="class_spherical_extraction_test_level.html#ae61ba7f5de73aa90fabcef7cdb8117a6">SphericalExtractionTestLevel</a>, <a class="el" href="class_spherical_extraction_test_level.html#ae61ba7f5de73aa90fabcef7cdb8117a6">SphericalExtractionTestLevel</a>, <a class="el" href="class_binary_b_h_level.html#a8dc0c3fbfec641da9e3517c1b801afc0">BinaryBHLevel</a>, <a class="el" href="class_kerr_b_h_level.html#a125d87c9fac23841cc19132cde860b4e">KerrBHLevel</a>, and <a class="el" href="class_scalar_field_level.html#a5cbfbecbdf4762f49bc94f48ec47cff8">ScalarFieldLevel</a>.</p>
 
 </div>
 </div>
@@ -1440,7 +1449,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Virtual function for the problem specific parts of Advance. </p>
 
-<p>Reimplemented in <a class="el" href="class_scalar_field_level.html#a0dd82d4be2026a40b501961f4ad739fe">ScalarFieldLevel</a>, <a class="el" href="class_binary_b_h_level.html#aa4864d9be0b58739b482175986423b80">BinaryBHLevel</a>, and <a class="el" href="class_kerr_b_h_level.html#a709b8a3e7c534cdae9aab11038bda018">KerrBHLevel</a>.</p>
+<p>Reimplemented in <a class="el" href="class_binary_b_h_level.html#aa4864d9be0b58739b482175986423b80">BinaryBHLevel</a>, <a class="el" href="class_kerr_b_h_level.html#a709b8a3e7c534cdae9aab11038bda018">KerrBHLevel</a>, and <a class="el" href="class_scalar_field_level.html#a9c64f6496baabc54b6a25e1f9dbf582f">ScalarFieldLevel</a>.</p>
 
 </div>
 </div>
@@ -1484,7 +1493,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_scalar_field_level.html#ad9184d811ad5aba75e8c62271e4a19b5">ScalarFieldLevel</a>, <a class="el" href="class_interpolator_test_level.html#acd96292a12a20b9067ee8f30a89dc0bd">InterpolatorTestLevel</a>, <a class="el" href="class_spherical_extraction_test_level.html#a010c9a3b7405321ef0e8e3d7941bf051">SphericalExtractionTestLevel</a>, <a class="el" href="class_binary_b_h_level.html#ac3d361f686ad84d64dba92be22fdd8d3">BinaryBHLevel</a>, and <a class="el" href="class_kerr_b_h_level.html#a70299c80f1a74e52e5c1fdb2c8d90373">KerrBHLevel</a>.</p>
+<p>Implemented in <a class="el" href="class_interpolator_test_level.html#acd96292a12a20b9067ee8f30a89dc0bd">InterpolatorTestLevel</a>, <a class="el" href="class_apparent_horizon_test2_d_level.html#a29de2543ec46dc1a6cef4607a2fcb320">ApparentHorizonTest2DLevel</a>, <a class="el" href="class_apparent_horizon_test3_d_level.html#a6d3e1cc1cd0a970942c3f678c545a85a">ApparentHorizonTest3DLevel</a>, <a class="el" href="class_spherical_extraction_test_level.html#a010c9a3b7405321ef0e8e3d7941bf051">SphericalExtractionTestLevel</a>, <a class="el" href="class_spherical_extraction_test_level.html#a010c9a3b7405321ef0e8e3d7941bf051">SphericalExtractionTestLevel</a>, <a class="el" href="class_binary_b_h_level.html#ac3d361f686ad84d64dba92be22fdd8d3">BinaryBHLevel</a>, <a class="el" href="class_kerr_b_h_level.html#a70299c80f1a74e52e5c1fdb2c8d90373">KerrBHLevel</a>, and <a class="el" href="class_scalar_field_level.html#acad3cf50a360458fc60ba75d049605f2">ScalarFieldLevel</a>.</p>
 
 </div>
 </div>
@@ -1513,7 +1522,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Virtual function for the problem specific parts of postTimeStep. </p>
 
-<p>Reimplemented in <a class="el" href="class_binary_b_h_level.html#afa5c244eaa14e787adf27ebdcadd71cc">BinaryBHLevel</a>.</p>
+<p>Reimplemented in <a class="el" href="class_binary_b_h_level.html#afa5c244eaa14e787adf27ebdcadd71cc">BinaryBHLevel</a>, <a class="el" href="class_kerr_b_h_level.html#ad9a3070c278fdb77b47d6ffe175c4248">KerrBHLevel</a>, and <a class="el" href="class_scalar_field_level.html#aef5324ed541a7b2fedc22291e10f4d9d">ScalarFieldLevel</a>.</p>
 
 </div>
 </div>
@@ -1557,7 +1566,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_scalar_field_level.html#acff46b4f913400b680e2c548d12ade6f">ScalarFieldLevel</a>, <a class="el" href="class_binary_b_h_level.html#a63d2fed8b1f7a5ee82b5cd0c20fde1e4">BinaryBHLevel</a>, and <a class="el" href="class_kerr_b_h_level.html#a7d84cbe98f00b622d092f565f0db007b">KerrBHLevel</a>.</p>
+<p>Reimplemented in <a class="el" href="class_binary_b_h_level.html#a63d2fed8b1f7a5ee82b5cd0c20fde1e4">BinaryBHLevel</a>, <a class="el" href="class_kerr_b_h_level.html#a7d84cbe98f00b622d092f565f0db007b">KerrBHLevel</a>, and <a class="el" href="class_scalar_field_level.html#a7605d8230629b9444724f120f7d67e85">ScalarFieldLevel</a>.</p>
 
 </div>
 </div>
@@ -2049,8 +2058,8 @@ Private Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/GRChomboCore/<a class="el" href="_g_r_a_m_r_level_8hpp_source.html">GRAMRLevel.hpp</a></li>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/GRChomboCore/<a class="el" href="_g_r_a_m_r_level_8cpp.html">GRAMRLevel.cpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/GRChomboCore/<a class="el" href="_g_r_a_m_r_level_8hpp_source.html">GRAMRLevel.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/GRChomboCore/<a class="el" href="_g_r_a_m_r_level_8cpp.html">GRAMRLevel.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

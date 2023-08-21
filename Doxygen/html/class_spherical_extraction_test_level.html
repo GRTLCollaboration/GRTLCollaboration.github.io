@@ -86,7 +86,9 @@ Inheritance diagram for SphericalExtractionTestLevel:</div>
   <img src="class_spherical_extraction_test_level.png" usemap="#SphericalExtractionTestLevel_map" alt=""/>
   <map id="SphericalExtractionTestLevel_map" name="SphericalExtractionTestLevel_map">
 <area href="class_g_r_a_m_r_level.html" alt="GRAMRLevel" shape="rect" coords="93,56,269,80"/>
-<area href="class_interp_source.html" alt="InterpSource" shape="rect" coords="186,0,362,24"/>
+<area href="class_g_r_a_m_r_level.html" alt="GRAMRLevel" shape="rect" coords="465,56,641,80"/>
+<area href="class_interp_source.html" alt="InterpSource&lt; N_DIMS &gt;" shape="rect" coords="186,0,362,24"/>
+<area href="class_interp_source.html" alt="InterpSource&lt; N_DIMS &gt;" shape="rect" coords="558,0,734,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -100,6 +102,16 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:afe85f2d37e2a0fb111454f207d91721d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_extraction_test_level.html#afe85f2d37e2a0fb111454f207d91721d">computeTaggingCriterion</a> (FArrayBox &amp;tagging_criterion, const FArrayBox &amp;current_state)</td></tr>
 <tr class="memdesc:afe85f2d37e2a0fb111454f207d91721d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual function which tags cells for refinement based on just evolution variables state.  <a href="class_spherical_extraction_test_level.html#afe85f2d37e2a0fb111454f207d91721d">More...</a><br /></td></tr>
 <tr class="separator:afe85f2d37e2a0fb111454f207d91721d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae61ba7f5de73aa90fabcef7cdb8117a6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_extraction_test_level.html#ae61ba7f5de73aa90fabcef7cdb8117a6">initialData</a> ()</td></tr>
+<tr class="memdesc:ae61ba7f5de73aa90fabcef7cdb8117a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Pure) virtual function for the initial data calculation  <a href="class_spherical_extraction_test_level.html#ae61ba7f5de73aa90fabcef7cdb8117a6">More...</a><br /></td></tr>
+<tr class="separator:ae61ba7f5de73aa90fabcef7cdb8117a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a010c9a3b7405321ef0e8e3d7941bf051"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_extraction_test_level.html#a010c9a3b7405321ef0e8e3d7941bf051">specificEvalRHS</a> (<a class="el" href="class_g_r_level_data.html">GRLevelData</a> &amp;a_soln, <a class="el" href="class_g_r_level_data.html">GRLevelData</a> &amp;a_rhs, const double a_time)</td></tr>
+<tr class="separator:a010c9a3b7405321ef0e8e3d7941bf051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe85f2d37e2a0fb111454f207d91721d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_extraction_test_level.html#afe85f2d37e2a0fb111454f207d91721d">computeTaggingCriterion</a> (FArrayBox &amp;tagging_criterion, const FArrayBox &amp;current_state)</td></tr>
+<tr class="memdesc:afe85f2d37e2a0fb111454f207d91721d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual function which tags cells for refinement based on just evolution variables state.  <a href="class_spherical_extraction_test_level.html#afe85f2d37e2a0fb111454f207d91721d">More...</a><br /></td></tr>
+<tr class="separator:afe85f2d37e2a0fb111454f207d91721d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a768ef403f8502afbce901ca57cc7f8fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_extraction_test_level.html#a768ef403f8502afbce901ca57cc7f8fe">GRAMRLevel</a> (<a class="el" href="class_g_r_a_m_r.html">GRAMR</a> &amp;gr_amr, const <a class="el" href="class_simulation_parameters.html">SimulationParameters</a> &amp;a_p, int a_verbosity)</td></tr>
+<tr class="separator:a768ef403f8502afbce901ca57cc7f8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a768ef403f8502afbce901ca57cc7f8fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_extraction_test_level.html#a768ef403f8502afbce901ca57cc7f8fe">GRAMRLevel</a> (<a class="el" href="class_g_r_a_m_r.html">GRAMR</a> &amp;gr_amr, const <a class="el" href="class_simulation_parameters.html">SimulationParameters</a> &amp;a_p, int a_verbosity)</td></tr>
 <tr class="separator:a768ef403f8502afbce901ca57cc7f8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -153,18 +165,23 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aa7c768f5ff87617b79f61974431ab718 inherit pub_methods_class_g_r_a_m_r_level"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac50ec29e5720c6494d16bf98a5e1a1c4 inherit pub_methods_class_g_r_a_m_r_level"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r_level.html#ac50ec29e5720c6494d16bf98a5e1a1c4">specificUpdateODE</a> (<a class="el" href="class_g_r_level_data.html">GRLevelData</a> &amp;a_soln, const <a class="el" href="class_g_r_level_data.html">GRLevelData</a> &amp;a_rhs, Real a_dt)</td></tr>
 <tr class="separator:ac50ec29e5720c6494d16bf98a5e1a1c4 inherit pub_methods_class_g_r_a_m_r_level"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91539c8fd9fce3689636a7d467a1747d inherit pub_methods_class_g_r_a_m_r_level"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r_level.html#a91539c8fd9fce3689636a7d467a1747d">get_dx</a> () const</td></tr>
-<tr class="separator:a91539c8fd9fce3689636a7d467a1747d inherit pub_methods_class_g_r_a_m_r_level"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc760757540082319cad5345d351d375 inherit pub_methods_class_g_r_a_m_r_level"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r_level.html#afc760757540082319cad5345d351d375">get_dx</a> (int dir=0) const</td></tr>
+<tr class="separator:afc760757540082319cad5345d351d375 inherit pub_methods_class_g_r_a_m_r_level"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a216e12c98bdfe2b2f1472861d0e4e69f inherit pub_methods_class_g_r_a_m_r_level"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r_level.html#a216e12c98bdfe2b2f1472861d0e4e69f">at_level_timestep_multiple</a> (int a_level) const</td></tr>
 <tr class="memdesc:a216e12c98bdfe2b2f1472861d0e4e69f inherit pub_methods_class_g_r_a_m_r_level"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if m_time is the same as the time at the end of the current timestep on level a_level and false otherwise Useful to check whether to calculate something in postTimeStep (which might only be needed at the end of a_level's timestep)  <a href="class_g_r_a_m_r_level.html#a216e12c98bdfe2b2f1472861d0e4e69f">More...</a><br /></td></tr>
 <tr class="separator:a216e12c98bdfe2b2f1472861d0e4e69f inherit pub_methods_class_g_r_a_m_r_level"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2296c8a960bcfaa8f6a690b191fdd79 inherit pub_methods_class_g_r_a_m_r_level"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r_level.html#af2296c8a960bcfaa8f6a690b191fdd79">fillAllGhosts</a> (const <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a> var_type=VariableType::evolution, const Interval &amp;a_comps=Interval(0, std::numeric_limits&lt; int &gt;::max()))</td></tr>
 <tr class="memdesc:af2296c8a960bcfaa8f6a690b191fdd79 inherit pub_methods_class_g_r_a_m_r_level"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill all [either] evolution or diagnostic ghost cells.  <a href="class_g_r_a_m_r_level.html#af2296c8a960bcfaa8f6a690b191fdd79">More...</a><br /></td></tr>
 <tr class="separator:af2296c8a960bcfaa8f6a690b191fdd79 inherit pub_methods_class_g_r_a_m_r_level"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b78ebdd77e4edff70c2068f094d6a18"><td class="memItemLeft" align="right" valign="top">virtual const LevelData&lt; FArrayBox &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#a6b78ebdd77e4edff70c2068f094d6a18">getLevelData</a> (const <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a> var_type=VariableType::evolution) const =0</td></tr>
-<tr class="separator:a6b78ebdd77e4edff70c2068f094d6a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1621b9fe04678231e5fabf0d9c025cd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#aa1621b9fe04678231e5fabf0d9c025cd">contains</a> (const std::array&lt; double, CH_SPACEDIM &gt; &amp;point) const =0</td></tr>
-<tr class="separator:aa1621b9fe04678231e5fabf0d9c025cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_interp_source"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_interp_source')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_interp_source.html">InterpSource&lt; N_DIMS &gt;</a></td></tr>
+<tr class="memitem:a43f5a10f228ed66f154b686c30aabc8a inherit pub_methods_class_interp_source"><td class="memItemLeft" align="right" valign="top">virtual const LevelData&lt; FArrayBox &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#a43f5a10f228ed66f154b686c30aabc8a">getLevelData</a> (const <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a> var_type=VariableType::evolution) const =0</td></tr>
+<tr class="separator:a43f5a10f228ed66f154b686c30aabc8a inherit pub_methods_class_interp_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7e2140fffb24b4616ae3bc4f8dd80c inherit pub_methods_class_interp_source"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#abd7e2140fffb24b4616ae3bc4f8dd80c">contains</a> (const std::array&lt; double, N_DIMS &gt; &amp;point) const =0</td></tr>
+<tr class="separator:abd7e2140fffb24b4616ae3bc4f8dd80c inherit pub_methods_class_interp_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a434a951a185ba7b058fb28f36ec194fe inherit pub_methods_class_interp_source"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#a434a951a185ba7b058fb28f36ec194fe">get_dx</a> (int dir) const =0</td></tr>
+<tr class="separator:a434a951a185ba7b058fb28f36ec194fe inherit pub_methods_class_interp_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae1e33b3c1959a48a5aac6463193d217 inherit pub_methods_class_interp_source"><td class="memItemLeft" align="right" valign="top">virtual std::array&lt; double, N_DIMS &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#aae1e33b3c1959a48a5aac6463193d217">get_dxs</a> () const</td></tr>
+<tr class="separator:aae1e33b3c1959a48a5aac6463193d217 inherit pub_methods_class_interp_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_g_r_a_m_r_level"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_g_r_a_m_r_level')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_g_r_a_m_r_level.html">GRAMRLevel</a></td></tr>
 <tr class="memitem:a3d5c18903806d2ef425662b81503b0b0 inherit pub_static_methods_class_g_r_a_m_r_level"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_g_r_a_m_r_level.html">GRAMRLevel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r_level.html#a3d5c18903806d2ef425662b81503b0b0">gr_cast</a> (const AMRLevel *const amr_level_ptr)</td></tr>
 <tr class="memdesc:a3d5c18903806d2ef425662b81503b0b0 inherit pub_static_methods_class_g_r_a_m_r_level"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do casting from AMRLevel to <a class="el" href="class_g_r_a_m_r_level.html">GRAMRLevel</a> and stop if this isn't possible.  <a href="class_g_r_a_m_r_level.html#a3d5c18903806d2ef425662b81503b0b0">More...</a><br /></td></tr>
@@ -246,7 +263,47 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="afe85f2d37e2a0fb111454f207d91721d" name="afe85f2d37e2a0fb111454f207d91721d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe85f2d37e2a0fb111454f207d91721d">&#9670;&#160;</a></span>computeTaggingCriterion()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afe85f2d37e2a0fb111454f207d91721d">&#9670;&#160;</a></span>computeTaggingCriterion() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SphericalExtractionTestLevel::computeTaggingCriterion </td>
+          <td>(</td>
+          <td class="paramtype">FArrayBox &amp;&#160;</td>
+          <td class="paramname"><em>tagging_criterion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FArrayBox &amp;&#160;</td>
+          <td class="paramname"><em>current_state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Virtual function which tags cells for refinement based on just evolution variables state. </p>
+
+<p>Reimplemented from <a class="el" href="class_g_r_a_m_r_level.html#a61c2af58b3a455d4674a1babaa4538a9">GRAMRLevel</a>.</p>
+
+</div>
+</div>
+<a id="afe85f2d37e2a0fb111454f207d91721d" name="afe85f2d37e2a0fb111454f207d91721d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe85f2d37e2a0fb111454f207d91721d">&#9670;&#160;</a></span>computeTaggingCriterion() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -286,7 +343,49 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a768ef403f8502afbce901ca57cc7f8fe" name="a768ef403f8502afbce901ca57cc7f8fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a768ef403f8502afbce901ca57cc7f8fe">&#9670;&#160;</a></span>GRAMRLevel()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a768ef403f8502afbce901ca57cc7f8fe">&#9670;&#160;</a></span>GRAMRLevel() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GRAMRLevel::GRAMRLevel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_g_r_a_m_r.html">GRAMR</a> &amp;&#160;</td>
+          <td class="paramname"><em>gr_amr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_simulation_parameters.html">SimulationParameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>a_p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a_verbosity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a768ef403f8502afbce901ca57cc7f8fe" name="a768ef403f8502afbce901ca57cc7f8fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a768ef403f8502afbce901ca57cc7f8fe">&#9670;&#160;</a></span>GRAMRLevel() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,7 +427,36 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="ae61ba7f5de73aa90fabcef7cdb8117a6" name="ae61ba7f5de73aa90fabcef7cdb8117a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae61ba7f5de73aa90fabcef7cdb8117a6">&#9670;&#160;</a></span>initialData()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae61ba7f5de73aa90fabcef7cdb8117a6">&#9670;&#160;</a></span>initialData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SphericalExtractionTestLevel::initialData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Pure) virtual function for the initial data calculation </p>
+
+<p>Implements <a class="el" href="class_g_r_a_m_r_level.html#a34a30f60d1f636990248bcd360c591e7">GRAMRLevel</a>.</p>
+
+</div>
+</div>
+<a id="ae61ba7f5de73aa90fabcef7cdb8117a6" name="ae61ba7f5de73aa90fabcef7cdb8117a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae61ba7f5de73aa90fabcef7cdb8117a6">&#9670;&#160;</a></span>initialData() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -357,7 +485,51 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a010c9a3b7405321ef0e8e3d7941bf051" name="a010c9a3b7405321ef0e8e3d7941bf051"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a010c9a3b7405321ef0e8e3d7941bf051">&#9670;&#160;</a></span>specificEvalRHS()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a010c9a3b7405321ef0e8e3d7941bf051">&#9670;&#160;</a></span>specificEvalRHS() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SphericalExtractionTestLevel::specificEvalRHS </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_g_r_level_data.html">GRLevelData</a> &amp;&#160;</td>
+          <td class="paramname"><em>a_soln</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_g_r_level_data.html">GRLevelData</a> &amp;&#160;</td>
+          <td class="paramname"><em>a_rhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>a_time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_g_r_a_m_r_level.html#aa7c768f5ff87617b79f61974431ab718">GRAMRLevel</a>.</p>
+
+</div>
+</div>
+<a id="a010c9a3b7405321ef0e8e3d7941bf051" name="a010c9a3b7405321ef0e8e3d7941bf051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a010c9a3b7405321ef0e8e3d7941bf051">&#9670;&#160;</a></span>specificEvalRHS() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -423,8 +595,9 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Tests/SphericalExtractionTest/<a class="el" href="_spherical_extraction_test_level_8hpp_source.html">SphericalExtractionTestLevel.hpp</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Tests/SphericalExtractionTest/<a class="el" href="_spherical_extraction_test_level_8hpp_source.html">SphericalExtractionTestLevel.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Tests/SphericalExtractionUniformTest/<a class="el" href="_spherical_extraction_uniform_test_level_8hpp_source.html">SphericalExtractionUniformTestLevel.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

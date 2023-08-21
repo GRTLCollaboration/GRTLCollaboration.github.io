@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/AMRInterpolator/InterpSource.hpp Source File</title>
+<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/AMRInterpolator/InterpSource.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -95,22 +95,31 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// Chombo namespace</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;UsingNamespace.H&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// Abstrace base class to get the FABs out of an AMRLevel</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_interp_source.html">   20</a></span><span class="keyword">class </span><a class="code hl_class" href="class_interp_source.html">InterpSource</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// Abstrace base class to identify points in an AMRLevel</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_interp_source.html">   20</a></span><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> N_DIMS = CH_SPACEDIM&gt; <span class="keyword">class </span><a class="code hl_class" href="class_interp_source.html">InterpSource</a></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_interp_source.html#a6b78ebdd77e4edff70c2068f094d6a18">   23</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> LevelData&lt;FArrayBox&gt; &amp;<a class="code hl_function" href="class_interp_source.html#a6b78ebdd77e4edff70c2068f094d6a18">getLevelData</a>(</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_interp_source.html#a43f5a10f228ed66f154b686c30aabc8a">   23</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> LevelData&lt;FArrayBox&gt; &amp;<a class="code hl_function" href="class_interp_source.html#a43f5a10f228ed66f154b686c30aabc8a">getLevelData</a>(</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">const</span> <a class="code hl_enumeration" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a> var_type = VariableType::evolution) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_interp_source.html#aa1621b9fe04678231e5fabf0d9c025cd">   26</a></span>    <a class="code hl_function" href="class_interp_source.html#aa1621b9fe04678231e5fabf0d9c025cd">contains</a>(<span class="keyword">const</span> std::array&lt;double, CH_SPACEDIM&gt; &amp;point) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif </span><span class="comment">/* INTERPSOURCE_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_interp_source.html#abd7e2140fffb24b4616ae3bc4f8dd80c">   25</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_interp_source.html#abd7e2140fffb24b4616ae3bc4f8dd80c">contains</a>(<span class="keyword">const</span> std::array&lt;double, N_DIMS&gt; &amp;point) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_interp_source.html#a434a951a185ba7b058fb28f36ec194fe">   26</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_interp_source.html#a434a951a185ba7b058fb28f36ec194fe">get_dx</a>(<span class="keywordtype">int</span> dir) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_interp_source.html#aae1e33b3c1959a48a5aac6463193d217">   27</a></span>    <span class="keyword">virtual</span> std::array&lt;double, N_DIMS&gt; <a class="code hl_function" href="class_interp_source.html#aae1e33b3c1959a48a5aac6463193d217">get_dxs</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        std::array&lt;double, N_DIMS&gt; dxs;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N_DIMS; ++i)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            dxs[i] = <a class="code hl_function" href="class_interp_source.html#a434a951a185ba7b058fb28f36ec194fe">get_dx</a>(i);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> dxs;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif </span><span class="comment">/* INTERPSOURCE_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="a_variable_type_8hpp_html"><div class="ttname"><a href="_variable_type_8hpp.html">VariableType.hpp</a></div></div>
 <div class="ttc" id="a_variable_type_8hpp_html_ac62972ff1b21a037e56530cde67309ab"><div class="ttname"><a href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a></div><div class="ttdeci">VariableType</div><div class="ttdef"><b>Definition:</b> VariableType.hpp:11</div></div>
 <div class="ttc" id="aclass_interp_source_html"><div class="ttname"><a href="class_interp_source.html">InterpSource</a></div><div class="ttdef"><b>Definition:</b> InterpSource.hpp:21</div></div>
-<div class="ttc" id="aclass_interp_source_html_a6b78ebdd77e4edff70c2068f094d6a18"><div class="ttname"><a href="class_interp_source.html#a6b78ebdd77e4edff70c2068f094d6a18">InterpSource::getLevelData</a></div><div class="ttdeci">virtual const LevelData&lt; FArrayBox &gt; &amp; getLevelData(const VariableType var_type=VariableType::evolution) const =0</div></div>
-<div class="ttc" id="aclass_interp_source_html_aa1621b9fe04678231e5fabf0d9c025cd"><div class="ttname"><a href="class_interp_source.html#aa1621b9fe04678231e5fabf0d9c025cd">InterpSource::contains</a></div><div class="ttdeci">virtual bool contains(const std::array&lt; double, CH_SPACEDIM &gt; &amp;point) const =0</div></div>
+<div class="ttc" id="aclass_interp_source_html_a434a951a185ba7b058fb28f36ec194fe"><div class="ttname"><a href="class_interp_source.html#a434a951a185ba7b058fb28f36ec194fe">InterpSource::get_dx</a></div><div class="ttdeci">virtual double get_dx(int dir) const =0</div></div>
+<div class="ttc" id="aclass_interp_source_html_a43f5a10f228ed66f154b686c30aabc8a"><div class="ttname"><a href="class_interp_source.html#a43f5a10f228ed66f154b686c30aabc8a">InterpSource::getLevelData</a></div><div class="ttdeci">virtual const LevelData&lt; FArrayBox &gt; &amp; getLevelData(const VariableType var_type=VariableType::evolution) const =0</div></div>
+<div class="ttc" id="aclass_interp_source_html_aae1e33b3c1959a48a5aac6463193d217"><div class="ttname"><a href="class_interp_source.html#aae1e33b3c1959a48a5aac6463193d217">InterpSource::get_dxs</a></div><div class="ttdeci">virtual std::array&lt; double, N_DIMS &gt; get_dxs() const</div><div class="ttdef"><b>Definition:</b> InterpSource.hpp:27</div></div>
+<div class="ttc" id="aclass_interp_source_html_abd7e2140fffb24b4616ae3bc4f8dd80c"><div class="ttname"><a href="class_interp_source.html#abd7e2140fffb24b4616ae3bc4f8dd80c">InterpSource::contains</a></div><div class="ttdeci">virtual bool contains(const std::array&lt; double, N_DIMS &gt; &amp;point) const =0</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -103,6 +103,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a78fb98fa1d8ba1485d7a527b52b48bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a899ad08938baf1467d21c86178b9694f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="class_g_r_a_m_r_level.html">GRAMRLevel</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r.html#a899ad08938baf1467d21c86178b9694f">get_gramrlevels</a> () const</td></tr>
 <tr class="separator:a899ad08938baf1467d21c86178b9694f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b4429eb3eb072c05f09991cf9fb8146"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r.html#a7b4429eb3eb072c05f09991cf9fb8146">get_max_level</a> () const</td></tr>
+<tr class="separator:a7b4429eb3eb072c05f09991cf9fb8146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a430fd751703a1ac3e990d070c532c351"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r.html#a430fd751703a1ac3e990d070c532c351">get_restart_step</a> () const</td></tr>
+<tr class="separator:a430fd751703a1ac3e990d070c532c351"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cb5560c983f2c79ef1a510a58905036"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r.html#a8cb5560c983f2c79ef1a510a58905036">fill_multilevel_ghosts</a> (const <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a> a_var_type, const Interval &amp;a_comps=Interval(0, std::numeric_limits&lt; int &gt;::max()), const int a_min_level=0, const int a_max_level=std::numeric_limits&lt; int &gt;::max()) const</td></tr>
 <tr class="separator:a8cb5560c983f2c79ef1a510a58905036"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -262,6 +266,56 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a7b4429eb3eb072c05f09991cf9fb8146" name="a7b4429eb3eb072c05f09991cf9fb8146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b4429eb3eb072c05f09991cf9fb8146">&#9670;&#160;</a></span>get_max_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GRAMR::get_max_level </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a430fd751703a1ac3e990d070c532c351" name="a430fd751703a1ac3e990d070c532c351"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a430fd751703a1ac3e990d070c532c351">&#9670;&#160;</a></span>get_restart_step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GRAMR::get_restart_step </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aabae98e7ea5c8c3538b56f0d200847ca" name="aabae98e7ea5c8c3538b56f0d200847ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aabae98e7ea5c8c3538b56f0d200847ca">&#9670;&#160;</a></span>get_walltime()</h2>
 
@@ -355,8 +409,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/GRChomboCore/<a class="el" href="_g_r_a_m_r_8hpp_source.html">GRAMR.hpp</a></li>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/GRChomboCore/<a class="el" href="_g_r_a_m_r_8cpp.html">GRAMR.cpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/GRChomboCore/<a class="el" href="_g_r_a_m_r_8hpp_source.html">GRAMR.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/GRChomboCore/<a class="el" href="_g_r_a_m_r_8cpp.html">GRAMR.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

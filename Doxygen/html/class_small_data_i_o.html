@@ -152,6 +152,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:af6c63df366a926ba0cb6a7d5a5ed7325"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_small_data_i_o.html#af6c63df366a926ba0cb6a7d5a5ed7325">get_new_filename</a> (const std::string &amp;a_filename_prefix, double a_dt, double a_time, const std::string &amp;a_file_extension=<a class="el" href="class_small_data_i_o.html#a4f644eeabcfd3836e753c9d611b766de">s_default_file_extension</a>, int a_filename_steps_width=<a class="el" href="class_small_data_i_o.html#a36ea7685c3ddc809f818cc569d131fe7">s_default_filename_steps_width</a>)</td></tr>
 <tr class="memdesc:af6c63df366a926ba0cb6a7d5a5ed7325"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the full filename of a file created in NEW mode at time=a_time with dt=a_dt  <a href="class_small_data_i_o.html#af6c63df366a926ba0cb6a7d5a5ed7325">More...</a><br /></td></tr>
 <tr class="separator:af6c63df366a926ba0cb6a7d5a5ed7325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ac49ef16ba279341b161bf295ebec0b"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_small_data_i_o.html#a3ac49ef16ba279341b161bf295ebec0b">pad_number</a> (int step, int a_filename_steps_width=<a class="el" href="class_small_data_i_o.html#a36ea7685c3ddc809f818cc569d131fe7">s_default_filename_steps_width</a>)</td></tr>
+<tr class="separator:a3ac49ef16ba279341b161bf295ebec0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a022bfd465c2c351ec68b575887655095"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_small_data_i_o.html#a022bfd465c2c351ec68b575887655095">get_default_data_epsilon</a> ()</td></tr>
 <tr class="memdesc:a022bfd465c2c351ec68b575887655095"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the default data_epsilon  <a href="class_small_data_i_o.html#a022bfd465c2c351ec68b575887655095">More...</a><br /></td></tr>
 <tr class="separator:a022bfd465c2c351ec68b575887655095"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,8 +193,6 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a9ba69c9f7133e91c9d0c0a3b6658c0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5af722526a7cf882a786772180a3aa1"><td class="memItemLeft" align="right" valign="top">std::fstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_small_data_i_o.html#af5af722526a7cf882a786772180a3aa1">m_file</a></td></tr>
 <tr class="separator:af5af722526a7cf882a786772180a3aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a396dc22ee3e3dda36e97d9120b9af63f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_small_data_i_o.html#a396dc22ee3e3dda36e97d9120b9af63f">m_rank</a></td></tr>
-<tr class="separator:a396dc22ee3e3dda36e97d9120b9af63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
@@ -723,6 +723,42 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a3ac49ef16ba279341b161bf295ebec0b" name="a3ac49ef16ba279341b161bf295ebec0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ac49ef16ba279341b161bf295ebec0b">&#9670;&#160;</a></span>pad_number()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SmallDataIO::pad_number </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>step</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a_filename_steps_width</em> = <code><a class="el" href="class_small_data_i_o.html#a36ea7685c3ddc809f818cc569d131fe7">s_default_filename_steps_width</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7a4274ecdd70e49d6454702554852159" name="a7a4274ecdd70e49d6454702554852159"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a4274ecdd70e49d6454702554852159">&#9670;&#160;</a></span>remove_duplicate_time_data()</h2>
 
@@ -1130,28 +1166,6 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a396dc22ee3e3dda36e97d9120b9af63f" name="a396dc22ee3e3dda36e97d9120b9af63f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a396dc22ee3e3dda36e97d9120b9af63f">&#9670;&#160;</a></span>m_rank</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int SmallDataIO::m_rank</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a0d6146dea08439d0974eacc0c0d9d7ba" name="a0d6146dea08439d0974eacc0c0d9d7ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d6146dea08439d0974eacc0c0d9d7ba">&#9670;&#160;</a></span>m_restart_time</h2>
 
@@ -1307,8 +1321,8 @@ Static Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/utils/<a class="el" href="_small_data_i_o_8hpp_source.html">SmallDataIO.hpp</a></li>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/utils/<a class="el" href="_small_data_i_o_8cpp.html">SmallDataIO.cpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/utils/<a class="el" href="_small_data_i_o_8hpp_source.html">SmallDataIO.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/utils/<a class="el" href="_small_data_i_o_8cpp.html">SmallDataIO.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

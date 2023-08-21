@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/utils/FilesystemTools.hpp Source File</title>
+<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/utils/FilesystemTools.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -102,71 +102,78 @@ $(function() {
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespace_filesystem_tools.html">   24</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_filesystem_tools.html">FilesystemTools</a></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">static</span> <span class="keywordtype">bool</span> directory_exists(<span class="keyword">const</span> std::string &amp;path)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">struct </span>stat stat_struct;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">return</span> (path == <span class="stringliteral">&quot;&quot;</span>) || (stat(path.c_str(), &amp;stat_struct) == 0 &amp;&amp;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                            S_ISDIR(stat_struct.st_mode));</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">static</span> <span class="keywordtype">bool</span> file_exists(<span class="keyword">const</span> std::string &amp;a_path)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">struct </span>stat stat_struct;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// also allow symbolic links</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">return</span> stat(a_path.c_str(), &amp;stat_struct) == 0 &amp;&amp;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>           (S_ISREG(stat_struct.st_mode) || S_ISLNK(stat_struct.st_mode));</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">static</span> <span class="keywordtype">bool</span> mkdir_recursive(<span class="keyword">const</span> std::string &amp;path)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">static</span> <span class="keywordtype">bool</span> directory_exists(<span class="keyword">const</span> std::string &amp;path)</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#ifdef CH_MPI</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// all processes should get here at the same time</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// e.g. if doing:</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">//     if (!directory_exists(path))</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">//         mkdir_recursive(path);</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// We want to make sure the directory is not created until all</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// ranks have passed the &#39;directory_exists&#39;</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    MPI_Barrier(Chombo_MPI::comm);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">bool</span> success = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (procID() == 0)</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="comment">// For Windows backslash, use delimeters = &quot;/\\&quot;</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">static</span> <span class="keyword">const</span> std::string delimeter = <span class="stringliteral">&quot;/&quot;</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        std::size_t found = path.find_first_of(delimeter);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">struct </span>stat stat_struct;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordflow">return</span> (path == <span class="stringliteral">&quot;&quot;</span>) || (stat(path.c_str(), &amp;stat_struct) == 0 &amp;&amp;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                            S_ISDIR(stat_struct.st_mode));</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">static</span> <span class="keywordtype">bool</span> mkdir_recursive(<span class="keyword">const</span> std::string &amp;path)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#ifdef CH_MPI</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">// all processes should get here at the same time</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// e.g. if doing:</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">//     if (!directory_exists(path))</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">//         mkdir_recursive(path);</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// We want to make sure the directory is not created until all</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// ranks have passed the &#39;directory_exists&#39;</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    MPI_Barrier(Chombo_MPI::comm);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="comment">// Even though this might look like RWX permissions for everyone,</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="comment">// this will be masked by the system user mask (see &#39;man umask&#39; or</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="comment">// https://man7.org/linux/man-pages/man2/umask.2.html)</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        mode_t permissions = S_IRWXU | S_IRWXG | S_IRWXO;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="comment">// NB: this would be very beautiful recursively, but let&#39;s not do it</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="comment">// because the function involves MPI_Barrier&#39;s</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">while</span> (success &amp;&amp; found != std::string::npos)</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            std::string subpath;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            subpath = path.substr(0, found);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">bool</span> success = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">if</span> (procID() == 0)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="comment">// For Windows backslash, use delimeters = &quot;/\\&quot;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">static</span> <span class="keyword">const</span> std::string delimeter = <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        std::size_t found = path.find_first_of(delimeter);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="comment">// Even though this might look like RWX permissions for everyone,</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="comment">// this will be masked by the system user mask (see &#39;man umask&#39; or</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="comment">// https://man7.org/linux/man-pages/man2/umask.2.html)</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        mode_t permissions = S_IRWXU | S_IRWXG | S_IRWXO;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">if</span> (subpath != <span class="stringliteral">&quot;.&quot;</span> &amp;&amp; subpath != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                <span class="comment">// success if created or if not created because it already</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="comment">// exists</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                success &amp;= (mkdir(subpath.c_str(), permissions) == 0 ||</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                            errno == EEXIST);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            }</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            found = path.find_first_of(delimeter, found + 1);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="comment">// if path doesn&#39;t finish with &quot;/&quot;, one more to do</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">if</span> (found != path.size() - 1)</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            success &amp;=</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                (mkdir(path.c_str(), permissions) == 0 || errno == EEXIST);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#ifdef CH_MPI</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">// all processes should wait to make sure directory structure is well set</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// for everyone</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    MPI_Barrier(Chombo_MPI::comm);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">return</span> success;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>} <span class="comment">// namespace FilesystemTools</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#endif </span><span class="comment">/* FILESYSTEMTOOLS_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="comment">// NB: this would be very beautiful recursively, but let&#39;s not do it</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="comment">// because the function involves MPI_Barrier&#39;s</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">while</span> (success &amp;&amp; found != std::string::npos)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            std::string subpath;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            subpath = path.substr(0, found);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">if</span> (subpath != <span class="stringliteral">&quot;.&quot;</span> &amp;&amp; subpath != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                <span class="comment">// success if created or if not created because it already</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="comment">// exists</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                success &amp;= (mkdir(subpath.c_str(), permissions) == 0 ||</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                            errno == EEXIST);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            found = path.find_first_of(delimeter, found + 1);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="comment">// if path doesn&#39;t finish with &quot;/&quot;, one more to do</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">if</span> (found != path.size() - 1)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            success &amp;=</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                (mkdir(path.c_str(), permissions) == 0 || errno == EEXIST);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#ifdef CH_MPI</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// all processes should wait to make sure directory structure is well set</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="comment">// for everyone</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    MPI_Barrier(Chombo_MPI::comm);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">return</span> success;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>} <span class="comment">// namespace FilesystemTools</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#endif </span><span class="comment">/* FILESYSTEMTOOLS_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="anamespace_filesystem_tools_html"><div class="ttname"><a href="namespace_filesystem_tools.html">FilesystemTools</a></div><div class="ttdef"><b>Definition:</b> FilesystemTools.hpp:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

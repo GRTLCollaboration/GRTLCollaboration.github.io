@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/utils/CoordinateTransformations.hpp Source File</title>
+<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/utils/CoordinateTransformations.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,9 +94,9 @@ $(function() {
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// Jacobian transformation matrix</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">static</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> spherical_jacobian(<span class="keyword">const</span> data_t x, <span class="keyword">const</span> <span class="keywordtype">double</span> y,</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                                            <span class="keyword">const</span> <span class="keywordtype">double</span> z)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t, <span class="keyword">class</span> data2_t&gt;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#aeb2a182d6c56aa8f809fcf25b9651b11">   19</a></span><a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> <a class="code hl_function" href="namespace_coordinate_transformations.html#aeb2a182d6c56aa8f809fcf25b9651b11">spherical_jacobian</a>(<span class="keyword">const</span> data_t x, <span class="keyword">const</span> data2_t y,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                                        <span class="keyword">const</span> data2_t z)</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// calculate useful position quantities</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    data_t rho2 = <a class="code hl_function" href="simd_8hpp.html#a83d0e74fe538c57c0bf86c906aa72ef2">simd_max</a>(x * x + y * y, 1e-12);</div>
@@ -109,7 +109,7 @@ $(function() {
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    data_t sin_phi = y / rho;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// derivatives for jacobian matrix - drdx etc</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> jac;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> jac;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    jac[0][0] = x / r;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    jac[1][0] = cos_phi * z / r2;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    jac[2][0] = -y / rho2;</div>
@@ -123,9 +123,9 @@ $(function() {
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// Incerse Jacobian</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">static</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>inverse_spherical_jacobian(<span class="keyword">const</span> data_t x, <span class="keyword">const</span> <span class="keywordtype">double</span> y, <span class="keyword">const</span> <span class="keywordtype">double</span> z)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t, <span class="keyword">class</span> data2_t&gt;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#a49b2d3aecba19ebb758347073bcbd82e">   48</a></span><a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> <a class="code hl_function" href="namespace_coordinate_transformations.html#a49b2d3aecba19ebb758347073bcbd82e">inverse_spherical_jacobian</a>(<span class="keyword">const</span> data_t x, <span class="keyword">const</span> data2_t y,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                                                <span class="keyword">const</span> data2_t z)</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">// calculate useful position quantities</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    data_t rho2 = <a class="code hl_function" href="simd_8hpp.html#a83d0e74fe538c57c0bf86c906aa72ef2">simd_max</a>(x * x + y * y, 1e-12);</div>
@@ -139,7 +139,7 @@ $(function() {
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    data_t sin_phi = y / rho;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// derivatives for inverse jacobian matrix - drdx etc</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> inv_jac;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> inv_jac;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    inv_jac[0][0] = x / r;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    inv_jac[1][0] = y / r;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    inv_jac[2][0] = z / r;</div>
@@ -152,210 +152,251 @@ $(function() {
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">return</span> inv_jac;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">// Convert a Tensor (with two lower indices) in spherical coords to cartesian</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">// coords</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">static</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>spherical_to_cartesian_LL(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> &amp;spherical_g, <span class="keyword">const</span> data_t x,</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                          <span class="keyword">const</span> <span class="keywordtype">double</span> y, <span class="keyword">const</span> <span class="keywordtype">double</span> z)</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>{</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> cartesian_g;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// derivatives for jacobian matrix - drdx etc</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> jac = spherical_jacobian(x, y, z);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// Convert the Tensor to cartesian coords</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i, j)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        cartesian_g[i][j] = 0.;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(k, l)</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            cartesian_g[i][j] += spherical_g[k][l] * jac[k][i] * jac[l][j];</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">return</span> cartesian_g;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">// Convert a Tensor (with two upper indices) in spherical coords to cartesian</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">// coords</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="keyword">static</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>spherical_to_cartesian_UU(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> &amp;spherical_g_UU,</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                          <span class="keyword">const</span> data_t x, <span class="keyword">const</span> <span class="keywordtype">double</span> y, <span class="keyword">const</span> <span class="keywordtype">double</span> z)</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>{</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> cartesian_g_UU;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="comment">// derivatives for jacobian matrix - drdx etc</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> inv_jac = inverse_spherical_jacobian(x, y, z);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="comment">// Convert the Tensor to cartesian coords</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">// transform a vector according to a given jacobian</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">// jacobian can be &quot;inverse jacobian&quot; in opposite transformation</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t, <span class="keyword">class</span> data2_t&gt;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#a8470bc3eadb253cf89fb15d4d4f36105">   79</a></span><a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a> <a class="code hl_function" href="namespace_coordinate_transformations.html#a8470bc3eadb253cf89fb15d4d4f36105">transform_vector</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a> &amp;vec_U,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                                      <span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data2_t, 3&gt;</a> &amp;jacobian)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>{</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a> transformed_U;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        transformed_U[i] = 0.0;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(j) { transformed_U[i] += jacobian[i][j] * vec_U[j]; }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">return</span> transformed_U;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">// transform a covector according to a given jacobian</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">// jacobian can be &quot;inverse jacobian&quot; in opposite transformation</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t, <span class="keyword">class</span> data2_t&gt;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#a3549ae47e09d93caed8076b64c83fba5">   94</a></span><a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a> <a class="code hl_function" href="namespace_coordinate_transformations.html#a3549ae47e09d93caed8076b64c83fba5">transform_covector</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a> &amp;vec_L,</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                                        <span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data2_t, 3&gt;</a> &amp;jacobian)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>{</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a> transformed_L;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        transformed_L[i] = 0.0;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(j) { transformed_L[i] += vec_L[j] * jacobian[j][i]; }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">return</span> transformed_L;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">// transform a tensor with two raised indices according to a given jacobian</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">// jacobian can be &quot;inverse jacobian&quot; in opposite transformation</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t, <span class="keyword">class</span> data2_t&gt;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#a95efe54128171641efe3085301488163">  109</a></span><a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> <a class="code hl_function" href="namespace_coordinate_transformations.html#a95efe54128171641efe3085301488163">transform_tensor_UU</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> &amp;tensor_UU,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                                         <span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data2_t, 3&gt;</a> &amp;jacobian)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>{</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> transformed_UU;</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i, j)</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        cartesian_g_UU[i][j] = 0.;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        transformed_UU[i][j] = 0.;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(k, l)</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            cartesian_g_UU[i][j] +=</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                spherical_g_UU[k][l] * inv_jac[i][k] * inv_jac[j][l];</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            transformed_UU[i][j] +=</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                jacobian[i][k] * jacobian[j][l] * tensor_UU[k][l];</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">return</span> cartesian_g_UU;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">return</span> transformed_UU;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>}</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">// Convert a Tensor (with two lower indices) in cartesian coords to spherical</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">// coords</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keyword">static</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>cartesian_to_spherical_LL(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> &amp;cartesian_g, <span class="keyword">const</span> data_t x,</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                          <span class="keyword">const</span> <span class="keywordtype">double</span> y, <span class="keyword">const</span> <span class="keywordtype">double</span> z)</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>{</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> spherical_g;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="comment">// derivatives for inverse jacobian matrix - drdx etc</span></div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> inv_jac = inverse_spherical_jacobian(x, y, z);</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="comment">// Convert the Tensor to spherical coords</span></div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i, j)</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    {</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        spherical_g[i][j] = 0.;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(k, l)</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        {</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            spherical_g[i][j] +=</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                cartesian_g[k][l] * inv_jac[k][i] * inv_jac[l][j];</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        }</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    }</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">return</span> spherical_g;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>}</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment">// Convert a Tensor (with two upper indices) in cartesian coords to spherical</span></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="comment">// coords</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keyword">static</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a></div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>cartesian_to_spherical_UU(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> &amp;cartesian_g_UU, data_t x,</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                          <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> z)</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>{</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> spherical_g_UU;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="comment">// derivatives for jacobian matrix - drdx etc</span></div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> jac = spherical_jacobian(x, y, z);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="comment">// Convert the Tensor to spherical coords</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i, j)</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    {</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        spherical_g_UU[i][j] = 0.;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(k, l)</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        {</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            spherical_g_UU[i][j] +=</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                cartesian_g_UU[k][l] * jac[i][k] * jac[j][l];</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        }</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    }</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">return</span> spherical_g_UU;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>}</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="comment">// Convert a vector (with one upper index) in spherical coords to cartesian</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">// coords</span></div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#ab27c0a7664b21dbdbf25ec0ff5f7ead9">  179</a></span><a class="code hl_function" href="namespace_coordinate_transformations.html#ab27c0a7664b21dbdbf25ec0ff5f7ead9">spherical_to_cartesian_U</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> &amp;spherical_v_U, data_t x,</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                         <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> z)</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>{</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> cartesian_v_U;</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="comment">// derivatives for inverse jacobian matrix - drdx etc</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> inv_jac = inverse_spherical_jacobian(x, y, z);</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="comment">// transform the vector to cartesian coords</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i)</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    {</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        cartesian_v_U[i] = 0.0;</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(j) { cartesian_v_U[i] += inv_jac[i][j] * spherical_v_U[j]; }</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    }</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordflow">return</span> cartesian_v_U;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">// transform a tensor with two lowered indices according to a given jacobian</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">// jacobian can be &quot;inverse jacobian&quot; in opposite transformation</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t, <span class="keyword">class</span> data2_t&gt;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#aa890b30f039e5d96f3afe1321d3312ef">  128</a></span><a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> <a class="code hl_function" href="namespace_coordinate_transformations.html#aa890b30f039e5d96f3afe1321d3312ef">transform_tensor_LL</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> &amp;tensor_LL,</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                                         <span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data2_t, 3&gt;</a> &amp;jacobian)</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>{</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> transformed_LL;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i, j)</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        transformed_LL[i][j] = 0.;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(k, l)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            transformed_LL[i][j] +=</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                tensor_LL[k][l] * jacobian[k][i] * jacobian[l][j];</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordflow">return</span> transformed_LL;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>}</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment">// Convert a Tensor (with two lower indices) in spherical coords to cartesian</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment">// coords</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t, <span class="keyword">class</span> data2_t&gt;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#a02e746a3004f885c534988d9a5a19781">  148</a></span><a class="code hl_function" href="namespace_coordinate_transformations.html#a02e746a3004f885c534988d9a5a19781">spherical_to_cartesian_LL</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> &amp;spherical_g,</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                          <span class="keyword">const</span> data_t x, <span class="keyword">const</span> data2_t y, <span class="keyword">const</span> data2_t z)</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>{</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespace_coordinate_transformations.html#aa890b30f039e5d96f3afe1321d3312ef">transform_tensor_LL</a>(spherical_g, <a class="code hl_function" href="namespace_coordinate_transformations.html#aeb2a182d6c56aa8f809fcf25b9651b11">spherical_jacobian</a>(x, y, z));</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>}</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">// Convert a Tensor (with two upper indices) in spherical coords to cartesian</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment">// coords</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t, <span class="keyword">class</span> data2_t&gt;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#a66c82b0fc4dbfe393d6fc68b629ccbf3">  158</a></span><a class="code hl_function" href="namespace_coordinate_transformations.html#a66c82b0fc4dbfe393d6fc68b629ccbf3">spherical_to_cartesian_UU</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> &amp;spherical_g_UU,</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                          <span class="keyword">const</span> data_t x, <span class="keyword">const</span> data2_t y, <span class="keyword">const</span> data2_t z)</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>{</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespace_coordinate_transformations.html#a95efe54128171641efe3085301488163">transform_tensor_UU</a>(spherical_g_UU,</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                               <a class="code hl_function" href="namespace_coordinate_transformations.html#a49b2d3aecba19ebb758347073bcbd82e">inverse_spherical_jacobian</a>(x, y, z));</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>}</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment">// Convert a Tensor (with two lower indices) in cartesian coords to spherical</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment">// coords</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t, <span class="keyword">class</span> data2_t&gt;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#a229012c670408f29e6c393b11fc31cc5">  169</a></span><a class="code hl_function" href="namespace_coordinate_transformations.html#a229012c670408f29e6c393b11fc31cc5">cartesian_to_spherical_LL</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> &amp;cartesian_g,</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                          <span class="keyword">const</span> data_t x, <span class="keyword">const</span> data2_t y, <span class="keyword">const</span> data2_t z)</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>{</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespace_coordinate_transformations.html#aa890b30f039e5d96f3afe1321d3312ef">transform_tensor_LL</a>(cartesian_g,</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                               <a class="code hl_function" href="namespace_coordinate_transformations.html#a49b2d3aecba19ebb758347073bcbd82e">inverse_spherical_jacobian</a>(x, y, z));</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>}</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">// Convert a Tensor (with two upper indices) in cartesian coords to spherical</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">// coords</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t, <span class="keyword">class</span> data2_t&gt;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#a49ddae3055a0a07d1061b522c73f106b">  180</a></span><a class="code hl_function" href="namespace_coordinate_transformations.html#a49ddae3055a0a07d1061b522c73f106b">cartesian_to_spherical_UU</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> &amp;cartesian_g_UU, data_t x,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                          data2_t y, data2_t z)</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>{</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespace_coordinate_transformations.html#a95efe54128171641efe3085301488163">transform_tensor_UU</a>(cartesian_g_UU, <a class="code hl_function" href="namespace_coordinate_transformations.html#aeb2a182d6c56aa8f809fcf25b9651b11">spherical_jacobian</a>(x, y, z));</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>}</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">// Convert a vector (with one upper index) in spherical coords to cartesian</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="comment">// coords</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t, <span class="keyword">class</span> data2_t&gt;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#a6fffb38d5e6cf2b95d45437a42acc000">  190</a></span><a class="code hl_function" href="namespace_coordinate_transformations.html#a6fffb38d5e6cf2b95d45437a42acc000">spherical_to_cartesian_U</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a> &amp;spherical_v_U, data_t x,</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                         data2_t y, data2_t z)</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>{</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespace_coordinate_transformations.html#a8470bc3eadb253cf89fb15d4d4f36105">transform_vector</a>(spherical_v_U, <a class="code hl_function" href="namespace_coordinate_transformations.html#a49b2d3aecba19ebb758347073bcbd82e">inverse_spherical_jacobian</a>(x, y, z));</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>}</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="comment">// Convert a vector (with one lower index) in spherical coords to cartesian</span></div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment">// coords</span></div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#aafd237a39bdfc29d439ea5b2f5ba98f9">  200</a></span><a class="code hl_function" href="namespace_coordinate_transformations.html#aafd237a39bdfc29d439ea5b2f5ba98f9">spherical_to_cartesian_L</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> &amp;spherical_v_L, data_t x,</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                         <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> z)</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t, <span class="keyword">class</span> data2_t&gt;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#a5671ad0b90bfab719931a4dc4e928f30">  200</a></span><a class="code hl_function" href="namespace_coordinate_transformations.html#a5671ad0b90bfab719931a4dc4e928f30">spherical_to_cartesian_L</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a> &amp;spherical_v_L, data_t x,</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                         data2_t y, data2_t z)</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>{</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> cartesian_v_L;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="comment">// derivatives for jacobian matrix - drdx etc</span></div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> jac = spherical_jacobian(x, y, z);</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="comment">// transform the vector to cartesian coords</span></div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i)</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    {</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        cartesian_v_L[i] = 0.0;</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(j) { cartesian_v_L[i] += spherical_v_L[j] * jac[j][i]; }</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordflow">return</span> cartesian_v_L;</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>}</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="comment">// Convert a vector (with one upper index) in cartesian coords to spherical</span></div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="comment">// coords</span></div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a></div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#a94f6265a6d65af81a217b4289fdc19aa">  221</a></span><a class="code hl_function" href="namespace_coordinate_transformations.html#a94f6265a6d65af81a217b4289fdc19aa">cartesian_to_spherical_U</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> &amp;cartesian_v_U, data_t x,</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                         <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> z)</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>{</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> spherical_v_U;</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="comment">// derivatives for jacobian matrix - drdx etc</span></div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> jac = spherical_jacobian(x, y, z);</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="comment">// transform the vector to cartesian coords</span></div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i)</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    {</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        spherical_v_U[i] = 0.0;</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(j) { spherical_v_U[i] += jac[i][j] * cartesian_v_U[j]; }</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    }</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="keywordflow">return</span> spherical_v_U;</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>}</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="comment">// Convert a vector (with one lower index) in cartesian coords to spherical</span></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="comment">// coords</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a></div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#a3530fb0a01bf1b64e5e33ca251b181e0">  242</a></span><a class="code hl_function" href="namespace_coordinate_transformations.html#a3530fb0a01bf1b64e5e33ca251b181e0">cartesian_to_spherical_L</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> &amp;cartesian_v_L, data_t x,</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                         <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> z)</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>{</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> spherical_v_L;</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="comment">// derivatives for inverse jacobian matrix - drdx etc</span></div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> inv_jac = inverse_spherical_jacobian(x, y, z);</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="comment">// transform the vector to cartesian coords</span></div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i)</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    {</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        spherical_v_L[i] = 0.0;</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(j) { spherical_v_L[i] += cartesian_v_L[j] * inv_jac[j][i]; }</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    }</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keywordflow">return</span> spherical_v_L;</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>}</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="comment">// The area element of a sphere</span></div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#a9667a6f6c13ca0983f2504a5087af765">  261</a></span>data_t <a class="code hl_function" href="namespace_coordinate_transformations.html#a9667a6f6c13ca0983f2504a5087af765">area_element_sphere</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> &amp;spherical_g)</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>{</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="keywordflow">return</span> sqrt(spherical_g[1][1] * spherical_g[2][2] -</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                spherical_g[1][2] * spherical_g[2][1]);</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>}</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>} <span class="comment">// namespace CoordinateTransformations</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="preprocessor">#endif </span><span class="comment">/* COORDINATETRANSFORMATIONS_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespace_coordinate_transformations.html#a3549ae47e09d93caed8076b64c83fba5">transform_covector</a>(spherical_v_L, <a class="code hl_function" href="namespace_coordinate_transformations.html#aeb2a182d6c56aa8f809fcf25b9651b11">spherical_jacobian</a>(x, y, z));</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>}</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="comment">// Convert a vector (with one upper index) in cartesian coords to spherical</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="comment">// coords</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t, <span class="keyword">class</span> data2_t&gt;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#a3378f59ce355e9c5e3e7e84207258c80">  210</a></span><a class="code hl_function" href="namespace_coordinate_transformations.html#a3378f59ce355e9c5e3e7e84207258c80">cartesian_to_spherical_U</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a> &amp;cartesian_v_U, data_t x,</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                         data2_t y, data2_t z)</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>{</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespace_coordinate_transformations.html#a8470bc3eadb253cf89fb15d4d4f36105">transform_vector</a>(cartesian_v_U, <a class="code hl_function" href="namespace_coordinate_transformations.html#aeb2a182d6c56aa8f809fcf25b9651b11">spherical_jacobian</a>(x, y, z));</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>}</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="comment">// Convert a vector (with one lower index) in cartesian coords to spherical</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="comment">// coords</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t, <span class="keyword">class</span> data2_t&gt;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#aa8aaa5a4d48238fd952f4ed829950cbe">  220</a></span><a class="code hl_function" href="namespace_coordinate_transformations.html#aa8aaa5a4d48238fd952f4ed829950cbe">cartesian_to_spherical_L</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a> &amp;cartesian_v_L, data_t x,</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                         data2_t y, data2_t z)</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>{</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespace_coordinate_transformations.html#a3549ae47e09d93caed8076b64c83fba5">transform_covector</a>(cartesian_v_L,</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                              <a class="code hl_function" href="namespace_coordinate_transformations.html#a49b2d3aecba19ebb758347073bcbd82e">inverse_spherical_jacobian</a>(x, y, z));</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>}</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="comment">// The area element of a sphere</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#a4be7351ea318381a7c7a6e279589434a">  229</a></span>data_t <a class="code hl_function" href="namespace_coordinate_transformations.html#a4be7351ea318381a7c7a6e279589434a">area_element_sphere</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> &amp;spherical_g)</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>{</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keywordflow">return</span> sqrt(spherical_g[1][1] * spherical_g[2][2] -</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                spherical_g[1][2] * spherical_g[2][1]);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>}</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="comment">// cartesian coordinates rotation matrix</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="comment">// axis must be normalized to 1</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#acfe979d5fa36140a72be6c2dcc13d42d">  238</a></span><a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> <a class="code hl_function" href="namespace_coordinate_transformations.html#acfe979d5fa36140a72be6c2dcc13d42d">rotation_matrix</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a> &amp;axis,</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                                     data_t cos_angle)</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>{</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    data_t sine = sqrt(1. - cos_angle * cos_angle);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    data_t one_minus_cos = 1. - cos_angle;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="comment">// as in</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="comment">// https://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> R;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    R[0][0] = axis[0] * axis[0] * one_minus_cos + cos_angle;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    R[0][1] = axis[1] * axis[0] * one_minus_cos - axis[2] * sine;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    R[0][2] = axis[2] * axis[0] * one_minus_cos + axis[1] * sine;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    R[1][0] = axis[0] * axis[1] * one_minus_cos + axis[2] * sine;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    R[1][1] = axis[1] * axis[1] * one_minus_cos + cos_angle;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    R[1][2] = axis[2] * axis[1] * one_minus_cos - axis[0] * sine;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    R[2][0] = axis[0] * axis[2] * one_minus_cos - axis[1] * sine;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    R[2][1] = axis[1] * axis[2] * one_minus_cos + axis[0] * sine;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    R[2][2] = axis[2] * axis[2] * one_minus_cos + cos_angle;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="keywordflow">return</span> R;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>}</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="comment">// cartesian coordinates rotation matrix</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="namespace_coordinate_transformations.html#aa360fa8156154aa292567f3a3f4f932e">  262</a></span><a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t, 3&gt;</a> <a class="code hl_function" href="namespace_coordinate_transformations.html#acfe979d5fa36140a72be6c2dcc13d42d">rotation_matrix</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a> &amp;origin,</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                                     <span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a> &amp;destination)</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>{</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="comment">// Calculate axis of rotation:</span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t, 3&gt;</a> axis = {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        origin[1] * destination[2] - origin[2] * destination[1],</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        origin[2] * destination[0] - origin[0] * destination[2],</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        origin[0] * destination[1] - origin[1] * destination[0]};</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> eps = 1.e-13;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keywordflow">if</span> (std::abs(axis[0]) &lt; eps &amp;&amp; std::abs(axis[1]) &lt; eps &amp;&amp;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        std::abs(axis[2]) &lt; eps)</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespace_coordinate_transformations.html#acfe979d5fa36140a72be6c2dcc13d42d">rotation_matrix</a>({0., 0., 0.}, 1.);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    data_t norm_inv =</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        1.0 / sqrt(axis[0] * axis[0] + axis[1] * axis[1] + axis[2] * axis[2]);</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    axis[0] *= norm_inv;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    axis[1] *= norm_inv;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    axis[2] *= norm_inv;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="comment">// Calculate angle of rotation</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    data_t norm_origin = sqrt(origin[0] * origin[0] + origin[1] * origin[1] +</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                              origin[2] * origin[2]);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    data_t norm_dest =</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        sqrt(destination[0] * destination[0] + destination[1] * destination[1] +</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>             destination[2] * destination[2]);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    data_t cos_angle = origin[0] * destination[0] + origin[1] * destination[1] +</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                       origin[2] * destination[2];</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    cos_angle /= (norm_origin * norm_dest);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespace_coordinate_transformations.html#acfe979d5fa36140a72be6c2dcc13d42d">rotation_matrix</a>(axis, cos_angle);</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>}</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>} <span class="comment">// namespace CoordinateTransformations</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="preprocessor">#endif </span><span class="comment">/* COORDINATETRANSFORMATIONS_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="a_dimension_definitions_8hpp_html"><div class="ttname"><a href="_dimension_definitions_8hpp.html">DimensionDefinitions.hpp</a></div></div>
 <div class="ttc" id="a_dimension_definitions_8hpp_html_a2ace046866a89995cbafe2f3f7754ddd"><div class="ttname"><a href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a></div><div class="ttdeci">#define FOR(...)</div><div class="ttdef"><b>Definition:</b> DimensionDefinitions.hpp:30</div></div>
 <div class="ttc" id="a_tensor_8hpp_html"><div class="ttname"><a href="_tensor_8hpp.html">Tensor.hpp</a></div></div>
 <div class="ttc" id="a_tensor_algebra_8hpp_html"><div class="ttname"><a href="_tensor_algebra_8hpp.html">TensorAlgebra.hpp</a></div></div>
 <div class="ttc" id="aclass_tensor_html"><div class="ttname"><a href="class_tensor.html">Tensor</a></div><div class="ttdoc">This class implements a Tensor with given rank, element data type, and dimension.</div><div class="ttdef"><b>Definition:</b> Tensor.hpp:15</div></div>
 <div class="ttc" id="anamespace_coordinate_transformations_html"><div class="ttname"><a href="namespace_coordinate_transformations.html">CoordinateTransformations</a></div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:15</div></div>
-<div class="ttc" id="anamespace_coordinate_transformations_html_a3530fb0a01bf1b64e5e33ca251b181e0"><div class="ttname"><a href="namespace_coordinate_transformations.html#a3530fb0a01bf1b64e5e33ca251b181e0">CoordinateTransformations::cartesian_to_spherical_L</a></div><div class="ttdeci">Tensor&lt; 1, data_t &gt; cartesian_to_spherical_L(const Tensor&lt; 1, data_t &gt; &amp;cartesian_v_L, data_t x, double y, double z)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:242</div></div>
-<div class="ttc" id="anamespace_coordinate_transformations_html_a94f6265a6d65af81a217b4289fdc19aa"><div class="ttname"><a href="namespace_coordinate_transformations.html#a94f6265a6d65af81a217b4289fdc19aa">CoordinateTransformations::cartesian_to_spherical_U</a></div><div class="ttdeci">Tensor&lt; 1, data_t &gt; cartesian_to_spherical_U(const Tensor&lt; 1, data_t &gt; &amp;cartesian_v_U, data_t x, double y, double z)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:221</div></div>
-<div class="ttc" id="anamespace_coordinate_transformations_html_a9667a6f6c13ca0983f2504a5087af765"><div class="ttname"><a href="namespace_coordinate_transformations.html#a9667a6f6c13ca0983f2504a5087af765">CoordinateTransformations::area_element_sphere</a></div><div class="ttdeci">data_t area_element_sphere(const Tensor&lt; 2, data_t &gt; &amp;spherical_g)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:261</div></div>
-<div class="ttc" id="anamespace_coordinate_transformations_html_aafd237a39bdfc29d439ea5b2f5ba98f9"><div class="ttname"><a href="namespace_coordinate_transformations.html#aafd237a39bdfc29d439ea5b2f5ba98f9">CoordinateTransformations::spherical_to_cartesian_L</a></div><div class="ttdeci">Tensor&lt; 1, data_t &gt; spherical_to_cartesian_L(const Tensor&lt; 1, data_t &gt; &amp;spherical_v_L, data_t x, double y, double z)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:200</div></div>
-<div class="ttc" id="anamespace_coordinate_transformations_html_ab27c0a7664b21dbdbf25ec0ff5f7ead9"><div class="ttname"><a href="namespace_coordinate_transformations.html#ab27c0a7664b21dbdbf25ec0ff5f7ead9">CoordinateTransformations::spherical_to_cartesian_U</a></div><div class="ttdeci">Tensor&lt; 1, data_t &gt; spherical_to_cartesian_U(const Tensor&lt; 1, data_t &gt; &amp;spherical_v_U, data_t x, double y, double z)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:179</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_a02e746a3004f885c534988d9a5a19781"><div class="ttname"><a href="namespace_coordinate_transformations.html#a02e746a3004f885c534988d9a5a19781">CoordinateTransformations::spherical_to_cartesian_LL</a></div><div class="ttdeci">Tensor&lt; 2, data_t, 3 &gt; spherical_to_cartesian_LL(const Tensor&lt; 2, data_t, 3 &gt; &amp;spherical_g, const data_t x, const data2_t y, const data2_t z)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:148</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_a229012c670408f29e6c393b11fc31cc5"><div class="ttname"><a href="namespace_coordinate_transformations.html#a229012c670408f29e6c393b11fc31cc5">CoordinateTransformations::cartesian_to_spherical_LL</a></div><div class="ttdeci">Tensor&lt; 2, data_t, 3 &gt; cartesian_to_spherical_LL(const Tensor&lt; 2, data_t, 3 &gt; &amp;cartesian_g, const data_t x, const data2_t y, const data2_t z)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:169</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_a3378f59ce355e9c5e3e7e84207258c80"><div class="ttname"><a href="namespace_coordinate_transformations.html#a3378f59ce355e9c5e3e7e84207258c80">CoordinateTransformations::cartesian_to_spherical_U</a></div><div class="ttdeci">Tensor&lt; 1, data_t, 3 &gt; cartesian_to_spherical_U(const Tensor&lt; 1, data_t, 3 &gt; &amp;cartesian_v_U, data_t x, data2_t y, data2_t z)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:210</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_a3549ae47e09d93caed8076b64c83fba5"><div class="ttname"><a href="namespace_coordinate_transformations.html#a3549ae47e09d93caed8076b64c83fba5">CoordinateTransformations::transform_covector</a></div><div class="ttdeci">Tensor&lt; 1, data_t, 3 &gt; transform_covector(const Tensor&lt; 1, data_t, 3 &gt; &amp;vec_L, const Tensor&lt; 2, data2_t, 3 &gt; &amp;jacobian)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:94</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_a49b2d3aecba19ebb758347073bcbd82e"><div class="ttname"><a href="namespace_coordinate_transformations.html#a49b2d3aecba19ebb758347073bcbd82e">CoordinateTransformations::inverse_spherical_jacobian</a></div><div class="ttdeci">Tensor&lt; 2, data_t, 3 &gt; inverse_spherical_jacobian(const data_t x, const data2_t y, const data2_t z)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:48</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_a49ddae3055a0a07d1061b522c73f106b"><div class="ttname"><a href="namespace_coordinate_transformations.html#a49ddae3055a0a07d1061b522c73f106b">CoordinateTransformations::cartesian_to_spherical_UU</a></div><div class="ttdeci">Tensor&lt; 2, data_t, 3 &gt; cartesian_to_spherical_UU(const Tensor&lt; 2, data_t, 3 &gt; &amp;cartesian_g_UU, data_t x, data2_t y, data2_t z)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:180</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_a4be7351ea318381a7c7a6e279589434a"><div class="ttname"><a href="namespace_coordinate_transformations.html#a4be7351ea318381a7c7a6e279589434a">CoordinateTransformations::area_element_sphere</a></div><div class="ttdeci">data_t area_element_sphere(const Tensor&lt; 2, data_t, 3 &gt; &amp;spherical_g)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:229</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_a5671ad0b90bfab719931a4dc4e928f30"><div class="ttname"><a href="namespace_coordinate_transformations.html#a5671ad0b90bfab719931a4dc4e928f30">CoordinateTransformations::spherical_to_cartesian_L</a></div><div class="ttdeci">Tensor&lt; 1, data_t, 3 &gt; spherical_to_cartesian_L(const Tensor&lt; 1, data_t, 3 &gt; &amp;spherical_v_L, data_t x, data2_t y, data2_t z)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:200</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_a66c82b0fc4dbfe393d6fc68b629ccbf3"><div class="ttname"><a href="namespace_coordinate_transformations.html#a66c82b0fc4dbfe393d6fc68b629ccbf3">CoordinateTransformations::spherical_to_cartesian_UU</a></div><div class="ttdeci">Tensor&lt; 2, data_t, 3 &gt; spherical_to_cartesian_UU(const Tensor&lt; 2, data_t, 3 &gt; &amp;spherical_g_UU, const data_t x, const data2_t y, const data2_t z)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:158</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_a6fffb38d5e6cf2b95d45437a42acc000"><div class="ttname"><a href="namespace_coordinate_transformations.html#a6fffb38d5e6cf2b95d45437a42acc000">CoordinateTransformations::spherical_to_cartesian_U</a></div><div class="ttdeci">Tensor&lt; 1, data_t, 3 &gt; spherical_to_cartesian_U(const Tensor&lt; 1, data_t, 3 &gt; &amp;spherical_v_U, data_t x, data2_t y, data2_t z)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:190</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_a8470bc3eadb253cf89fb15d4d4f36105"><div class="ttname"><a href="namespace_coordinate_transformations.html#a8470bc3eadb253cf89fb15d4d4f36105">CoordinateTransformations::transform_vector</a></div><div class="ttdeci">Tensor&lt; 1, data_t, 3 &gt; transform_vector(const Tensor&lt; 1, data_t, 3 &gt; &amp;vec_U, const Tensor&lt; 2, data2_t, 3 &gt; &amp;jacobian)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:79</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_a95efe54128171641efe3085301488163"><div class="ttname"><a href="namespace_coordinate_transformations.html#a95efe54128171641efe3085301488163">CoordinateTransformations::transform_tensor_UU</a></div><div class="ttdeci">Tensor&lt; 2, data_t, 3 &gt; transform_tensor_UU(const Tensor&lt; 2, data_t, 3 &gt; &amp;tensor_UU, const Tensor&lt; 2, data2_t, 3 &gt; &amp;jacobian)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:109</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_aa890b30f039e5d96f3afe1321d3312ef"><div class="ttname"><a href="namespace_coordinate_transformations.html#aa890b30f039e5d96f3afe1321d3312ef">CoordinateTransformations::transform_tensor_LL</a></div><div class="ttdeci">Tensor&lt; 2, data_t, 3 &gt; transform_tensor_LL(const Tensor&lt; 2, data_t, 3 &gt; &amp;tensor_LL, const Tensor&lt; 2, data2_t, 3 &gt; &amp;jacobian)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:128</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_aa8aaa5a4d48238fd952f4ed829950cbe"><div class="ttname"><a href="namespace_coordinate_transformations.html#aa8aaa5a4d48238fd952f4ed829950cbe">CoordinateTransformations::cartesian_to_spherical_L</a></div><div class="ttdeci">Tensor&lt; 1, data_t, 3 &gt; cartesian_to_spherical_L(const Tensor&lt; 1, data_t, 3 &gt; &amp;cartesian_v_L, data_t x, data2_t y, data2_t z)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:220</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_acfe979d5fa36140a72be6c2dcc13d42d"><div class="ttname"><a href="namespace_coordinate_transformations.html#acfe979d5fa36140a72be6c2dcc13d42d">CoordinateTransformations::rotation_matrix</a></div><div class="ttdeci">Tensor&lt; 2, data_t, 3 &gt; rotation_matrix(const Tensor&lt; 1, data_t, 3 &gt; &amp;axis, data_t cos_angle)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:238</div></div>
+<div class="ttc" id="anamespace_coordinate_transformations_html_aeb2a182d6c56aa8f809fcf25b9651b11"><div class="ttname"><a href="namespace_coordinate_transformations.html#aeb2a182d6c56aa8f809fcf25b9651b11">CoordinateTransformations::spherical_jacobian</a></div><div class="ttdeci">Tensor&lt; 2, data_t, 3 &gt; spherical_jacobian(const data_t x, const data2_t y, const data2_t z)</div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:19</div></div>
 <div class="ttc" id="asimd_8hpp_html"><div class="ttname"><a href="simd_8hpp.html">simd.hpp</a></div></div>
 <div class="ttc" id="asimd_8hpp_html_a83d0e74fe538c57c0bf86c906aa72ef2"><div class="ttname"><a href="simd_8hpp.html#a83d0e74fe538c57c0bf86c906aa72ef2">simd_max</a></div><div class="ttdeci">ALWAYS_INLINE t simd_max(const t &amp;a, const t &amp;b)</div><div class="ttdef"><b>Definition:</b> simd.hpp:168</div></div>
 </div><!-- fragment --></div><!-- contents -->

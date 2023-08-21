@@ -71,6 +71,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -82,6 +83,11 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_a_m_r_interpolator_8hpp_source.html">AMRInterpolator.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_a_m_r_interpolator_1_1_interpolation_layout.html">InterpolationLayout</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a12b031b49cdb85a4c91ba9a748253af8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_r_interpolator.html#a12b031b49cdb85a4c91ba9a748253af8">AMRInterpolator</a> (const <a class="el" href="class_g_r_a_m_r.html">GRAMR</a> &amp;amr, const std::array&lt; double, CH_SPACEDIM &gt; &amp;coarsest_origin, const std::array&lt; double, CH_SPACEDIM &gt; &amp;coarsest_dx, int verbosity=0)</td></tr>
@@ -98,19 +104,23 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af82b01359621091a04fc4521e019d9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c53d5b90f44a821f5e9c47dbebacd5e"><td class="memItemLeft" align="right" valign="top">const AMR &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_r_interpolator.html#a1c53d5b90f44a821f5e9c47dbebacd5e">getAMR</a> () const</td></tr>
 <tr class="separator:a1c53d5b90f44a821f5e9c47dbebacd5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8280692c5d9eefd16878d7a47ec2ed70"><td class="memItemLeft" align="right" valign="top">const std::array&lt; double, CH_SPACEDIM &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_r_interpolator.html#a8280692c5d9eefd16878d7a47ec2ed70">get_coarsest_dx</a> ()</td></tr>
-<tr class="separator:a8280692c5d9eefd16878d7a47ec2ed70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a971831418097f1921cb984e789101783"><td class="memItemLeft" align="right" valign="top">const std::array&lt; double, CH_SPACEDIM &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_r_interpolator.html#a971831418097f1921cb984e789101783">get_coarsest_origin</a> ()</td></tr>
-<tr class="separator:a971831418097f1921cb984e789101783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe5f794e5eba59e23520b7192a9d2db1"><td class="memItemLeft" align="right" valign="top">const std::array&lt; double, CH_SPACEDIM &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_r_interpolator.html#afe5f794e5eba59e23520b7192a9d2db1">get_coarsest_dx</a> () const</td></tr>
+<tr class="separator:afe5f794e5eba59e23520b7192a9d2db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac526bf13605e0099a1b11d7781b7747"><td class="memItemLeft" align="right" valign="top">const std::array&lt; double, CH_SPACEDIM &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_r_interpolator.html#aac526bf13605e0099a1b11d7781b7747">get_coarsest_origin</a> () const</td></tr>
+<tr class="separator:aac526bf13605e0099a1b11d7781b7747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addb0d671dc8bfbc9751828b62771761c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_r_interpolator.html#addb0d671dc8bfbc9751828b62771761c">get_boundary_reflective</a> (Side::LoHiSide a_side, int a_dir) const</td></tr>
+<tr class="separator:addb0d671dc8bfbc9751828b62771761c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678ad6202b11bc65a558580801a0a68f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_r_interpolator.html#a678ad6202b11bc65a558580801a0a68f">get_boundary_periodic</a> (int a_dir) const</td></tr>
+<tr class="separator:a678ad6202b11bc65a558580801a0a68f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a52ed4fb557896fc07acf46c0198cf0a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_r_interpolator.html#a52ed4fb557896fc07acf46c0198cf0a1">computeLevelLayouts</a> ()</td></tr>
 <tr class="separator:a52ed4fb557896fc07acf46c0198cf0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58eb13dcc89a4f5e2e6ce23ecab1c095"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_interpolation_layout.html">InterpolationLayout</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_r_interpolator.html#a58eb13dcc89a4f5e2e6ce23ecab1c095">findBoxes</a> (<a class="el" href="class_interpolation_query.html">InterpolationQuery</a> &amp;query)</td></tr>
-<tr class="separator:a58eb13dcc89a4f5e2e6ce23ecab1c095"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad42a5a0de0b03098bc9c10b7269e0620"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_r_interpolator.html#ad42a5a0de0b03098bc9c10b7269e0620">prepareMPI</a> (<a class="el" href="class_interpolation_query.html">InterpolationQuery</a> &amp;query, const <a class="el" href="class_interpolation_layout.html">InterpolationLayout</a> layout)</td></tr>
-<tr class="separator:ad42a5a0de0b03098bc9c10b7269e0620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaab6195b8010cf1e730afceef620ced"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_a_m_r_interpolator_1_1_interpolation_layout.html">InterpolationLayout</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_r_interpolator.html#adaab6195b8010cf1e730afceef620ced">findBoxes</a> (<a class="el" href="class_interpolation_query.html">InterpolationQuery</a> &amp;query)</td></tr>
+<tr class="separator:adaab6195b8010cf1e730afceef620ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22a2e75aa29761e2ff06f828e596dbae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_r_interpolator.html#a22a2e75aa29761e2ff06f828e596dbae">prepareMPI</a> (<a class="el" href="class_interpolation_query.html">InterpolationQuery</a> &amp;query, const <a class="el" href="struct_a_m_r_interpolator_1_1_interpolation_layout.html">InterpolationLayout</a> &amp;layout)</td></tr>
+<tr class="separator:a22a2e75aa29761e2ff06f828e596dbae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40c512610ba13f13384a1c7dda52e63b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_r_interpolator.html#a40c512610ba13f13384a1c7dda52e63b">exchangeMPIQuery</a> ()</td></tr>
 <tr class="separator:a40c512610ba13f13384a1c7dda52e63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa63f94268feb9729643cd36c38ac2bd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_r_interpolator.html#aa63f94268feb9729643cd36c38ac2bd0">calculateAnswers</a> (<a class="el" href="class_interpolation_query.html">InterpolationQuery</a> &amp;query)</td></tr>
@@ -461,8 +471,8 @@ template&lt;typename InterpAlgo &gt; </div>
 
 </div>
 </div>
-<a id="a58eb13dcc89a4f5e2e6ce23ecab1c095" name="a58eb13dcc89a4f5e2e6ce23ecab1c095"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58eb13dcc89a4f5e2e6ce23ecab1c095">&#9670;&#160;</a></span>findBoxes()</h2>
+<a id="adaab6195b8010cf1e730afceef620ced" name="adaab6195b8010cf1e730afceef620ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaab6195b8010cf1e730afceef620ced">&#9670;&#160;</a></span>findBoxes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -473,7 +483,7 @@ template&lt;typename InterpAlgo &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_interpolation_layout.html">InterpolationLayout</a> <a class="el" href="class_a_m_r_interpolator.html">AMRInterpolator</a>&lt; InterpAlgo &gt;::findBoxes </td>
+          <td class="memname"><a class="el" href="class_a_m_r_interpolator.html">AMRInterpolator</a>&lt; InterpAlgo &gt;::InterpolationLayout <a class="el" href="class_a_m_r_interpolator.html">AMRInterpolator</a>&lt; InterpAlgo &gt;::findBoxes </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_interpolation_query.html">InterpolationQuery</a> &amp;&#160;</td>
           <td class="paramname"><em>query</em></td><td>)</td>
@@ -489,8 +499,58 @@ template&lt;typename InterpAlgo &gt; </div>
 
 </div>
 </div>
-<a id="a8280692c5d9eefd16878d7a47ec2ed70" name="a8280692c5d9eefd16878d7a47ec2ed70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8280692c5d9eefd16878d7a47ec2ed70">&#9670;&#160;</a></span>get_coarsest_dx()</h2>
+<a id="a678ad6202b11bc65a558580801a0a68f" name="a678ad6202b11bc65a558580801a0a68f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a678ad6202b11bc65a558580801a0a68f">&#9670;&#160;</a></span>get_boundary_periodic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InterpAlgo &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_a_m_r_interpolator.html">AMRInterpolator</a>&lt; InterpAlgo &gt;::get_boundary_periodic </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a_dir</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addb0d671dc8bfbc9751828b62771761c" name="addb0d671dc8bfbc9751828b62771761c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb0d671dc8bfbc9751828b62771761c">&#9670;&#160;</a></span>get_boundary_reflective()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InterpAlgo &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_a_m_r_interpolator.html">AMRInterpolator</a>&lt; InterpAlgo &gt;::get_boundary_reflective </td>
+          <td>(</td>
+          <td class="paramtype">Side::LoHiSide&#160;</td>
+          <td class="paramname"><em>a_side</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a_dir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe5f794e5eba59e23520b7192a9d2db1" name="afe5f794e5eba59e23520b7192a9d2db1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe5f794e5eba59e23520b7192a9d2db1">&#9670;&#160;</a></span>get_coarsest_dx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -505,8 +565,8 @@ template&lt;typename InterpAlgo &gt; </div>
 
 </div>
 </div>
-<a id="a971831418097f1921cb984e789101783" name="a971831418097f1921cb984e789101783"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a971831418097f1921cb984e789101783">&#9670;&#160;</a></span>get_coarsest_origin()</h2>
+<a id="aac526bf13605e0099a1b11d7781b7747" name="aac526bf13605e0099a1b11d7781b7747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac526bf13605e0099a1b11d7781b7747">&#9670;&#160;</a></span>get_coarsest_origin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -633,8 +693,8 @@ template&lt;typename InterpAlgo &gt; </div>
 
 </div>
 </div>
-<a id="ad42a5a0de0b03098bc9c10b7269e0620" name="ad42a5a0de0b03098bc9c10b7269e0620"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad42a5a0de0b03098bc9c10b7269e0620">&#9670;&#160;</a></span>prepareMPI()</h2>
+<a id="a22a2e75aa29761e2ff06f828e596dbae" name="a22a2e75aa29761e2ff06f828e596dbae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22a2e75aa29761e2ff06f828e596dbae">&#9670;&#160;</a></span>prepareMPI()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -653,7 +713,7 @@ template&lt;typename InterpAlgo &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="class_interpolation_layout.html">InterpolationLayout</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="struct_a_m_r_interpolator_1_1_interpolation_layout.html">InterpolationLayout</a> &amp;&#160;</td>
           <td class="paramname"><em>layout</em>&#160;</td>
         </tr>
         <tr>
@@ -1299,8 +1359,8 @@ template&lt;typename InterpAlgo &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/AMRInterpolator/<a class="el" href="_a_m_r_interpolator_8hpp_source.html">AMRInterpolator.hpp</a></li>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/AMRInterpolator/<a class="el" href="_a_m_r_interpolator_8impl_8hpp_source.html">AMRInterpolator.impl.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/AMRInterpolator/<a class="el" href="_a_m_r_interpolator_8hpp_source.html">AMRInterpolator.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/AMRInterpolator/<a class="el" href="_a_m_r_interpolator_8impl_8hpp_source.html">AMRInterpolator.impl.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

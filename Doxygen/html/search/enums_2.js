@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['variabletype_0',['VariableType',['../_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab',1,'VariableType.hpp']]]
+  ['up_5fdir_0',['UP_DIR',['../class_spherical_geometry.html#af9027e16c3fd2f9531614bb56ce7995a',1,'SphericalGeometry']]]
 ];

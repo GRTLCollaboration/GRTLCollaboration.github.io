@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Examples/KerrBH/UserVariables.hpp Source File</title>
+<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Examples/KerrBH/UserVariables.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,7 +104,16 @@ $(function() {
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="_user_variables_8inc_8hpp.html">UserVariables.inc.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif </span><span class="comment">/* USERVARIABLES_HPP */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// uncomment to look for chi instead of expansion</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">// #define USE_CHI_CONTOURS</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#ifdef USE_CHI_CONTOURS</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="_a_h_functions_8hpp.html">AHFunctions.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#define AHFunction ChiContourFunction </span><span class="comment">// change default to chi contours</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif </span><span class="comment">/* USERVARIABLES_HPP */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="a_a_h_functions_8hpp_html"><div class="ttname"><a href="_a_h_functions_8hpp.html">AHFunctions.hpp</a></div></div>
 <div class="ttc" id="a_array_tools_8hpp_html"><div class="ttname"><a href="_array_tools_8hpp.html">ArrayTools.hpp</a></div></div>
 <div class="ttc" id="a_c_c_z4_user_variables_8hpp_html"><div class="ttname"><a href="_c_c_z4_user_variables_8hpp.html">CCZ4UserVariables.hpp</a></div></div>
 <div class="ttc" id="a_c_c_z4_user_variables_8hpp_html_ab04a0655cd1e3bcac5e8f48c18df1a57a717a6c1b568c37946704455143bdf154"><div class="ttname"><a href="_c_c_z4_user_variables_8hpp.html#ab04a0655cd1e3bcac5e8f48c18df1a57a717a6c1b568c37946704455143bdf154">NUM_CCZ4_VARS</a></div><div class="ttdeci">@ NUM_CCZ4_VARS</div><div class="ttdef"><b>Definition:</b> CCZ4UserVariables.hpp:50</div></div>

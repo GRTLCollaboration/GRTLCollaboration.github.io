@@ -72,8 +72,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_chombo_parameters-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ChomboParameters Class Reference</div></div>
@@ -89,10 +90,14 @@ Inheritance diagram for ChomboParameters:</div>
   <map id="ChomboParameters_map" name="ChomboParameters_map">
 <area href="class_simulation_parameters.html" alt="SimulationParameters" shape="rect" coords="0,56,161,80"/>
 <area href="class_simulation_parameters.html" alt="SimulationParameters" shape="rect" coords="171,56,332,80"/>
-<area href="class_simulation_parameters_base.html" alt="SimulationParametersBase" shape="rect" coords="342,56,503,80"/>
-<area href="class_simulation_parameters.html" alt="SimulationParameters" shape="rect" coords="171,112,332,136"/>
-<area href="class_simulation_parameters.html" alt="SimulationParameters" shape="rect" coords="342,112,503,136"/>
-<area href="class_simulation_parameters.html" alt="SimulationParameters" shape="rect" coords="513,112,674,136"/>
+<area href="class_simulation_parameters.html" alt="SimulationParameters" shape="rect" coords="342,56,503,80"/>
+<area href="class_simulation_parameters.html" alt="SimulationParameters" shape="rect" coords="513,56,674,80"/>
+<area href="class_simulation_parameters.html" alt="SimulationParameters" shape="rect" coords="684,56,845,80"/>
+<area href="class_simulation_parameters.html" alt="SimulationParameters" shape="rect" coords="855,56,1016,80"/>
+<area href="class_simulation_parameters_base.html" alt="SimulationParametersBase" shape="rect" coords="1026,56,1187,80"/>
+<area href="class_simulation_parameters.html" alt="SimulationParameters" shape="rect" coords="855,112,1016,136"/>
+<area href="class_simulation_parameters.html" alt="SimulationParameters" shape="rect" coords="1026,112,1187,136"/>
+<area href="class_simulation_parameters.html" alt="SimulationParameters" shape="rect" coords="1197,112,1358,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -108,6 +113,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adddb0f8bd9ee62d917dbd8e82863dcb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2b239d8a85e7f3687b0f15dda346d1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#ad2b239d8a85e7f3687b0f15dda346d1b">check_params</a> ()</td></tr>
 <tr class="separator:ad2b239d8a85e7f3687b0f15dda346d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ae9b0aed83af2ba94a187a5d85cd91bea"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae9b0aed83af2ba94a187a5d85cd91bea"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#ae9b0aed83af2ba94a187a5d85cd91bea">check_parameter</a> (const std::string &amp;a_name, T a_value, const bool a_valid, const std::string &amp;a_invalid_explanation)</td></tr>
+<tr class="separator:ae9b0aed83af2ba94a187a5d85cd91bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae2fbed8d69ecbaba064e80eac6e914"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5ae2fbed8d69ecbaba064e80eac6e914"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#a5ae2fbed8d69ecbaba064e80eac6e914">warn_parameter</a> (const std::string &amp;a_name, T a_value, const bool a_nowarn, const std::string &amp;a_warning_explanation)</td></tr>
+<tr class="separator:a5ae2fbed8d69ecbaba064e80eac6e914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff977f20f1c3d8242ac77ea8bd958b5"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t N&gt; </td></tr>
+<tr class="memitem:a5ff977f20f1c3d8242ac77ea8bd958b5"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#a5ff977f20f1c3d8242ac77ea8bd958b5">check_array_parameter</a> (const std::string &amp;a_name, const std::array&lt; T, N &gt; &amp;a_value, const bool a_valid, const std::string &amp;a_invalid_explanation)</td></tr>
+<tr class="separator:a5ff977f20f1c3d8242ac77ea8bd958b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb8b44c9b2676a93c395ff6cc41a2ca"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t N&gt; </td></tr>
+<tr class="memitem:a0eb8b44c9b2676a93c395ff6cc41a2ca"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#a0eb8b44c9b2676a93c395ff6cc41a2ca">warn_array_parameter</a> (const std::string &amp;a_name, const std::array&lt; T, N &gt; &amp;a_value, const bool a_nowarn, const std::string &amp;a_warning_explanation)</td></tr>
+<tr class="separator:a0eb8b44c9b2676a93c395ff6cc41a2ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -157,6 +177,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ac11926cec0df221841cd20d38ad92f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79158e19e57614b3d513549ddc36dd81"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#a79158e19e57614b3d513549ddc36dd81">output_path</a></td></tr>
 <tr class="separator:a79158e19e57614b3d513549ddc36dd81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d173021ab8a06d8dffd808a7791bde9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#a5d173021ab8a06d8dffd808a7791bde9">data_path</a></td></tr>
+<tr class="separator:a5d173021ab8a06d8dffd808a7791bde9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afba66ec518bfe266715bfe1c0b9bdb4f"><td class="memItemLeft" align="right" valign="top">std::array&lt; double, CH_SPACEDIM &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#afba66ec518bfe266715bfe1c0b9bdb4f">origin</a></td></tr>
 <tr class="separator:afba66ec518bfe266715bfe1c0b9bdb4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83ff0fb4c124f34e580128a4fd0c1cc4"><td class="memItemLeft" align="right" valign="top">std::array&lt; double, CH_SPACEDIM &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#a83ff0fb4c124f34e580128a4fd0c1cc4">dx</a></td></tr>
@@ -170,22 +192,10 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a5b84c0762908f2f0430478d2a6c53a6c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#a5b84c0762908f2f0430478d2a6c53a6c">print_progress_only_to_rank_0</a></td></tr>
 <tr class="separator:a5b84c0762908f2f0430478d2a6c53a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a862218ad8cc75e76a02c929d6df51d00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#a862218ad8cc75e76a02c929d6df51d00">error</a> (const std::string &amp;a_error_message)</td></tr>
-<tr class="separator:a862218ad8cc75e76a02c929d6df51d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6f2330c43cc81d0345b5082a8d8724c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac6f2330c43cc81d0345b5082a8d8724c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#ac6f2330c43cc81d0345b5082a8d8724c">check_parameter</a> (const std::string &amp;a_name, T a_value, const bool a_valid, const std::string &amp;a_invalid_explanation)</td></tr>
-<tr class="separator:ac6f2330c43cc81d0345b5082a8d8724c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abef480040a8e7d17216ab2f7982c471a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:abef480040a8e7d17216ab2f7982c471a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#abef480040a8e7d17216ab2f7982c471a">warn_parameter</a> (const std::string &amp;a_name, T a_value, const bool a_nowarn, const std::string &amp;a_warning_explanation)</td></tr>
-<tr class="separator:abef480040a8e7d17216ab2f7982c471a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa99c0af737c07f789ad03aaa488aa8fd"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t N&gt; </td></tr>
-<tr class="memitem:aa99c0af737c07f789ad03aaa488aa8fd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#aa99c0af737c07f789ad03aaa488aa8fd">check_array_parameter</a> (const std::string &amp;a_name, const std::array&lt; T, N &gt; &amp;a_value, const bool a_valid, const std::string &amp;a_invalid_explanation)</td></tr>
-<tr class="separator:aa99c0af737c07f789ad03aaa488aa8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdea4f271eaa136299902e0eab944562"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t N&gt; </td></tr>
-<tr class="memitem:acdea4f271eaa136299902e0eab944562"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#acdea4f271eaa136299902e0eab944562">warn_array_parameter</a> (const std::string &amp;a_name, const std::array&lt; T, N &gt; &amp;a_value, const bool a_nowarn, const std::string &amp;a_warning_explanation)</td></tr>
-<tr class="separator:acdea4f271eaa136299902e0eab944562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:ad0a415d37b1fca9737ac93d5d9af2f2a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_chombo_parameters.html#ad0a415d37b1fca9737ac93d5d9af2f2a">error</a> (const std::string &amp;a_error_message)</td></tr>
+<tr class="separator:ad0a415d37b1fca9737ac93d5d9af2f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -222,8 +232,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa99c0af737c07f789ad03aaa488aa8fd" name="aa99c0af737c07f789ad03aaa488aa8fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa99c0af737c07f789ad03aaa488aa8fd">&#9670;&#160;</a></span>check_array_parameter()</h2>
+<a id="a5ff977f20f1c3d8242ac77ea8bd958b5" name="a5ff977f20f1c3d8242ac77ea8bd958b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff977f20f1c3d8242ac77ea8bd958b5">&#9670;&#160;</a></span>check_array_parameter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,7 +244,7 @@ template&lt;typename T , size_t N&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ChomboParameters::check_array_parameter </td>
+          <td class="memname">static void ChomboParameters::check_array_parameter </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>a_name</em>, </td>
@@ -265,15 +275,15 @@ template&lt;typename T , size_t N&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac6f2330c43cc81d0345b5082a8d8724c" name="ac6f2330c43cc81d0345b5082a8d8724c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6f2330c43cc81d0345b5082a8d8724c">&#9670;&#160;</a></span>check_parameter()</h2>
+<a id="ae9b0aed83af2ba94a187a5d85cd91bea" name="ae9b0aed83af2ba94a187a5d85cd91bea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b0aed83af2ba94a187a5d85cd91bea">&#9670;&#160;</a></span>check_parameter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,7 +294,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ChomboParameters::check_parameter </td>
+          <td class="memname">static void ChomboParameters::check_parameter </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>a_name</em>, </td>
@@ -315,7 +325,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -347,8 +357,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a862218ad8cc75e76a02c929d6df51d00" name="a862218ad8cc75e76a02c929d6df51d00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a862218ad8cc75e76a02c929d6df51d00">&#9670;&#160;</a></span>error()</h2>
+<a id="ad0a415d37b1fca9737ac93d5d9af2f2a" name="ad0a415d37b1fca9737ac93d5d9af2f2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a415d37b1fca9737ac93d5d9af2f2a">&#9670;&#160;</a></span>error()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -357,7 +367,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ChomboParameters::error </td>
+          <td class="memname">static void ChomboParameters::error </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>a_error_message</em></td><td>)</td>
@@ -366,7 +376,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -451,8 +461,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="acdea4f271eaa136299902e0eab944562" name="acdea4f271eaa136299902e0eab944562"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdea4f271eaa136299902e0eab944562">&#9670;&#160;</a></span>warn_array_parameter()</h2>
+<a id="a0eb8b44c9b2676a93c395ff6cc41a2ca" name="a0eb8b44c9b2676a93c395ff6cc41a2ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eb8b44c9b2676a93c395ff6cc41a2ca">&#9670;&#160;</a></span>warn_array_parameter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -463,7 +473,7 @@ template&lt;typename T , size_t N&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ChomboParameters::warn_array_parameter </td>
+          <td class="memname">static void ChomboParameters::warn_array_parameter </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>a_name</em>, </td>
@@ -494,15 +504,15 @@ template&lt;typename T , size_t N&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="abef480040a8e7d17216ab2f7982c471a" name="abef480040a8e7d17216ab2f7982c471a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abef480040a8e7d17216ab2f7982c471a">&#9670;&#160;</a></span>warn_parameter()</h2>
+<a id="a5ae2fbed8d69ecbaba064e80eac6e914" name="a5ae2fbed8d69ecbaba064e80eac6e914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ae2fbed8d69ecbaba064e80eac6e914">&#9670;&#160;</a></span>warn_parameter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -513,7 +523,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ChomboParameters::warn_parameter </td>
+          <td class="memname">static void ChomboParameters::warn_parameter </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>a_name</em>, </td>
@@ -544,7 +554,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -630,6 +640,20 @@ template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">double ChomboParameters::coarsest_dx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d173021ab8a06d8dffd808a7791bde9" name="a5d173021ab8a06d8dffd808a7791bde9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d173021ab8a06d8dffd808a7791bde9">&#9670;&#160;</a></span>data_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ChomboParameters::data_path</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1003,7 +1027,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/GRChomboCore/<a class="el" href="_chombo_parameters_8hpp_source.html">ChomboParameters.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/GRChomboCore/<a class="el" href="_chombo_parameters_8hpp_source.html">ChomboParameters.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
