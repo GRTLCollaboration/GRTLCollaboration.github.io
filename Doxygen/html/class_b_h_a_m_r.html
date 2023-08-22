@@ -72,7 +72,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_b_h_a_m_r-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">BHAMR Class Reference</div></div>
 </div><!--header-->
@@ -109,13 +108,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a78fb98fa1d8ba1485d7a527b52b48bb8 inherit pub_methods_class_g_r_a_m_r"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a899ad08938baf1467d21c86178b9694f inherit pub_methods_class_g_r_a_m_r"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="class_g_r_a_m_r_level.html">GRAMRLevel</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r.html#a899ad08938baf1467d21c86178b9694f">get_gramrlevels</a> () const</td></tr>
 <tr class="separator:a899ad08938baf1467d21c86178b9694f inherit pub_methods_class_g_r_a_m_r"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b4429eb3eb072c05f09991cf9fb8146 inherit pub_methods_class_g_r_a_m_r"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r.html#a7b4429eb3eb072c05f09991cf9fb8146">get_max_level</a> () const</td></tr>
+<tr class="separator:a7b4429eb3eb072c05f09991cf9fb8146 inherit pub_methods_class_g_r_a_m_r"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a430fd751703a1ac3e990d070c532c351 inherit pub_methods_class_g_r_a_m_r"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r.html#a430fd751703a1ac3e990d070c532c351">get_restart_step</a> () const</td></tr>
+<tr class="separator:a430fd751703a1ac3e990d070c532c351 inherit pub_methods_class_g_r_a_m_r"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cb5560c983f2c79ef1a510a58905036 inherit pub_methods_class_g_r_a_m_r"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r.html#a8cb5560c983f2c79ef1a510a58905036">fill_multilevel_ghosts</a> (const <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a> a_var_type, const Interval &amp;a_comps=Interval(0, std::numeric_limits&lt; int &gt;::max()), const int a_min_level=0, const int a_max_level=std::numeric_limits&lt; int &gt;::max()) const</td></tr>
 <tr class="separator:a8cb5560c983f2c79ef1a510a58905036 inherit pub_methods_class_g_r_a_m_r"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a326d8294bd0f5b763742604fc22827d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_puncture_tracker.html">PunctureTracker</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_h_a_m_r.html#a326d8294bd0f5b763742604fc22827d4">m_puncture_tracker</a></td></tr>
-<tr class="separator:a326d8294bd0f5b763742604fc22827d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_g_r_a_m_r"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_g_r_a_m_r')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_g_r_a_m_r.html">GRAMR</a></td></tr>
 <tr class="memitem:a4ffd3eecd6cc263fb76a2c0186b414a2 inherit pub_attribs_class_g_r_a_m_r"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_m_r_interpolator.html">AMRInterpolator</a>&lt; <a class="el" href="class_lagrange.html">Lagrange</a>&lt; 4 &gt; &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_r_a_m_r.html#a4ffd3eecd6cc263fb76a2c0186b414a2">m_interpolator</a></td></tr>
 <tr class="memdesc:a4ffd3eecd6cc263fb76a2c0186b414a2 inherit pub_attribs_class_g_r_a_m_r"><td class="mdescLeft">&#160;</td><td class="mdescRight">The interpolator pointer.  <a href="class_g_r_a_m_r.html#a4ffd3eecd6cc263fb76a2c0186b414a2">More...</a><br /></td></tr>
@@ -179,23 +180,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a326d8294bd0f5b763742604fc22827d4" name="a326d8294bd0f5b763742604fc22827d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a326d8294bd0f5b763742604fc22827d4">&#9670;&#160;</a></span>m_puncture_tracker</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_puncture_tracker.html">PunctureTracker</a> BHAMR::m_puncture_tracker</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/BlackHoles/<a class="el" href="_b_h_a_m_r_8hpp_source.html">BHAMR.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/BlackHoles/<a class="el" href="_b_h_a_m_r_8hpp_source.html">BHAMR.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

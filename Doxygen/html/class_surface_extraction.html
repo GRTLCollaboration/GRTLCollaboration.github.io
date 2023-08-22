@@ -71,11 +71,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-types">Protected Types</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_surface_extraction-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">SurfaceExtraction&lt; SurfaceGeometry &gt; Class Template Reference</div></div>
@@ -87,11 +85,6 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_surface_extraction_8hpp_source.html">SurfaceExtraction.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_surface_extraction_1_1params__t.html">params_t</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a8ba8b151a1c5d4eba19f20718a35c724"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#a8ba8b151a1c5d4eba19f20718a35c724">vars_t</a> = std::tuple&lt; int, <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a>, <a class="el" href="class_derivative.html">Derivative</a> &gt;</td></tr>
@@ -99,9 +92,9 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a75cd6f18c5cd21cf8823dbe6f72ec3ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#a75cd6f18c5cd21cf8823dbe6f72ec3ec">SurfaceExtraction</a> (const SurfaceGeometry &amp;a_geom, const <a class="el" href="struct_surface_extraction_1_1params__t.html">params_t</a> &amp;a_params, double a_dt, double a_time, bool a_first_step, double a_restart_time=0.0)</td></tr>
-<tr class="memdesc:a75cd6f18c5cd21cf8823dbe6f72ec3ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normal constructor which requires vars to be added after construction using add_var or add_vars.  <a href="class_surface_extraction.html#a75cd6f18c5cd21cf8823dbe6f72ec3ec">More...</a><br /></td></tr>
-<tr class="separator:a75cd6f18c5cd21cf8823dbe6f72ec3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97851ff6715fc786d195c991540a267b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#a97851ff6715fc786d195c991540a267b">SurfaceExtraction</a> (const SurfaceGeometry &amp;a_geom, const <a class="el" href="structsurface__extraction__params__t.html">surface_extraction_params_t</a> &amp;a_params, double a_dt, double a_time, bool a_first_step, double a_restart_time=0.0)</td></tr>
+<tr class="memdesc:a97851ff6715fc786d195c991540a267b"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the flattened index for m_interp_data and m_interp_coords associated to given surface, u and v indices  <a href="class_surface_extraction.html#a97851ff6715fc786d195c991540a267b">More...</a><br /></td></tr>
+<tr class="separator:a97851ff6715fc786d195c991540a267b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afec806a8cdfea84c1e2fc6c9795930f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#afec806a8cdfea84c1e2fc6c9795930f8">add_var</a> (int a_var, const <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a> var_type=VariableType::evolution, const <a class="el" href="class_derivative.html">Derivative</a> &amp;a_deriv=<a class="el" href="class_derivative.html#ac8c244c6ceee82fc1c904375a6dab524">Derivative::LOCAL</a>)</td></tr>
 <tr class="memdesc:afec806a8cdfea84c1e2fc6c9795930f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a single variable or derivative of variable  <a href="class_surface_extraction.html#afec806a8cdfea84c1e2fc6c9795930f8">More...</a><br /></td></tr>
 <tr class="separator:afec806a8cdfea84c1e2fc6c9795930f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -114,12 +107,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae11063bd00fe8651fc9b00568c3500f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#ae11063bd00fe8651fc9b00568c3500f4">add_diagnostic_vars</a> (const std::vector&lt; int &gt; &amp;a_vars)</td></tr>
 <tr class="memdesc:ae11063bd00fe8651fc9b00568c3500f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a vector of diagnostic variables (no derivatives)  <a href="class_surface_extraction.html#ae11063bd00fe8651fc9b00568c3500f4">More...</a><br /></td></tr>
 <tr class="separator:ae11063bd00fe8651fc9b00568c3500f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4b9c244860abef4efd1c5e2317c414d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#ad4b9c244860abef4efd1c5e2317c414d">SurfaceExtraction</a> (const SurfaceGeometry &amp;a_geom, const <a class="el" href="struct_surface_extraction_1_1params__t.html">params_t</a> &amp;a_params, const std::vector&lt; std::tuple&lt; int, <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a>, <a class="el" href="class_derivative.html">Derivative</a> &gt; &gt; &amp;a_vars, double a_dt, double a_time, bool a_first_step, double a_restart_time=0.0)</td></tr>
-<tr class="memdesc:ad4b9c244860abef4efd1c5e2317c414d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative constructor with a predefined vector of variables and derivatives.  <a href="class_surface_extraction.html#ad4b9c244860abef4efd1c5e2317c414d">More...</a><br /></td></tr>
-<tr class="separator:ad4b9c244860abef4efd1c5e2317c414d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25dcf4006e297b9bf1ae5798a6a1d962"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#a25dcf4006e297b9bf1ae5798a6a1d962">SurfaceExtraction</a> (const SurfaceGeometry &amp;a_geom, const <a class="el" href="struct_surface_extraction_1_1params__t.html">params_t</a> &amp;a_params, const std::vector&lt; int &gt; &amp;a_vars, double a_dt, double a_time, bool a_first_step, double a_restart_time=0.0)</td></tr>
-<tr class="memdesc:a25dcf4006e297b9bf1ae5798a6a1d962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Another alternative constructor with a predefined vector of variables no derivatives.  <a href="class_surface_extraction.html#a25dcf4006e297b9bf1ae5798a6a1d962">More...</a><br /></td></tr>
-<tr class="separator:a25dcf4006e297b9bf1ae5798a6a1d962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d5e68939744ed0f1ec9f15a1840d11"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#aa2d5e68939744ed0f1ec9f15a1840d11">SurfaceExtraction</a> (const SurfaceGeometry &amp;a_geom, const <a class="el" href="structsurface__extraction__params__t.html">surface_extraction_params_t</a> &amp;a_params, const std::vector&lt; std::tuple&lt; int, <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a>, <a class="el" href="class_derivative.html">Derivative</a> &gt; &gt; &amp;a_vars, double a_dt, double a_time, bool a_first_step, double a_restart_time=0.0)</td></tr>
+<tr class="memdesc:aa2d5e68939744ed0f1ec9f15a1840d11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative constructor with a predefined vector of variables and derivatives.  <a href="class_surface_extraction.html#aa2d5e68939744ed0f1ec9f15a1840d11">More...</a><br /></td></tr>
+<tr class="separator:aa2d5e68939744ed0f1ec9f15a1840d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b70c3d7f580a0b8c5ab713ca801d91b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#a6b70c3d7f580a0b8c5ab713ca801d91b">SurfaceExtraction</a> (const SurfaceGeometry &amp;a_geom, const <a class="el" href="structsurface__extraction__params__t.html">surface_extraction_params_t</a> &amp;a_params, const std::vector&lt; int &gt; &amp;a_vars, double a_dt, double a_time, bool a_first_step, double a_restart_time=0.0)</td></tr>
+<tr class="memdesc:a6b70c3d7f580a0b8c5ab713ca801d91b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Another alternative constructor with a predefined vector of variables no derivatives.  <a href="class_surface_extraction.html#a6b70c3d7f580a0b8c5ab713ca801d91b">More...</a><br /></td></tr>
+<tr class="separator:a6b70c3d7f580a0b8c5ab713ca801d91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4d4cbc01cbda080fed93aefeed2b64a"><td class="memTemplParams" colspan="2">template&lt;typename InterpAlgo &gt; </td></tr>
 <tr class="memitem:ae4d4cbc01cbda080fed93aefeed2b64a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#ae4d4cbc01cbda080fed93aefeed2b64a">extract</a> (<a class="el" href="class_a_m_r_interpolator.html">AMRInterpolator</a>&lt; InterpAlgo &gt; *a_interpolator)</td></tr>
 <tr class="memdesc:ae4d4cbc01cbda080fed93aefeed2b64a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do the extraction.  <a href="class_surface_extraction.html#ae4d4cbc01cbda080fed93aefeed2b64a">More...</a><br /></td></tr>
@@ -151,19 +144,13 @@ Protected Types</h2></td></tr>
 <tr class="memitem:a777de0e36a6d3e00b404306c4eeda825"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#a777de0e36a6d3e00b404306c4eeda825">integrand_t</a> = std::function&lt; double(std::vector&lt; double &gt; &amp;, double, double, double)&gt;</td></tr>
 <tr class="separator:a777de0e36a6d3e00b404306c4eeda825"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a649ba5fac4e3541917a20e038846c19c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#a649ba5fac4e3541917a20e038846c19c">index</a> (int a_isurface, int a_iu, int a_iv) const</td></tr>
-<tr class="memdesc:a649ba5fac4e3541917a20e038846c19c"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the flattened index for m_interp_data and m_interp_coords associated to given surface, u and v indices  <a href="class_surface_extraction.html#a649ba5fac4e3541917a20e038846c19c">More...</a><br /></td></tr>
-<tr class="separator:a649ba5fac4e3541917a20e038846c19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ace53763e00420a161adcf4ab23d95242"><td class="memItemLeft" align="right" valign="top">const SurfaceGeometry&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#ace53763e00420a161adcf4ab23d95242">m_geom</a></td></tr>
 <tr class="memdesc:ace53763e00420a161adcf4ab23d95242"><td class="mdescLeft">&#160;</td><td class="mdescRight">the geometry class which knows about the particular surface  <a href="class_surface_extraction.html#ace53763e00420a161adcf4ab23d95242">More...</a><br /></td></tr>
 <tr class="separator:ace53763e00420a161adcf4ab23d95242"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8200fa04c53f4c1475b87eb89208555b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_surface_extraction_1_1params__t.html">params_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#a8200fa04c53f4c1475b87eb89208555b">m_params</a></td></tr>
-<tr class="separator:a8200fa04c53f4c1475b87eb89208555b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab13e73d6d08d11b8706c350906cd016b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structsurface__extraction__params__t.html">surface_extraction_params_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#ab13e73d6d08d11b8706c350906cd016b">m_params</a></td></tr>
+<tr class="separator:ab13e73d6d08d11b8706c350906cd016b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32723a9f720adf88af739a2a1fdc23e8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; int, <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a>, <a class="el" href="class_derivative.html">Derivative</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_surface_extraction.html#a32723a9f720adf88af739a2a1fdc23e8">m_vars</a></td></tr>
 <tr class="memdesc:a32723a9f720adf88af739a2a1fdc23e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">the vector of pairs of  <a href="class_surface_extraction.html#a32723a9f720adf88af739a2a1fdc23e8">More...</a><br /></td></tr>
 <tr class="separator:a32723a9f720adf88af739a2a1fdc23e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,8 +232,8 @@ template&lt;class SurfaceGeometry &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a75cd6f18c5cd21cf8823dbe6f72ec3ec" name="a75cd6f18c5cd21cf8823dbe6f72ec3ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75cd6f18c5cd21cf8823dbe6f72ec3ec">&#9670;&#160;</a></span>SurfaceExtraction() <span class="overload">[1/3]</span></h2>
+<a id="a97851ff6715fc786d195c991540a267b" name="a97851ff6715fc786d195c991540a267b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97851ff6715fc786d195c991540a267b">&#9670;&#160;</a></span>SurfaceExtraction() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,7 +249,7 @@ template&lt;class SurfaceGeometry &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="struct_surface_extraction_1_1params__t.html">params_t</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structsurface__extraction__params__t.html">surface_extraction_params_t</a> &amp;&#160;</td>
           <td class="paramname"><em>a_params</em>, </td>
         </tr>
         <tr>
@@ -297,12 +284,14 @@ template&lt;class SurfaceGeometry &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Normal constructor which requires vars to be added after construction using add_var or add_vars. </p>
+<p>returns the flattened index for m_interp_data and m_interp_coords associated to given surface, u and v indices </p>
+<p >Normal constructor which requires vars to be added after construction using add_var or add_vars.</p>
+<p >Normal constructor which requires vars to be added after construction using add_var or add_vars </p>
 
 </div>
 </div>
-<a id="ad4b9c244860abef4efd1c5e2317c414d" name="ad4b9c244860abef4efd1c5e2317c414d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4b9c244860abef4efd1c5e2317c414d">&#9670;&#160;</a></span>SurfaceExtraction() <span class="overload">[2/3]</span></h2>
+<a id="aa2d5e68939744ed0f1ec9f15a1840d11" name="aa2d5e68939744ed0f1ec9f15a1840d11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2d5e68939744ed0f1ec9f15a1840d11">&#9670;&#160;</a></span>SurfaceExtraction() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -318,7 +307,7 @@ template&lt;class SurfaceGeometry &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="struct_surface_extraction_1_1params__t.html">params_t</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structsurface__extraction__params__t.html">surface_extraction_params_t</a> &amp;&#160;</td>
           <td class="paramname"><em>a_params</em>, </td>
         </tr>
         <tr>
@@ -363,8 +352,8 @@ template&lt;class SurfaceGeometry &gt; </div>
 
 </div>
 </div>
-<a id="a25dcf4006e297b9bf1ae5798a6a1d962" name="a25dcf4006e297b9bf1ae5798a6a1d962"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25dcf4006e297b9bf1ae5798a6a1d962">&#9670;&#160;</a></span>SurfaceExtraction() <span class="overload">[3/3]</span></h2>
+<a id="a6b70c3d7f580a0b8c5ab713ca801d91b" name="a6b70c3d7f580a0b8c5ab713ca801d91b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b70c3d7f580a0b8c5ab713ca801d91b">&#9670;&#160;</a></span>SurfaceExtraction() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -380,7 +369,7 @@ template&lt;class SurfaceGeometry &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="struct_surface_extraction_1_1params__t.html">params_t</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structsurface__extraction__params__t.html">surface_extraction_params_t</a> &amp;&#160;</td>
           <td class="paramname"><em>a_params</em>, </td>
         </tr>
         <tr>
@@ -658,52 +647,6 @@ template&lt;typename InterpAlgo &gt; </div>
 </div><div class="memdoc">
 
 <p>Do the extraction. </p>
-
-</div>
-</div>
-<a id="a649ba5fac4e3541917a20e038846c19c" name="a649ba5fac4e3541917a20e038846c19c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a649ba5fac4e3541917a20e038846c19c">&#9670;&#160;</a></span>index()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class SurfaceGeometry &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="class_surface_extraction.html">SurfaceExtraction</a>&lt; SurfaceGeometry &gt;::index </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>a_isurface</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>a_iu</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>a_iv</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>returns the flattened index for m_interp_data and m_interp_coords associated to given surface, u and v indices </p>
 
 </div>
 </div>
@@ -1195,8 +1138,8 @@ template&lt;class SurfaceGeometry &gt; </div>
 
 </div>
 </div>
-<a id="a8200fa04c53f4c1475b87eb89208555b" name="a8200fa04c53f4c1475b87eb89208555b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8200fa04c53f4c1475b87eb89208555b">&#9670;&#160;</a></span>m_params</h2>
+<a id="ab13e73d6d08d11b8706c350906cd016b" name="ab13e73d6d08d11b8706c350906cd016b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab13e73d6d08d11b8706c350906cd016b">&#9670;&#160;</a></span>m_params</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1207,7 +1150,7 @@ template&lt;class SurfaceGeometry &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="struct_surface_extraction_1_1params__t.html">params_t</a> <a class="el" href="class_surface_extraction.html">SurfaceExtraction</a>&lt; SurfaceGeometry &gt;::m_params</td>
+          <td class="memname">const <a class="el" href="structsurface__extraction__params__t.html">surface_extraction_params_t</a> <a class="el" href="class_surface_extraction.html">SurfaceExtraction</a>&lt; SurfaceGeometry &gt;::m_params</td>
         </tr>
       </table>
   </td>
@@ -1295,8 +1238,8 @@ template&lt;class SurfaceGeometry &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/AMRInterpolator/<a class="el" href="_surface_extraction_8hpp_source.html">SurfaceExtraction.hpp</a></li>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/AMRInterpolator/<a class="el" href="_surface_extraction_8impl_8hpp_source.html">SurfaceExtraction.impl.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/AMRInterpolator/<a class="el" href="_surface_extraction_8hpp_source.html">SurfaceExtraction.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/AMRInterpolator/<a class="el" href="_surface_extraction_8impl_8hpp_source.html">SurfaceExtraction.impl.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

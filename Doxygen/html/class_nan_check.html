@@ -85,53 +85,29 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7024c6c25dd19ff61686bbe632ed97db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nan_check.html#a7024c6c25dd19ff61686bbe632ed97db">NanCheck</a> ()</td></tr>
-<tr class="separator:a7024c6c25dd19ff61686bbe632ed97db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a72c89ada03422d99669e4dc9bf6975"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nan_check.html#a5a72c89ada03422d99669e4dc9bf6975">NanCheck</a> (const std::string a_error_info)</td></tr>
-<tr class="memdesc:a5a72c89ada03422d99669e4dc9bf6975"><td class="mdescLeft">&#160;</td><td class="mdescRight">This constructor takes a string which will be displayed when nans happen.  <a href="class_nan_check.html#a5a72c89ada03422d99669e4dc9bf6975">More...</a><br /></td></tr>
-<tr class="separator:a5a72c89ada03422d99669e4dc9bf6975"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf2a635f4d7758e9108d46fb7eb39f0b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nan_check.html#adf2a635f4d7758e9108d46fb7eb39f0b">NanCheck</a> (const std::string a_error_info, const double a_max_abs)</td></tr>
-<tr class="separator:adf2a635f4d7758e9108d46fb7eb39f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a935f0ef44f9027282faa17b54077311d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nan_check.html#a935f0ef44f9027282faa17b54077311d">NanCheck</a> (const std::string a_error_info=&quot;NanCheck&quot;, const double a_max_abs=1e20)</td></tr>
+<tr class="separator:a935f0ef44f9027282faa17b54077311d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea83cd89c2da4ae139238e0c0b4dc950"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nan_check.html#aea83cd89c2da4ae139238e0c0b4dc950">NanCheck</a> (const double a_dx, const std::array&lt; double, CH_SPACEDIM &gt; &amp;a_center, const std::string a_error_info=&quot;NanCheck&quot;, const double a_max_abs=1e20)</td></tr>
+<tr class="separator:aea83cd89c2da4ae139238e0c0b4dc950"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b2d51bff33e586c705b7e70edbd7b89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nan_check.html#a8b2d51bff33e586c705b7e70edbd7b89">compute</a> (<a class="el" href="class_cell.html">Cell</a>&lt; double &gt; current_cell) const</td></tr>
 <tr class="separator:a8b2d51bff33e586c705b7e70edbd7b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a1cdfe62dc972f2db428220a39a04fa71"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nan_check.html#a1cdfe62dc972f2db428220a39a04fa71">m_error_info</a> = &quot;NanCheck&quot;</td></tr>
+<tr class="memitem:aba66fa90afd542c1aef17a81f9fb791f"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nan_check.html#aba66fa90afd542c1aef17a81f9fb791f">m_dx</a></td></tr>
+<tr class="separator:aba66fa90afd542c1aef17a81f9fb791f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5429ed370e8f519959971c0e5dc083d0"><td class="memItemLeft" align="right" valign="top">const std::array&lt; double, CH_SPACEDIM &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nan_check.html#a5429ed370e8f519959971c0e5dc083d0">m_center</a></td></tr>
+<tr class="separator:a5429ed370e8f519959971c0e5dc083d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cdfe62dc972f2db428220a39a04fa71"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nan_check.html#a1cdfe62dc972f2db428220a39a04fa71">m_error_info</a></td></tr>
 <tr class="separator:a1cdfe62dc972f2db428220a39a04fa71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c49119fbceb7d495af933f74785884d"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nan_check.html#a6c49119fbceb7d495af933f74785884d">m_max_abs</a> = 1e20</td></tr>
+<tr class="memitem:a6c49119fbceb7d495af933f74785884d"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nan_check.html#a6c49119fbceb7d495af933f74785884d">m_max_abs</a></td></tr>
 <tr class="separator:a6c49119fbceb7d495af933f74785884d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >This compute class checks for nans or very large values and aborts the execution when they appear displying a custom or default error message. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a7024c6c25dd19ff61686bbe632ed97db" name="a7024c6c25dd19ff61686bbe632ed97db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7024c6c25dd19ff61686bbe632ed97db">&#9670;&#160;</a></span>NanCheck() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">NanCheck::NanCheck </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5a72c89ada03422d99669e4dc9bf6975" name="a5a72c89ada03422d99669e4dc9bf6975"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a72c89ada03422d99669e4dc9bf6975">&#9670;&#160;</a></span>NanCheck() <span class="overload">[2/3]</span></h2>
+<a id="a935f0ef44f9027282faa17b54077311d" name="a935f0ef44f9027282faa17b54077311d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a935f0ef44f9027282faa17b54077311d">&#9670;&#160;</a></span>NanCheck() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,41 +119,61 @@ Protected Attributes</h2></td></tr>
           <td class="memname">NanCheck::NanCheck </td>
           <td>(</td>
           <td class="paramtype">const std::string&#160;</td>
-          <td class="paramname"><em>a_error_info</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>This constructor takes a string which will be displayed when nans happen. </p>
-
-</div>
-</div>
-<a id="adf2a635f4d7758e9108d46fb7eb39f0b" name="adf2a635f4d7758e9108d46fb7eb39f0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf2a635f4d7758e9108d46fb7eb39f0b">&#9670;&#160;</a></span>NanCheck() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">NanCheck::NanCheck </td>
-          <td>(</td>
-          <td class="paramtype">const std::string&#160;</td>
-          <td class="paramname"><em>a_error_info</em>, </td>
+          <td class="paramname"><em>a_error_info</em> = <code>&quot;NanCheck&quot;</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>a_max_abs</em>&#160;</td>
+          <td class="paramname"><em>a_max_abs</em> = <code>1e20</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea83cd89c2da4ae139238e0c0b4dc950" name="aea83cd89c2da4ae139238e0c0b4dc950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea83cd89c2da4ae139238e0c0b4dc950">&#9670;&#160;</a></span>NanCheck() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NanCheck::NanCheck </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>a_dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::array&lt; double, CH_SPACEDIM &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a_center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>a_error_info</em> = <code>&quot;NanCheck&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>a_max_abs</em> = <code>1e20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -222,6 +218,50 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5429ed370e8f519959971c0e5dc083d0" name="a5429ed370e8f519959971c0e5dc083d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5429ed370e8f519959971c0e5dc083d0">&#9670;&#160;</a></span>m_center</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::array&lt;double, CH_SPACEDIM&gt;&amp; NanCheck::m_center</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba66fa90afd542c1aef17a81f9fb791f" name="aba66fa90afd542c1aef17a81f9fb791f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba66fa90afd542c1aef17a81f9fb791f">&#9670;&#160;</a></span>m_dx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double NanCheck::m_dx</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a1cdfe62dc972f2db428220a39a04fa71" name="a1cdfe62dc972f2db428220a39a04fa71"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1cdfe62dc972f2db428220a39a04fa71">&#9670;&#160;</a></span>m_error_info</h2>
 
@@ -232,7 +272,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string NanCheck::m_error_info = &quot;NanCheck&quot;</td>
+          <td class="memname">const std::string NanCheck::m_error_info</td>
         </tr>
       </table>
   </td>
@@ -254,7 +294,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double NanCheck::m_max_abs = 1e20</td>
+          <td class="memname">const double NanCheck::m_max_abs</td>
         </tr>
       </table>
   </td>
@@ -267,7 +307,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/BoxUtils/<a class="el" href="_nan_check_8hpp_source.html">NanCheck.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/BoxUtils/<a class="el" href="_nan_check_8hpp_source.html">NanCheck.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

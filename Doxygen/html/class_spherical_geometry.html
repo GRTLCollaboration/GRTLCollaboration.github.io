@@ -71,8 +71,10 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_spherical_geometry-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">SphericalGeometry Class Reference</div></div>
 </div><!--header-->
@@ -82,48 +84,104 @@ $(function() {
  <a href="class_spherical_geometry.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_spherical_geometry_8hpp_source.html">SphericalGeometry.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for SphericalGeometry:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_spherical_geometry.png" usemap="#SphericalGeometry_map" alt=""/>
+  <map id="SphericalGeometry_map" name="SphericalGeometry_map">
+<area href="class_a_h_spherical_geometry.html" title="This SurfaceGeometry template class provides spherical shell geometry implementation for the SurfaceE..." alt="AHSphericalGeometry" shape="rect" coords="0,56,138,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:af9027e16c3fd2f9531614bb56ce7995a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#af9027e16c3fd2f9531614bb56ce7995a">UP_DIR</a> { <a class="el" href="class_spherical_geometry.html#af9027e16c3fd2f9531614bb56ce7995aae84608804c3c4ab31a2edef2e98b3d80">X</a>
+, <a class="el" href="class_spherical_geometry.html#af9027e16c3fd2f9531614bb56ce7995aa634bf1963a7880979fb1d4bec5ab8ce4">Y</a>
+, <a class="el" href="class_spherical_geometry.html#af9027e16c3fd2f9531614bb56ce7995aa7ada4ed466dec75cbad9e4c42410c8b6">Z</a>
+ }</td></tr>
+<tr class="separator:af9027e16c3fd2f9531614bb56ce7995a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3a787ede48dd611039c11199b6ca70be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a3a787ede48dd611039c11199b6ca70be">SphericalGeometry</a> (const std::array&lt; double, CH_SPACEDIM &gt; &amp;a_center)</td></tr>
 <tr class="separator:a3a787ede48dd611039c11199b6ca70be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8c6d72d3fbbbde02f47afa85d2238b7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#af8c6d72d3fbbbde02f47afa85d2238b7">du</a> (int a_num_points_theta) const</td></tr>
-<tr class="memdesc:af8c6d72d3fbbbde02f47afa85d2238b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the grid spacing in theta  <a href="class_spherical_geometry.html#af8c6d72d3fbbbde02f47afa85d2238b7">More...</a><br /></td></tr>
-<tr class="separator:af8c6d72d3fbbbde02f47afa85d2238b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c6dff6b665c8c411894cf364ce7d1ff"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a9c6dff6b665c8c411894cf364ce7d1ff">dv</a> (int a_num_points_phi) const</td></tr>
-<tr class="memdesc:a9c6dff6b665c8c411894cf364ce7d1ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the grid spacing in phi  <a href="class_spherical_geometry.html#a9c6dff6b665c8c411894cf364ce7d1ff">More...</a><br /></td></tr>
-<tr class="separator:a9c6dff6b665c8c411894cf364ce7d1ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4b5d79ef35289f0ef4bd37f87166059"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#ae4b5d79ef35289f0ef4bd37f87166059">u</a> (int a_itheta, int a_num_points_theta) const</td></tr>
-<tr class="memdesc:ae4b5d79ef35289f0ef4bd37f87166059"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the theta coordinate associated to the theta/u index  <a href="class_spherical_geometry.html#ae4b5d79ef35289f0ef4bd37f87166059">More...</a><br /></td></tr>
-<tr class="separator:ae4b5d79ef35289f0ef4bd37f87166059"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a442026a314ec8a334526cbab4b139a6e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a442026a314ec8a334526cbab4b139a6e">v</a> (int a_iphi, int a_num_points_phi) const</td></tr>
-<tr class="memdesc:a442026a314ec8a334526cbab4b139a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the phi coordinate associated to the phi/v index  <a href="class_spherical_geometry.html#a442026a314ec8a334526cbab4b139a6e">More...</a><br /></td></tr>
-<tr class="separator:a442026a314ec8a334526cbab4b139a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f9437418eb428e535bb12b022a38378"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a5f9437418eb428e535bb12b022a38378">is_u_periodic</a> () const</td></tr>
-<tr class="separator:a5f9437418eb428e535bb12b022a38378"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ab716b7463b7cf93dd04d0eed955dc2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a3ab716b7463b7cf93dd04d0eed955dc2">is_v_periodic</a> () const</td></tr>
-<tr class="separator:a3ab716b7463b7cf93dd04d0eed955dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbe7cfc842284b2e9a41c6570f3af2d8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#acbe7cfc842284b2e9a41c6570f3af2d8">get_grid_coord</a> (int a_dir, double a_radius, double a_theta, double a_phi) const</td></tr>
-<tr class="memdesc:acbe7cfc842284b2e9a41c6570f3af2d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the Cartesian coordinate in direction a_dir with specified radius, theta and phi.  <a href="class_spherical_geometry.html#acbe7cfc842284b2e9a41c6570f3af2d8">More...</a><br /></td></tr>
-<tr class="separator:acbe7cfc842284b2e9a41c6570f3af2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3accfe04a7aed6af64f52da0d0d4caa4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a3accfe04a7aed6af64f52da0d0d4caa4">area_element</a> (double a_radius, double a_theta, double a_phi) const</td></tr>
-<tr class="memdesc:a3accfe04a7aed6af64f52da0d0d4caa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the area element on a sphere with radius a_radius at the point (a_theta, a_phi)  <a href="class_spherical_geometry.html#a3accfe04a7aed6af64f52da0d0d4caa4">More...</a><br /></td></tr>
-<tr class="separator:a3accfe04a7aed6af64f52da0d0d4caa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c07602ca63a8d7066e3cad228dbfe05"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a9c07602ca63a8d7066e3cad228dbfe05">param_name</a> () const</td></tr>
-<tr class="separator:a9c07602ca63a8d7066e3cad228dbfe05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d1e59847970cd4605b7ee3875f01b2f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a8d1e59847970cd4605b7ee3875f01b2f">u_name</a> () const</td></tr>
-<tr class="separator:a8d1e59847970cd4605b7ee3875f01b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a153fcb01eee4d58519c7f116e4eb8ecf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a153fcb01eee4d58519c7f116e4eb8ecf">v_name</a> () const</td></tr>
-<tr class="separator:a153fcb01eee4d58519c7f116e4eb8ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed4ef0f5d055e621ff9d0aa936bc7134"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> <a class="el" href="class_spherical_geometry.html#af9027e16c3fd2f9531614bb56ce7995a">UP_DIR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#aed4ef0f5d055e621ff9d0aa936bc7134">get_up_dir</a> () const</td></tr>
+<tr class="separator:aed4ef0f5d055e621ff9d0aa936bc7134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00bccccbac7f6131855697351fefad0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a00bccccbac7f6131855697351fefad0a">get_grid_coord</a> (int a_dir, double a_radius, double a_theta, double a_phi=0.) const</td></tr>
+<tr class="memdesc:a00bccccbac7f6131855697351fefad0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the Cartesian coordinate in direction a_dir with specified radius, theta and phi.  <a href="class_spherical_geometry.html#a00bccccbac7f6131855697351fefad0a">More...</a><br /></td></tr>
+<tr class="separator:a00bccccbac7f6131855697351fefad0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a440ce73961fc2d30c5bf99fb366b71b9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a440ce73961fc2d30c5bf99fb366b71b9">get_domain_u_min</a> ()</td></tr>
+<tr class="separator:a440ce73961fc2d30c5bf99fb366b71b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bdd07bcb55d9a788621e6fdcd285d8a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a8bdd07bcb55d9a788621e6fdcd285d8a">get_domain_u_max</a> ()</td></tr>
+<tr class="separator:a8bdd07bcb55d9a788621e6fdcd285d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cb1dae1e89cbf68bab2cdd66f0f05be"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a4cb1dae1e89cbf68bab2cdd66f0f05be">get_domain_v_min</a> ()</td></tr>
+<tr class="separator:a4cb1dae1e89cbf68bab2cdd66f0f05be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd37f49cccddd97d3367af06cfe71bc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a5cd37f49cccddd97d3367af06cfe71bc">get_domain_v_max</a> ()</td></tr>
+<tr class="separator:a5cd37f49cccddd97d3367af06cfe71bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81dfed9fb24404b94e447f6cb3aa5c7b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a81dfed9fb24404b94e447f6cb3aa5c7b">du</a> (int a_num_points_theta)</td></tr>
+<tr class="memdesc:a81dfed9fb24404b94e447f6cb3aa5c7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the grid spacing in theta  <a href="class_spherical_geometry.html#a81dfed9fb24404b94e447f6cb3aa5c7b">More...</a><br /></td></tr>
+<tr class="separator:a81dfed9fb24404b94e447f6cb3aa5c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf2e42fa6f96d3da2d5bdd412f4ae8f0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#adf2e42fa6f96d3da2d5bdd412f4ae8f0">dv</a> (int a_num_points_phi)</td></tr>
+<tr class="memdesc:adf2e42fa6f96d3da2d5bdd412f4ae8f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the grid spacing in phi  <a href="class_spherical_geometry.html#adf2e42fa6f96d3da2d5bdd412f4ae8f0">More...</a><br /></td></tr>
+<tr class="separator:adf2e42fa6f96d3da2d5bdd412f4ae8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae82c499ca3b74c3616fd7c7cfe7823e1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#ae82c499ca3b74c3616fd7c7cfe7823e1">u</a> (int a_itheta, int a_num_points_theta)</td></tr>
+<tr class="memdesc:ae82c499ca3b74c3616fd7c7cfe7823e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the theta coordinate associated to the theta/u index  <a href="class_spherical_geometry.html#ae82c499ca3b74c3616fd7c7cfe7823e1">More...</a><br /></td></tr>
+<tr class="separator:ae82c499ca3b74c3616fd7c7cfe7823e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24c05a8066dbea882ae429256c28590a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a24c05a8066dbea882ae429256c28590a">v</a> (int a_iphi, int a_num_points_phi)</td></tr>
+<tr class="memdesc:a24c05a8066dbea882ae429256c28590a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the phi coordinate associated to the phi/v index  <a href="class_spherical_geometry.html#a24c05a8066dbea882ae429256c28590a">More...</a><br /></td></tr>
+<tr class="separator:a24c05a8066dbea882ae429256c28590a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884cc8854b4591f76fc2442933a7d18d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a884cc8854b4591f76fc2442933a7d18d">is_u_periodic</a> ()</td></tr>
+<tr class="separator:a884cc8854b4591f76fc2442933a7d18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a376cda0d09a9dc06f3a8647fcd2187ee"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a376cda0d09a9dc06f3a8647fcd2187ee">is_v_periodic</a> ()</td></tr>
+<tr class="separator:a376cda0d09a9dc06f3a8647fcd2187ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ab93c605d9af115e8550a607a241a05"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a3ab93c605d9af115e8550a607a241a05">param_name</a> ()</td></tr>
+<tr class="separator:a3ab93c605d9af115e8550a607a241a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a64a4bc1252f59ff75d9cf29fd5f49"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#af3a64a4bc1252f59ff75d9cf29fd5f49">u_name</a> ()</td></tr>
+<tr class="separator:af3a64a4bc1252f59ff75d9cf29fd5f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94dedaa95c2a47995c7211c83276b63a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a94dedaa95c2a47995c7211c83276b63a">v_name</a> ()</td></tr>
+<tr class="separator:a94dedaa95c2a47995c7211c83276b63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac44d00380efde7559893f13901071703"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#ac44d00380efde7559893f13901071703">area_element</a> (double a_radius, double a_theta, double a_phi)</td></tr>
+<tr class="memdesc:ac44d00380efde7559893f13901071703"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the area element on a sphere with radius a_radius at the point (a_theta, a_phi)  <a href="class_spherical_geometry.html#ac44d00380efde7559893f13901071703">More...</a><br /></td></tr>
+<tr class="separator:ac44d00380efde7559893f13901071703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d72b545f343f2bb9a5f22afb4389415"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_integration_method.html">IntegrationMethod</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#a0d72b545f343f2bb9a5f22afb4389415">get_recommended_integration_method_u</a> (int a_num_points_theta)</td></tr>
+<tr class="separator:a0d72b545f343f2bb9a5f22afb4389415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5863c14bd6b894db5048f1bd4b11d95"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_integration_method.html">IntegrationMethod</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#aa5863c14bd6b894db5048f1bd4b11d95">get_recommended_integration_method_v</a> (int a_num_points_phi)</td></tr>
+<tr class="separator:aa5863c14bd6b894db5048f1bd4b11d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:adaed317563c5ce8238d26bd8b3214a17"><td class="memItemLeft" align="right" valign="top">std::array&lt; double, CH_SPACEDIM &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#adaed317563c5ce8238d26bd8b3214a17">m_center</a></td></tr>
 <tr class="separator:adaed317563c5ce8238d26bd8b3214a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad576e17e9f0000887b9d2cde68457328"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spherical_geometry.html#af9027e16c3fd2f9531614bb56ce7995a">UP_DIR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spherical_geometry.html#ad576e17e9f0000887b9d2cde68457328">m_up_dir</a></td></tr>
+<tr class="separator:ad576e17e9f0000887b9d2cde68457328"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >This SurfaceGeometry template class provides spherical shell geometry implementation for the <a class="el" href="class_surface_extraction.html" title="This class extracts grid variables on 2 dimensional surfaces each parameterised by u and v with diffe...">SurfaceExtraction</a> class u = theta, v = phi. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="af9027e16c3fd2f9531614bb56ce7995a" name="af9027e16c3fd2f9531614bb56ce7995a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9027e16c3fd2f9531614bb56ce7995a">&#9670;&#160;</a></span>UP_DIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_spherical_geometry.html#af9027e16c3fd2f9531614bb56ce7995a">SphericalGeometry::UP_DIR</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af9027e16c3fd2f9531614bb56ce7995aae84608804c3c4ab31a2edef2e98b3d80" name="af9027e16c3fd2f9531614bb56ce7995aae84608804c3c4ab31a2edef2e98b3d80"></a>X&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9027e16c3fd2f9531614bb56ce7995aa634bf1963a7880979fb1d4bec5ab8ce4" name="af9027e16c3fd2f9531614bb56ce7995aa634bf1963a7880979fb1d4bec5ab8ce4"></a>Y&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9027e16c3fd2f9531614bb56ce7995aa7ada4ed466dec75cbad9e4c42410c8b6" name="af9027e16c3fd2f9531614bb56ce7995aa7ada4ed466dec75cbad9e4c42410c8b6"></a>Z&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3a787ede48dd611039c11199b6ca70be" name="a3a787ede48dd611039c11199b6ca70be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3a787ede48dd611039c11199b6ca70be">&#9670;&#160;</a></span>SphericalGeometry()</h2>
 
@@ -151,8 +209,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3accfe04a7aed6af64f52da0d0d4caa4" name="a3accfe04a7aed6af64f52da0d0d4caa4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3accfe04a7aed6af64f52da0d0d4caa4">&#9670;&#160;</a></span>area_element()</h2>
+<a id="ac44d00380efde7559893f13901071703" name="ac44d00380efde7559893f13901071703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac44d00380efde7559893f13901071703">&#9670;&#160;</a></span>area_element()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,7 +219,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double SphericalGeometry::area_element </td>
+          <td class="memname">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double SphericalGeometry::area_element </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>a_radius</em>, </td>
@@ -181,12 +239,12 @@ Private Attributes</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -195,8 +253,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af8c6d72d3fbbbde02f47afa85d2238b7" name="af8c6d72d3fbbbde02f47afa85d2238b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8c6d72d3fbbbde02f47afa85d2238b7">&#9670;&#160;</a></span>du()</h2>
+<a id="a81dfed9fb24404b94e447f6cb3aa5c7b" name="a81dfed9fb24404b94e447f6cb3aa5c7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81dfed9fb24404b94e447f6cb3aa5c7b">&#9670;&#160;</a></span>du()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -205,16 +263,16 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double SphericalGeometry::du </td>
+          <td class="memname">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double SphericalGeometry::du </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>a_num_points_theta</em></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -223,8 +281,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9c6dff6b665c8c411894cf364ce7d1ff" name="a9c6dff6b665c8c411894cf364ce7d1ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c6dff6b665c8c411894cf364ce7d1ff">&#9670;&#160;</a></span>dv()</h2>
+<a id="adf2e42fa6f96d3da2d5bdd412f4ae8f0" name="adf2e42fa6f96d3da2d5bdd412f4ae8f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf2e42fa6f96d3da2d5bdd412f4ae8f0">&#9670;&#160;</a></span>dv()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,16 +291,16 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double SphericalGeometry::dv </td>
+          <td class="memname">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double SphericalGeometry::dv </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>a_num_points_phi</em></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -251,8 +309,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="acbe7cfc842284b2e9a41c6570f3af2d8" name="acbe7cfc842284b2e9a41c6570f3af2d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbe7cfc842284b2e9a41c6570f3af2d8">&#9670;&#160;</a></span>get_grid_coord()</h2>
+<a id="a8bdd07bcb55d9a788621e6fdcd285d8a" name="a8bdd07bcb55d9a788621e6fdcd285d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bdd07bcb55d9a788621e6fdcd285d8a">&#9670;&#160;</a></span>get_domain_u_max()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -261,7 +319,107 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double SphericalGeometry::get_grid_coord </td>
+          <td class="memname">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double SphericalGeometry::get_domain_u_max </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a440ce73961fc2d30c5bf99fb366b71b9" name="a440ce73961fc2d30c5bf99fb366b71b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a440ce73961fc2d30c5bf99fb366b71b9">&#9670;&#160;</a></span>get_domain_u_min()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double SphericalGeometry::get_domain_u_min </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cd37f49cccddd97d3367af06cfe71bc" name="a5cd37f49cccddd97d3367af06cfe71bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cd37f49cccddd97d3367af06cfe71bc">&#9670;&#160;</a></span>get_domain_v_max()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double SphericalGeometry::get_domain_v_max </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4cb1dae1e89cbf68bab2cdd66f0f05be" name="a4cb1dae1e89cbf68bab2cdd66f0f05be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cb1dae1e89cbf68bab2cdd66f0f05be">&#9670;&#160;</a></span>get_domain_v_min()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double SphericalGeometry::get_domain_v_min </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00bccccbac7f6131855697351fefad0a" name="a00bccccbac7f6131855697351fefad0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00bccccbac7f6131855697351fefad0a">&#9670;&#160;</a></span>get_grid_coord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double SphericalGeometry::get_grid_coord </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>a_dir</em>, </td>
@@ -282,7 +440,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>a_phi</em>&#160;</td>
+          <td class="paramname"><em>a_phi</em> = <code>0.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -301,8 +459,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a5f9437418eb428e535bb12b022a38378" name="a5f9437418eb428e535bb12b022a38378"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f9437418eb428e535bb12b022a38378">&#9670;&#160;</a></span>is_u_periodic()</h2>
+<a id="a0d72b545f343f2bb9a5f22afb4389415" name="a0d72b545f343f2bb9a5f22afb4389415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d72b545f343f2bb9a5f22afb4389415">&#9670;&#160;</a></span>get_recommended_integration_method_u()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -311,7 +469,59 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool SphericalGeometry::is_u_periodic </td>
+          <td class="memname">static const <a class="el" href="class_integration_method.html">IntegrationMethod</a> &amp; SphericalGeometry::get_recommended_integration_method_u </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a_num_points_theta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5863c14bd6b894db5048f1bd4b11d95" name="aa5863c14bd6b894db5048f1bd4b11d95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5863c14bd6b894db5048f1bd4b11d95">&#9670;&#160;</a></span>get_recommended_integration_method_v()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_integration_method.html">IntegrationMethod</a> &amp; SphericalGeometry::get_recommended_integration_method_v </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a_num_points_phi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed4ef0f5d055e621ff9d0aa936bc7134" name="aed4ef0f5d055e621ff9d0aa936bc7134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed4ef0f5d055e621ff9d0aa936bc7134">&#9670;&#160;</a></span>get_up_dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> <a class="el" href="class_spherical_geometry.html#af9027e16c3fd2f9531614bb56ce7995a">UP_DIR</a> SphericalGeometry::get_up_dir </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -326,8 +536,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a3ab716b7463b7cf93dd04d0eed955dc2" name="a3ab716b7463b7cf93dd04d0eed955dc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ab716b7463b7cf93dd04d0eed955dc2">&#9670;&#160;</a></span>is_v_periodic()</h2>
+<a id="a884cc8854b4591f76fc2442933a7d18d" name="a884cc8854b4591f76fc2442933a7d18d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a884cc8854b4591f76fc2442933a7d18d">&#9670;&#160;</a></span>is_u_periodic()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -336,23 +546,23 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool SphericalGeometry::is_v_periodic </td>
+          <td class="memname">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> bool SphericalGeometry::is_u_periodic </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a9c07602ca63a8d7066e3cad228dbfe05" name="a9c07602ca63a8d7066e3cad228dbfe05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c07602ca63a8d7066e3cad228dbfe05">&#9670;&#160;</a></span>param_name()</h2>
+<a id="a376cda0d09a9dc06f3a8647fcd2187ee" name="a376cda0d09a9dc06f3a8647fcd2187ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a376cda0d09a9dc06f3a8647fcd2187ee">&#9670;&#160;</a></span>is_v_periodic()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -361,23 +571,23 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string SphericalGeometry::param_name </td>
+          <td class="memname">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> bool SphericalGeometry::is_v_periodic </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ae4b5d79ef35289f0ef4bd37f87166059" name="ae4b5d79ef35289f0ef4bd37f87166059"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4b5d79ef35289f0ef4bd37f87166059">&#9670;&#160;</a></span>u()</h2>
+<a id="a3ab93c605d9af115e8550a607a241a05" name="a3ab93c605d9af115e8550a607a241a05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ab93c605d9af115e8550a607a241a05">&#9670;&#160;</a></span>param_name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -386,7 +596,32 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double SphericalGeometry::u </td>
+          <td class="memname">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> std::string SphericalGeometry::param_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae82c499ca3b74c3616fd7c7cfe7823e1" name="ae82c499ca3b74c3616fd7c7cfe7823e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae82c499ca3b74c3616fd7c7cfe7823e1">&#9670;&#160;</a></span>u()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double SphericalGeometry::u </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>a_itheta</em>, </td>
@@ -400,12 +635,12 @@ Private Attributes</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -414,8 +649,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8d1e59847970cd4605b7ee3875f01b2f" name="a8d1e59847970cd4605b7ee3875f01b2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d1e59847970cd4605b7ee3875f01b2f">&#9670;&#160;</a></span>u_name()</h2>
+<a id="af3a64a4bc1252f59ff75d9cf29fd5f49" name="af3a64a4bc1252f59ff75d9cf29fd5f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3a64a4bc1252f59ff75d9cf29fd5f49">&#9670;&#160;</a></span>u_name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -424,23 +659,23 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string SphericalGeometry::u_name </td>
+          <td class="memname">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> std::string SphericalGeometry::u_name </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a442026a314ec8a334526cbab4b139a6e" name="a442026a314ec8a334526cbab4b139a6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a442026a314ec8a334526cbab4b139a6e">&#9670;&#160;</a></span>v()</h2>
+<a id="a24c05a8066dbea882ae429256c28590a" name="a24c05a8066dbea882ae429256c28590a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24c05a8066dbea882ae429256c28590a">&#9670;&#160;</a></span>v()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -449,7 +684,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double SphericalGeometry::v </td>
+          <td class="memname">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> double SphericalGeometry::v </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>a_iphi</em>, </td>
@@ -463,12 +698,12 @@ Private Attributes</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -477,8 +712,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a153fcb01eee4d58519c7f116e4eb8ecf" name="a153fcb01eee4d58519c7f116e4eb8ecf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a153fcb01eee4d58519c7f116e4eb8ecf">&#9670;&#160;</a></span>v_name()</h2>
+<a id="a94dedaa95c2a47995c7211c83276b63a" name="a94dedaa95c2a47995c7211c83276b63a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94dedaa95c2a47995c7211c83276b63a">&#9670;&#160;</a></span>v_name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -487,15 +722,15 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string SphericalGeometry::v_name </td>
+          <td class="memname">static <a class="el" href="_always_inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a> std::string SphericalGeometry::v_name </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -518,7 +753,29 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad576e17e9f0000887b9d2cde68457328" name="ad576e17e9f0000887b9d2cde68457328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad576e17e9f0000887b9d2cde68457328">&#9670;&#160;</a></span>m_up_dir</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_spherical_geometry.html#af9027e16c3fd2f9531614bb56ce7995a">UP_DIR</a> SphericalGeometry::m_up_dir</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -526,7 +783,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/AMRInterpolator/<a class="el" href="_spherical_geometry_8hpp_source.html">SphericalGeometry.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/AMRInterpolator/<a class="el" href="_spherical_geometry_8hpp_source.html">SphericalGeometry.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

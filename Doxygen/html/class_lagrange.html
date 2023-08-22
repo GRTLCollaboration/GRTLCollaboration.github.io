@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GRChombo: Lagrange&lt; Order &gt; Class Template Reference</title>
+<title>GRChombo: Lagrange&lt; Order, N_DIMS &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -78,7 +78,7 @@ $(function() {
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_lagrange-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Lagrange&lt; Order &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">Lagrange&lt; Order, N_DIMS &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -91,61 +91,62 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a63e52c6d7aa81935502178e62bd5bcfd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a63e52c6d7aa81935502178e62bd5bcfd">Lagrange</a> (const <a class="el" href="class_interp_source.html">InterpSource</a> &amp;source, bool verbosity=false)</td></tr>
-<tr class="separator:a63e52c6d7aa81935502178e62bd5bcfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bc139c0f9c0e41c506c4f76614dfb9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a5bc139c0f9c0e41c506c4f76614dfb9e">setup</a> (const std::array&lt; int, CH_SPACEDIM &gt; &amp;deriv, const std::array&lt; double, CH_SPACEDIM &gt; &amp;dx, const std::array&lt; double, CH_SPACEDIM &gt; &amp;evalCoord, const IntVect &amp;nearest)</td></tr>
-<tr class="separator:a5bc139c0f9c0e41c506c4f76614dfb9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac69046121c7240fd92db80fe3a225476"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#ac69046121c7240fd92db80fe3a225476">interpData</a> (const FArrayBox &amp;fab, int comp)</td></tr>
-<tr class="separator:ac69046121c7240fd92db80fe3a225476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d4915989baccb6fbc1863f5ea7a453"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#ac4d4915989baccb6fbc1863f5ea7a453">Lagrange</a> (const <a class="el" href="class_interp_source.html">InterpSource</a>&lt; N_DIMS &gt; &amp;source, bool verbosity=false)</td></tr>
+<tr class="separator:ac4d4915989baccb6fbc1863f5ea7a453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afef00cddf8b55bb5a0511fcd7e562ccb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#afef00cddf8b55bb5a0511fcd7e562ccb">setup</a> (const std::array&lt; int, N_DIMS &gt; &amp;deriv, const std::array&lt; double, N_DIMS &gt; &amp;eval_index)</td></tr>
+<tr class="separator:afef00cddf8b55bb5a0511fcd7e562ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dda57a84987f4bd11b28a54a426ae40"><td class="memTemplParams" colspan="2">template&lt;class GeneralArrayBox &gt; </td></tr>
+<tr class="memitem:a5dda57a84987f4bd11b28a54a426ae40"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a5dda57a84987f4bd11b28a54a426ae40">interpData</a> (const GeneralArrayBox &amp;fab, int comp=0)</td></tr>
+<tr class="separator:a5dda57a84987f4bd11b28a54a426ae40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a6fc30433af45d86b631003909c12fc6f"><td class="memItemLeft" align="right" valign="top">static const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a6fc30433af45d86b631003909c12fc6f">TAG</a> = &quot;\x1b[36;1m[<a class="el" href="class_lagrange.html">Lagrange</a>]\x1b[0m &quot;</td></tr>
-<tr class="separator:a6fc30433af45d86b631003909c12fc6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0401d4f64634b1d51c5b47e571de9e1"><td class="memItemLeft" align="right" valign="top">static const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#ac0401d4f64634b1d51c5b47e571de9e1">TAG</a> = &quot;\x1b[36;1m[<a class="el" href="class_lagrange.html">Lagrange</a>]\x1b[0m &quot;</td></tr>
+<tr class="separator:ac0401d4f64634b1d51c5b47e571de9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:a24ea44b232ea6baf24867e5df710ba61"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="struct_lagrange_1_1_stencil.html">Stencil</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a24ea44b232ea6baf24867e5df710ba61">stencil_collection_t</a></td></tr>
-<tr class="separator:a24ea44b232ea6baf24867e5df710ba61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bdedafb8988bfdb094f7030821fd040"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="struct_lagrange_1_1_stencil.html">Stencil</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a7bdedafb8988bfdb094f7030821fd040">stencil_collection_t</a></td></tr>
+<tr class="separator:a7bdedafb8988bfdb094f7030821fd040"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a5665c703bb5e1fe0dd81b778c0655300"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_lagrange_1_1_stencil.html">Stencil</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a5665c703bb5e1fe0dd81b778c0655300">getStencil</a> (int width, int deriv, double point_offset, double dx)</td></tr>
-<tr class="separator:a5665c703bb5e1fe0dd81b778c0655300"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ef963db32381e23c9abf6d28c1a40e4"><td class="memItemLeft" align="right" valign="top">pair&lt; std::vector&lt; IntVect &gt;, std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a1ef963db32381e23c9abf6d28c1a40e4">generateStencil</a> (const std::array&lt; int, CH_SPACEDIM &gt; &amp;deriv, const std::array&lt; double, CH_SPACEDIM &gt; &amp;dx, const std::array&lt; double, CH_SPACEDIM &gt; &amp;evalCoord, const IntVect &amp;nearest, int dim=CH_SPACEDIM - 1)</td></tr>
-<tr class="separator:a1ef963db32381e23c9abf6d28c1a40e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3604197bb8f9b71fe99efd1ddfe37766"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_lagrange_1_1_stencil.html">Stencil</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a3604197bb8f9b71fe99efd1ddfe37766">getStencil</a> (int width, int deriv, double point_offset, double dx)</td></tr>
+<tr class="separator:a3604197bb8f9b71fe99efd1ddfe37766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d69d6545d26614a25ad4024ac7142ad"><td class="memItemLeft" align="right" valign="top">pair&lt; std::vector&lt; IntVect &gt;, std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a5d69d6545d26614a25ad4024ac7142ad">generateStencil</a> (const std::array&lt; int, N_DIMS &gt; &amp;deriv, const std::array&lt; double, N_DIMS &gt; &amp;dx, const std::array&lt; double, N_DIMS &gt; &amp;eval_index, int dim=N_DIMS - 1)</td></tr>
+<tr class="separator:a5d69d6545d26614a25ad4024ac7142ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ab4b35b280c84ad2600c5b76f4505e448"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_interp_source.html">InterpSource</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#ab4b35b280c84ad2600c5b76f4505e448">m_source</a></td></tr>
-<tr class="separator:ab4b35b280c84ad2600c5b76f4505e448"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a521ece12632797c937a0b1a5f9080361"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a521ece12632797c937a0b1a5f9080361">m_verbosity</a></td></tr>
-<tr class="separator:a521ece12632797c937a0b1a5f9080361"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93726f70867550e2dfe0c79b8e3f8e79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_lagrange.html#a24ea44b232ea6baf24867e5df710ba61">stencil_collection_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a93726f70867550e2dfe0c79b8e3f8e79">m_memoized_stencils</a></td></tr>
-<tr class="separator:a93726f70867550e2dfe0c79b8e3f8e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af975531466650f70166081c523b69da8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; IntVect &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#af975531466650f70166081c523b69da8">m_interp_points</a></td></tr>
-<tr class="separator:af975531466650f70166081c523b69da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77f698e250028a437954467f55f54d9b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a77f698e250028a437954467f55f54d9b">m_interp_weights</a></td></tr>
-<tr class="separator:a77f698e250028a437954467f55f54d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6c1a397c70cca6b0484183910a4431d"><td class="memItemLeft" align="right" valign="top">multiset&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#aa6c1a397c70cca6b0484183910a4431d">m_interp_neg</a></td></tr>
-<tr class="separator:aa6c1a397c70cca6b0484183910a4431d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a010531b7b91cc809ba9555c974303e0b"><td class="memItemLeft" align="right" valign="top">multiset&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a010531b7b91cc809ba9555c974303e0b">m_interp_pos</a></td></tr>
-<tr class="separator:a010531b7b91cc809ba9555c974303e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a246f4c501261e94d35c891b609a4e54a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_interp_source.html">InterpSource</a>&lt; N_DIMS &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a246f4c501261e94d35c891b609a4e54a">m_source</a></td></tr>
+<tr class="separator:a246f4c501261e94d35c891b609a4e54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f8b8cf12b2334c7f341b342661e3ea2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a1f8b8cf12b2334c7f341b342661e3ea2">m_verbosity</a></td></tr>
+<tr class="separator:a1f8b8cf12b2334c7f341b342661e3ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea2a94e32e112f16e8ec9666fe9139c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_lagrange.html#a7bdedafb8988bfdb094f7030821fd040">stencil_collection_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#aea2a94e32e112f16e8ec9666fe9139c2">m_memoized_stencils</a></td></tr>
+<tr class="separator:aea2a94e32e112f16e8ec9666fe9139c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7154583b71331c4d6b0efdd258120cf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; IntVect &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#ad7154583b71331c4d6b0efdd258120cf">m_interp_points</a></td></tr>
+<tr class="separator:ad7154583b71331c4d6b0efdd258120cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae29829bf9503e41d7332273d08bfe13c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#ae29829bf9503e41d7332273d08bfe13c">m_interp_weights</a></td></tr>
+<tr class="separator:ae29829bf9503e41d7332273d08bfe13c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b839381c8e7b870d0969363c8aeef3b"><td class="memItemLeft" align="right" valign="top">multiset&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a3b839381c8e7b870d0969363c8aeef3b">m_interp_neg</a></td></tr>
+<tr class="separator:a3b839381c8e7b870d0969363c8aeef3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a820cca641dc97e476ae26e5747dbd479"><td class="memItemLeft" align="right" valign="top">multiset&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lagrange.html#a820cca641dc97e476ae26e5747dbd479">m_interp_pos</a></td></tr>
+<tr class="separator:a820cca641dc97e476ae26e5747dbd479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a24ea44b232ea6baf24867e5df710ba61" name="a24ea44b232ea6baf24867e5df710ba61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24ea44b232ea6baf24867e5df710ba61">&#9670;&#160;</a></span>stencil_collection_t</h2>
+<a id="a7bdedafb8988bfdb094f7030821fd040" name="a7bdedafb8988bfdb094f7030821fd040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bdedafb8988bfdb094f7030821fd040">&#9670;&#160;</a></span>stencil_collection_t</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int Order&gt; </div>
+template&lt;int Order, int N_DIMS = CH_SPACEDIM&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::vector&lt;<a class="el" href="struct_lagrange_1_1_stencil.html">Stencil</a>&gt; <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order &gt;::stencil_collection_t</td>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="struct_lagrange_1_1_stencil.html">Stencil</a>&gt; <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order, N_DIMS &gt;::stencil_collection_t</td>
         </tr>
       </table>
   </td>
@@ -158,18 +159,18 @@ template&lt;int Order&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a63e52c6d7aa81935502178e62bd5bcfd" name="a63e52c6d7aa81935502178e62bd5bcfd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63e52c6d7aa81935502178e62bd5bcfd">&#9670;&#160;</a></span>Lagrange()</h2>
+<a id="ac4d4915989baccb6fbc1863f5ea7a453" name="ac4d4915989baccb6fbc1863f5ea7a453"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4d4915989baccb6fbc1863f5ea7a453">&#9670;&#160;</a></span>Lagrange()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int Order&gt; </div>
+template&lt;int Order, int N_DIMS&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order &gt;<a class="el" href="class_lagrange.html">::Lagrange</a> </td>
+          <td class="memname"><a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order, N_DIMS &gt;<a class="el" href="class_lagrange.html">::Lagrange</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_interp_source.html">InterpSource</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_interp_source.html">InterpSource</a>&lt; N_DIMS &gt; &amp;&#160;</td>
           <td class="paramname"><em>source</em>, </td>
         </tr>
         <tr>
@@ -189,46 +190,40 @@ template&lt;int Order&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1ef963db32381e23c9abf6d28c1a40e4" name="a1ef963db32381e23c9abf6d28c1a40e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ef963db32381e23c9abf6d28c1a40e4">&#9670;&#160;</a></span>generateStencil()</h2>
+<a id="a5d69d6545d26614a25ad4024ac7142ad" name="a5d69d6545d26614a25ad4024ac7142ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d69d6545d26614a25ad4024ac7142ad">&#9670;&#160;</a></span>generateStencil()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int Order&gt; </div>
+template&lt;int Order, int N_DIMS&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">pair&lt; std::vector&lt; IntVect &gt;, std::vector&lt; double &gt; &gt; <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order &gt;::generateStencil </td>
+          <td class="memname">pair&lt; std::vector&lt; IntVect &gt;, std::vector&lt; double &gt; &gt; <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order, N_DIMS &gt;::generateStencil </td>
           <td>(</td>
-          <td class="paramtype">const std::array&lt; int, CH_SPACEDIM &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::array&lt; int, N_DIMS &gt; &amp;&#160;</td>
           <td class="paramname"><em>deriv</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::array&lt; double, CH_SPACEDIM &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::array&lt; double, N_DIMS &gt; &amp;&#160;</td>
           <td class="paramname"><em>dx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::array&lt; double, CH_SPACEDIM &gt; &amp;&#160;</td>
-          <td class="paramname"><em>evalCoord</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const IntVect &amp;&#160;</td>
-          <td class="paramname"><em>nearest</em>, </td>
+          <td class="paramtype">const std::array&lt; double, N_DIMS &gt; &amp;&#160;</td>
+          <td class="paramname"><em>eval_index</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>dim</em> = <code>CH_SPACEDIM&#160;-&#160;1</code>&#160;</td>
+          <td class="paramname"><em>dim</em> = <code>N_DIMS&#160;-&#160;1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -245,19 +240,19 @@ template&lt;int Order&gt; </div>
 
 </div>
 </div>
-<a id="a5665c703bb5e1fe0dd81b778c0655300" name="a5665c703bb5e1fe0dd81b778c0655300"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5665c703bb5e1fe0dd81b778c0655300">&#9670;&#160;</a></span>getStencil()</h2>
+<a id="a3604197bb8f9b71fe99efd1ddfe37766" name="a3604197bb8f9b71fe99efd1ddfe37766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3604197bb8f9b71fe99efd1ddfe37766">&#9670;&#160;</a></span>getStencil()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int Order&gt; </div>
+template&lt;int Order, int N_DIMS&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order &gt;::Stencil <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order &gt;::getStencil </td>
+          <td class="memname"><a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order, N_DIMS &gt;::Stencil <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order, N_DIMS &gt;::getStencil </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>width</em>, </td>
@@ -295,25 +290,27 @@ template&lt;int Order&gt; </div>
 
 </div>
 </div>
-<a id="ac69046121c7240fd92db80fe3a225476" name="ac69046121c7240fd92db80fe3a225476"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac69046121c7240fd92db80fe3a225476">&#9670;&#160;</a></span>interpData()</h2>
+<a id="a5dda57a84987f4bd11b28a54a426ae40" name="a5dda57a84987f4bd11b28a54a426ae40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dda57a84987f4bd11b28a54a426ae40">&#9670;&#160;</a></span>interpData()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int Order&gt; </div>
+template&lt;int Order, int N_DIMS&gt; </div>
+<div class="memtemplate">
+template&lt;class GeneralArrayBox &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">double <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order &gt;::interpData </td>
+          <td class="memname">double <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order, N_DIMS &gt;::interpData </td>
           <td>(</td>
-          <td class="paramtype">const FArrayBox &amp;&#160;</td>
+          <td class="paramtype">const GeneralArrayBox &amp;&#160;</td>
           <td class="paramname"><em>fab</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>comp</em>&#160;</td>
+          <td class="paramname"><em>comp</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -325,37 +322,25 @@ template&lt;int Order&gt; </div>
 
 </div>
 </div>
-<a id="a5bc139c0f9c0e41c506c4f76614dfb9e" name="a5bc139c0f9c0e41c506c4f76614dfb9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bc139c0f9c0e41c506c4f76614dfb9e">&#9670;&#160;</a></span>setup()</h2>
+<a id="afef00cddf8b55bb5a0511fcd7e562ccb" name="afef00cddf8b55bb5a0511fcd7e562ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afef00cddf8b55bb5a0511fcd7e562ccb">&#9670;&#160;</a></span>setup()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int Order&gt; </div>
+template&lt;int Order, int N_DIMS&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order &gt;::setup </td>
+          <td class="memname">void <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order, N_DIMS &gt;::setup </td>
           <td>(</td>
-          <td class="paramtype">const std::array&lt; int, CH_SPACEDIM &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::array&lt; int, N_DIMS &gt; &amp;&#160;</td>
           <td class="paramname"><em>deriv</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::array&lt; double, CH_SPACEDIM &gt; &amp;&#160;</td>
-          <td class="paramname"><em>dx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::array&lt; double, CH_SPACEDIM &gt; &amp;&#160;</td>
-          <td class="paramname"><em>evalCoord</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const IntVect &amp;&#160;</td>
-          <td class="paramname"><em>nearest</em>&#160;</td>
+          <td class="paramtype">const std::array&lt; double, N_DIMS &gt; &amp;&#160;</td>
+          <td class="paramname"><em>eval_index</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -368,19 +353,19 @@ template&lt;int Order&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa6c1a397c70cca6b0484183910a4431d" name="aa6c1a397c70cca6b0484183910a4431d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6c1a397c70cca6b0484183910a4431d">&#9670;&#160;</a></span>m_interp_neg</h2>
+<a id="a3b839381c8e7b870d0969363c8aeef3b" name="a3b839381c8e7b870d0969363c8aeef3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b839381c8e7b870d0969363c8aeef3b">&#9670;&#160;</a></span>m_interp_neg</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int Order&gt; </div>
+template&lt;int Order, int N_DIMS = CH_SPACEDIM&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">multiset&lt;double&gt; <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order &gt;::m_interp_neg</td>
+          <td class="memname">multiset&lt;double&gt; <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order, N_DIMS &gt;::m_interp_neg</td>
         </tr>
       </table>
   </td>
@@ -392,19 +377,19 @@ template&lt;int Order&gt; </div>
 
 </div>
 </div>
-<a id="af975531466650f70166081c523b69da8" name="af975531466650f70166081c523b69da8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af975531466650f70166081c523b69da8">&#9670;&#160;</a></span>m_interp_points</h2>
+<a id="ad7154583b71331c4d6b0efdd258120cf" name="ad7154583b71331c4d6b0efdd258120cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7154583b71331c4d6b0efdd258120cf">&#9670;&#160;</a></span>m_interp_points</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int Order&gt; </div>
+template&lt;int Order, int N_DIMS = CH_SPACEDIM&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;IntVect&gt; <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order &gt;::m_interp_points</td>
+          <td class="memname">std::vector&lt;IntVect&gt; <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order, N_DIMS &gt;::m_interp_points</td>
         </tr>
       </table>
   </td>
@@ -416,19 +401,19 @@ template&lt;int Order&gt; </div>
 
 </div>
 </div>
-<a id="a010531b7b91cc809ba9555c974303e0b" name="a010531b7b91cc809ba9555c974303e0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a010531b7b91cc809ba9555c974303e0b">&#9670;&#160;</a></span>m_interp_pos</h2>
+<a id="a820cca641dc97e476ae26e5747dbd479" name="a820cca641dc97e476ae26e5747dbd479"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a820cca641dc97e476ae26e5747dbd479">&#9670;&#160;</a></span>m_interp_pos</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int Order&gt; </div>
+template&lt;int Order, int N_DIMS = CH_SPACEDIM&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">multiset&lt;double&gt; <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order &gt;::m_interp_pos</td>
+          <td class="memname">multiset&lt;double&gt; <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order, N_DIMS &gt;::m_interp_pos</td>
         </tr>
       </table>
   </td>
@@ -440,19 +425,19 @@ template&lt;int Order&gt; </div>
 
 </div>
 </div>
-<a id="a77f698e250028a437954467f55f54d9b" name="a77f698e250028a437954467f55f54d9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77f698e250028a437954467f55f54d9b">&#9670;&#160;</a></span>m_interp_weights</h2>
+<a id="ae29829bf9503e41d7332273d08bfe13c" name="ae29829bf9503e41d7332273d08bfe13c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae29829bf9503e41d7332273d08bfe13c">&#9670;&#160;</a></span>m_interp_weights</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int Order&gt; </div>
+template&lt;int Order, int N_DIMS = CH_SPACEDIM&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;double&gt; <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order &gt;::m_interp_weights</td>
+          <td class="memname">std::vector&lt;double&gt; <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order, N_DIMS &gt;::m_interp_weights</td>
         </tr>
       </table>
   </td>
@@ -464,19 +449,19 @@ template&lt;int Order&gt; </div>
 
 </div>
 </div>
-<a id="a93726f70867550e2dfe0c79b8e3f8e79" name="a93726f70867550e2dfe0c79b8e3f8e79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93726f70867550e2dfe0c79b8e3f8e79">&#9670;&#160;</a></span>m_memoized_stencils</h2>
+<a id="aea2a94e32e112f16e8ec9666fe9139c2" name="aea2a94e32e112f16e8ec9666fe9139c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea2a94e32e112f16e8ec9666fe9139c2">&#9670;&#160;</a></span>m_memoized_stencils</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int Order&gt; </div>
+template&lt;int Order, int N_DIMS = CH_SPACEDIM&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_lagrange.html#a24ea44b232ea6baf24867e5df710ba61">stencil_collection_t</a> <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order &gt;::m_memoized_stencils</td>
+          <td class="memname"><a class="el" href="class_lagrange.html#a7bdedafb8988bfdb094f7030821fd040">stencil_collection_t</a> <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order, N_DIMS &gt;::m_memoized_stencils</td>
         </tr>
       </table>
   </td>
@@ -488,19 +473,19 @@ template&lt;int Order&gt; </div>
 
 </div>
 </div>
-<a id="ab4b35b280c84ad2600c5b76f4505e448" name="ab4b35b280c84ad2600c5b76f4505e448"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4b35b280c84ad2600c5b76f4505e448">&#9670;&#160;</a></span>m_source</h2>
+<a id="a246f4c501261e94d35c891b609a4e54a" name="a246f4c501261e94d35c891b609a4e54a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a246f4c501261e94d35c891b609a4e54a">&#9670;&#160;</a></span>m_source</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int Order&gt; </div>
+template&lt;int Order, int N_DIMS = CH_SPACEDIM&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_interp_source.html">InterpSource</a>&amp; <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order &gt;::m_source</td>
+          <td class="memname">const <a class="el" href="class_interp_source.html">InterpSource</a>&lt;N_DIMS&gt;&amp; <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order, N_DIMS &gt;::m_source</td>
         </tr>
       </table>
   </td>
@@ -512,19 +497,19 @@ template&lt;int Order&gt; </div>
 
 </div>
 </div>
-<a id="a521ece12632797c937a0b1a5f9080361" name="a521ece12632797c937a0b1a5f9080361"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a521ece12632797c937a0b1a5f9080361">&#9670;&#160;</a></span>m_verbosity</h2>
+<a id="a1f8b8cf12b2334c7f341b342661e3ea2" name="a1f8b8cf12b2334c7f341b342661e3ea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f8b8cf12b2334c7f341b342661e3ea2">&#9670;&#160;</a></span>m_verbosity</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int Order&gt; </div>
+template&lt;int Order, int N_DIMS = CH_SPACEDIM&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order &gt;::m_verbosity</td>
+          <td class="memname">bool <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order, N_DIMS &gt;::m_verbosity</td>
         </tr>
       </table>
   </td>
@@ -536,19 +521,19 @@ template&lt;int Order&gt; </div>
 
 </div>
 </div>
-<a id="a6fc30433af45d86b631003909c12fc6f" name="a6fc30433af45d86b631003909c12fc6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fc30433af45d86b631003909c12fc6f">&#9670;&#160;</a></span>TAG</h2>
+<a id="ac0401d4f64634b1d51c5b47e571de9e1" name="ac0401d4f64634b1d51c5b47e571de9e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0401d4f64634b1d51c5b47e571de9e1">&#9670;&#160;</a></span>TAG</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int Order&gt; </div>
+template&lt;int Order, int N_DIMS&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const string <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order &gt;::TAG = &quot;\x1b[36;1m[<a class="el" href="class_lagrange.html">Lagrange</a>]\x1b[0m &quot;</td>
+          <td class="memname">const string <a class="el" href="class_lagrange.html">Lagrange</a>&lt; Order, N_DIMS &gt;::TAG = &quot;\x1b[36;1m[<a class="el" href="class_lagrange.html">Lagrange</a>]\x1b[0m &quot;</td>
         </tr>
       </table>
   </td>
@@ -561,8 +546,8 @@ template&lt;int Order&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/AMRInterpolator/<a class="el" href="_lagrange_8hpp_source.html">Lagrange.hpp</a></li>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/AMRInterpolator/<a class="el" href="_lagrange_8impl_8hpp_source.html">Lagrange.impl.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/AMRInterpolator/<a class="el" href="_lagrange_8hpp_source.html">Lagrange.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/AMRInterpolator/<a class="el" href="_lagrange_8impl_8hpp_source.html">Lagrange.impl.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

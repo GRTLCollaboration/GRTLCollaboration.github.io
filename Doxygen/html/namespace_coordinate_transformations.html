@@ -78,25 +78,61 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab27c0a7664b21dbdbf25ec0ff5f7ead9"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
-<tr class="memitem:ab27c0a7664b21dbdbf25ec0ff5f7ead9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#ab27c0a7664b21dbdbf25ec0ff5f7ead9">spherical_to_cartesian_U</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt; &amp;spherical_v_U, data_t x, double y, double z)</td></tr>
-<tr class="separator:ab27c0a7664b21dbdbf25ec0ff5f7ead9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafd237a39bdfc29d439ea5b2f5ba98f9"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
-<tr class="memitem:aafd237a39bdfc29d439ea5b2f5ba98f9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#aafd237a39bdfc29d439ea5b2f5ba98f9">spherical_to_cartesian_L</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt; &amp;spherical_v_L, data_t x, double y, double z)</td></tr>
-<tr class="separator:aafd237a39bdfc29d439ea5b2f5ba98f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94f6265a6d65af81a217b4289fdc19aa"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
-<tr class="memitem:a94f6265a6d65af81a217b4289fdc19aa"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#a94f6265a6d65af81a217b4289fdc19aa">cartesian_to_spherical_U</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt; &amp;cartesian_v_U, data_t x, double y, double z)</td></tr>
-<tr class="separator:a94f6265a6d65af81a217b4289fdc19aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3530fb0a01bf1b64e5e33ca251b181e0"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
-<tr class="memitem:a3530fb0a01bf1b64e5e33ca251b181e0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#a3530fb0a01bf1b64e5e33ca251b181e0">cartesian_to_spherical_L</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt; &amp;cartesian_v_L, data_t x, double y, double z)</td></tr>
-<tr class="separator:a3530fb0a01bf1b64e5e33ca251b181e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9667a6f6c13ca0983f2504a5087af765"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
-<tr class="memitem:a9667a6f6c13ca0983f2504a5087af765"><td class="memTemplItemLeft" align="right" valign="top">data_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#a9667a6f6c13ca0983f2504a5087af765">area_element_sphere</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t &gt; &amp;spherical_g)</td></tr>
-<tr class="separator:a9667a6f6c13ca0983f2504a5087af765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb2a182d6c56aa8f809fcf25b9651b11"><td class="memTemplParams" colspan="2">template&lt;class data_t , class data2_t &gt; </td></tr>
+<tr class="memitem:aeb2a182d6c56aa8f809fcf25b9651b11"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#aeb2a182d6c56aa8f809fcf25b9651b11">spherical_jacobian</a> (const data_t x, const data2_t y, const data2_t z)</td></tr>
+<tr class="separator:aeb2a182d6c56aa8f809fcf25b9651b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b2d3aecba19ebb758347073bcbd82e"><td class="memTemplParams" colspan="2">template&lt;class data_t , class data2_t &gt; </td></tr>
+<tr class="memitem:a49b2d3aecba19ebb758347073bcbd82e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#a49b2d3aecba19ebb758347073bcbd82e">inverse_spherical_jacobian</a> (const data_t x, const data2_t y, const data2_t z)</td></tr>
+<tr class="separator:a49b2d3aecba19ebb758347073bcbd82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8470bc3eadb253cf89fb15d4d4f36105"><td class="memTemplParams" colspan="2">template&lt;class data_t , class data2_t &gt; </td></tr>
+<tr class="memitem:a8470bc3eadb253cf89fb15d4d4f36105"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#a8470bc3eadb253cf89fb15d4d4f36105">transform_vector</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;vec_U, const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data2_t, 3 &gt; &amp;jacobian)</td></tr>
+<tr class="separator:a8470bc3eadb253cf89fb15d4d4f36105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3549ae47e09d93caed8076b64c83fba5"><td class="memTemplParams" colspan="2">template&lt;class data_t , class data2_t &gt; </td></tr>
+<tr class="memitem:a3549ae47e09d93caed8076b64c83fba5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#a3549ae47e09d93caed8076b64c83fba5">transform_covector</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;vec_L, const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data2_t, 3 &gt; &amp;jacobian)</td></tr>
+<tr class="separator:a3549ae47e09d93caed8076b64c83fba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95efe54128171641efe3085301488163"><td class="memTemplParams" colspan="2">template&lt;class data_t , class data2_t &gt; </td></tr>
+<tr class="memitem:a95efe54128171641efe3085301488163"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#a95efe54128171641efe3085301488163">transform_tensor_UU</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; &amp;tensor_UU, const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data2_t, 3 &gt; &amp;jacobian)</td></tr>
+<tr class="separator:a95efe54128171641efe3085301488163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa890b30f039e5d96f3afe1321d3312ef"><td class="memTemplParams" colspan="2">template&lt;class data_t , class data2_t &gt; </td></tr>
+<tr class="memitem:aa890b30f039e5d96f3afe1321d3312ef"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#aa890b30f039e5d96f3afe1321d3312ef">transform_tensor_LL</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; &amp;tensor_LL, const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data2_t, 3 &gt; &amp;jacobian)</td></tr>
+<tr class="separator:aa890b30f039e5d96f3afe1321d3312ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02e746a3004f885c534988d9a5a19781"><td class="memTemplParams" colspan="2">template&lt;class data_t , class data2_t &gt; </td></tr>
+<tr class="memitem:a02e746a3004f885c534988d9a5a19781"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#a02e746a3004f885c534988d9a5a19781">spherical_to_cartesian_LL</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; &amp;spherical_g, const data_t x, const data2_t y, const data2_t z)</td></tr>
+<tr class="separator:a02e746a3004f885c534988d9a5a19781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c82b0fc4dbfe393d6fc68b629ccbf3"><td class="memTemplParams" colspan="2">template&lt;class data_t , class data2_t &gt; </td></tr>
+<tr class="memitem:a66c82b0fc4dbfe393d6fc68b629ccbf3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#a66c82b0fc4dbfe393d6fc68b629ccbf3">spherical_to_cartesian_UU</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; &amp;spherical_g_UU, const data_t x, const data2_t y, const data2_t z)</td></tr>
+<tr class="separator:a66c82b0fc4dbfe393d6fc68b629ccbf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229012c670408f29e6c393b11fc31cc5"><td class="memTemplParams" colspan="2">template&lt;class data_t , class data2_t &gt; </td></tr>
+<tr class="memitem:a229012c670408f29e6c393b11fc31cc5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#a229012c670408f29e6c393b11fc31cc5">cartesian_to_spherical_LL</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; &amp;cartesian_g, const data_t x, const data2_t y, const data2_t z)</td></tr>
+<tr class="separator:a229012c670408f29e6c393b11fc31cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ddae3055a0a07d1061b522c73f106b"><td class="memTemplParams" colspan="2">template&lt;class data_t , class data2_t &gt; </td></tr>
+<tr class="memitem:a49ddae3055a0a07d1061b522c73f106b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#a49ddae3055a0a07d1061b522c73f106b">cartesian_to_spherical_UU</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; &amp;cartesian_g_UU, data_t x, data2_t y, data2_t z)</td></tr>
+<tr class="separator:a49ddae3055a0a07d1061b522c73f106b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fffb38d5e6cf2b95d45437a42acc000"><td class="memTemplParams" colspan="2">template&lt;class data_t , class data2_t &gt; </td></tr>
+<tr class="memitem:a6fffb38d5e6cf2b95d45437a42acc000"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#a6fffb38d5e6cf2b95d45437a42acc000">spherical_to_cartesian_U</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;spherical_v_U, data_t x, data2_t y, data2_t z)</td></tr>
+<tr class="separator:a6fffb38d5e6cf2b95d45437a42acc000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5671ad0b90bfab719931a4dc4e928f30"><td class="memTemplParams" colspan="2">template&lt;class data_t , class data2_t &gt; </td></tr>
+<tr class="memitem:a5671ad0b90bfab719931a4dc4e928f30"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#a5671ad0b90bfab719931a4dc4e928f30">spherical_to_cartesian_L</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;spherical_v_L, data_t x, data2_t y, data2_t z)</td></tr>
+<tr class="separator:a5671ad0b90bfab719931a4dc4e928f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3378f59ce355e9c5e3e7e84207258c80"><td class="memTemplParams" colspan="2">template&lt;class data_t , class data2_t &gt; </td></tr>
+<tr class="memitem:a3378f59ce355e9c5e3e7e84207258c80"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#a3378f59ce355e9c5e3e7e84207258c80">cartesian_to_spherical_U</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;cartesian_v_U, data_t x, data2_t y, data2_t z)</td></tr>
+<tr class="separator:a3378f59ce355e9c5e3e7e84207258c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8aaa5a4d48238fd952f4ed829950cbe"><td class="memTemplParams" colspan="2">template&lt;class data_t , class data2_t &gt; </td></tr>
+<tr class="memitem:aa8aaa5a4d48238fd952f4ed829950cbe"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#aa8aaa5a4d48238fd952f4ed829950cbe">cartesian_to_spherical_L</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;cartesian_v_L, data_t x, data2_t y, data2_t z)</td></tr>
+<tr class="separator:aa8aaa5a4d48238fd952f4ed829950cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be7351ea318381a7c7a6e279589434a"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
+<tr class="memitem:a4be7351ea318381a7c7a6e279589434a"><td class="memTemplItemLeft" align="right" valign="top">data_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#a4be7351ea318381a7c7a6e279589434a">area_element_sphere</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; &amp;spherical_g)</td></tr>
+<tr class="separator:a4be7351ea318381a7c7a6e279589434a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfe979d5fa36140a72be6c2dcc13d42d"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
+<tr class="memitem:acfe979d5fa36140a72be6c2dcc13d42d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#acfe979d5fa36140a72be6c2dcc13d42d">rotation_matrix</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;axis, data_t cos_angle)</td></tr>
+<tr class="separator:acfe979d5fa36140a72be6c2dcc13d42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa360fa8156154aa292567f3a3f4f932e"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
+<tr class="memitem:aa360fa8156154aa292567f3a3f4f932e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_coordinate_transformations.html#aa360fa8156154aa292567f3a3f4f932e">rotation_matrix</a> (const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;origin, const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;destination)</td></tr>
+<tr class="separator:aa360fa8156154aa292567f3a3f4f932e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a9667a6f6c13ca0983f2504a5087af765" name="a9667a6f6c13ca0983f2504a5087af765"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9667a6f6c13ca0983f2504a5087af765">&#9670;&#160;</a></span>area_element_sphere()</h2>
+<a id="a4be7351ea318381a7c7a6e279589434a" name="a4be7351ea318381a7c7a6e279589434a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4be7351ea318381a7c7a6e279589434a">&#9670;&#160;</a></span>area_element_sphere()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -106,7 +142,7 @@ template&lt;class data_t &gt; </div>
         <tr>
           <td class="memname">data_t CoordinateTransformations::area_element_sphere </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; &amp;&#160;</td>
           <td class="paramname"><em>spherical_g</em></td><td>)</td>
           <td></td>
         </tr>
@@ -115,18 +151,18 @@ template&lt;class data_t &gt; </div>
 
 </div>
 </div>
-<a id="a3530fb0a01bf1b64e5e33ca251b181e0" name="a3530fb0a01bf1b64e5e33ca251b181e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3530fb0a01bf1b64e5e33ca251b181e0">&#9670;&#160;</a></span>cartesian_to_spherical_L()</h2>
+<a id="aa8aaa5a4d48238fd952f4ed829950cbe" name="aa8aaa5a4d48238fd952f4ed829950cbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8aaa5a4d48238fd952f4ed829950cbe">&#9670;&#160;</a></span>cartesian_to_spherical_L()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class data_t &gt; </div>
+template&lt;class data_t , class data2_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt; CoordinateTransformations::cartesian_to_spherical_L </td>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; CoordinateTransformations::cartesian_to_spherical_L </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;&#160;</td>
           <td class="paramname"><em>cartesian_v_L</em>, </td>
         </tr>
         <tr>
@@ -138,13 +174,13 @@ template&lt;class data_t &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">data2_t&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">data2_t&#160;</td>
           <td class="paramname"><em>z</em>&#160;</td>
         </tr>
         <tr>
@@ -157,18 +193,60 @@ template&lt;class data_t &gt; </div>
 
 </div>
 </div>
-<a id="a94f6265a6d65af81a217b4289fdc19aa" name="a94f6265a6d65af81a217b4289fdc19aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94f6265a6d65af81a217b4289fdc19aa">&#9670;&#160;</a></span>cartesian_to_spherical_U()</h2>
+<a id="a229012c670408f29e6c393b11fc31cc5" name="a229012c670408f29e6c393b11fc31cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a229012c670408f29e6c393b11fc31cc5">&#9670;&#160;</a></span>cartesian_to_spherical_LL()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class data_t &gt; </div>
+template&lt;class data_t , class data2_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt; CoordinateTransformations::cartesian_to_spherical_U </td>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; CoordinateTransformations::cartesian_to_spherical_LL </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cartesian_g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const data_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const data2_t&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const data2_t&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3378f59ce355e9c5e3e7e84207258c80" name="a3378f59ce355e9c5e3e7e84207258c80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3378f59ce355e9c5e3e7e84207258c80">&#9670;&#160;</a></span>cartesian_to_spherical_U()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class data_t , class data2_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; CoordinateTransformations::cartesian_to_spherical_U </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;&#160;</td>
           <td class="paramname"><em>cartesian_v_U</em>, </td>
         </tr>
         <tr>
@@ -180,13 +258,13 @@ template&lt;class data_t &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">data2_t&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">data2_t&#160;</td>
           <td class="paramname"><em>z</em>&#160;</td>
         </tr>
         <tr>
@@ -199,8 +277,86 @@ template&lt;class data_t &gt; </div>
 
 </div>
 </div>
-<a id="aafd237a39bdfc29d439ea5b2f5ba98f9" name="aafd237a39bdfc29d439ea5b2f5ba98f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafd237a39bdfc29d439ea5b2f5ba98f9">&#9670;&#160;</a></span>spherical_to_cartesian_L()</h2>
+<a id="a49ddae3055a0a07d1061b522c73f106b" name="a49ddae3055a0a07d1061b522c73f106b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ddae3055a0a07d1061b522c73f106b">&#9670;&#160;</a></span>cartesian_to_spherical_UU()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class data_t , class data2_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; CoordinateTransformations::cartesian_to_spherical_UU </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cartesian_g_UU</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">data_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">data2_t&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">data2_t&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49b2d3aecba19ebb758347073bcbd82e" name="a49b2d3aecba19ebb758347073bcbd82e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49b2d3aecba19ebb758347073bcbd82e">&#9670;&#160;</a></span>inverse_spherical_jacobian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class data_t , class data2_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; CoordinateTransformations::inverse_spherical_jacobian </td>
+          <td>(</td>
+          <td class="paramtype">const data_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const data2_t&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const data2_t&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfe979d5fa36140a72be6c2dcc13d42d" name="acfe979d5fa36140a72be6c2dcc13d42d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfe979d5fa36140a72be6c2dcc13d42d">&#9670;&#160;</a></span>rotation_matrix() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,9 +364,105 @@ template&lt;class data_t &gt; </div>
 template&lt;class data_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt; CoordinateTransformations::spherical_to_cartesian_L </td>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; CoordinateTransformations::rotation_matrix </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">data_t&#160;</td>
+          <td class="paramname"><em>cos_angle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa360fa8156154aa292567f3a3f4f932e" name="aa360fa8156154aa292567f3a3f4f932e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa360fa8156154aa292567f3a3f4f932e">&#9670;&#160;</a></span>rotation_matrix() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class data_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; CoordinateTransformations::rotation_matrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>origin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>destination</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb2a182d6c56aa8f809fcf25b9651b11" name="aeb2a182d6c56aa8f809fcf25b9651b11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb2a182d6c56aa8f809fcf25b9651b11">&#9670;&#160;</a></span>spherical_jacobian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class data_t , class data2_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; CoordinateTransformations::spherical_jacobian </td>
+          <td>(</td>
+          <td class="paramtype">const data_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const data2_t&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const data2_t&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5671ad0b90bfab719931a4dc4e928f30" name="a5671ad0b90bfab719931a4dc4e928f30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5671ad0b90bfab719931a4dc4e928f30">&#9670;&#160;</a></span>spherical_to_cartesian_L()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class data_t , class data2_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; CoordinateTransformations::spherical_to_cartesian_L </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;&#160;</td>
           <td class="paramname"><em>spherical_v_L</em>, </td>
         </tr>
         <tr>
@@ -222,13 +474,13 @@ template&lt;class data_t &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">data2_t&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">data2_t&#160;</td>
           <td class="paramname"><em>z</em>&#160;</td>
         </tr>
         <tr>
@@ -241,18 +493,60 @@ template&lt;class data_t &gt; </div>
 
 </div>
 </div>
-<a id="ab27c0a7664b21dbdbf25ec0ff5f7ead9" name="ab27c0a7664b21dbdbf25ec0ff5f7ead9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab27c0a7664b21dbdbf25ec0ff5f7ead9">&#9670;&#160;</a></span>spherical_to_cartesian_U()</h2>
+<a id="a02e746a3004f885c534988d9a5a19781" name="a02e746a3004f885c534988d9a5a19781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e746a3004f885c534988d9a5a19781">&#9670;&#160;</a></span>spherical_to_cartesian_LL()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class data_t &gt; </div>
+template&lt;class data_t , class data2_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt; CoordinateTransformations::spherical_to_cartesian_U </td>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; CoordinateTransformations::spherical_to_cartesian_LL </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>spherical_g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const data_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const data2_t&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const data2_t&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6fffb38d5e6cf2b95d45437a42acc000" name="a6fffb38d5e6cf2b95d45437a42acc000"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fffb38d5e6cf2b95d45437a42acc000">&#9670;&#160;</a></span>spherical_to_cartesian_U()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class data_t , class data2_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; CoordinateTransformations::spherical_to_cartesian_U </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;&#160;</td>
           <td class="paramname"><em>spherical_v_U</em>, </td>
         </tr>
         <tr>
@@ -264,14 +558,176 @@ template&lt;class data_t &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">data2_t&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">data2_t&#160;</td>
           <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66c82b0fc4dbfe393d6fc68b629ccbf3" name="a66c82b0fc4dbfe393d6fc68b629ccbf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66c82b0fc4dbfe393d6fc68b629ccbf3">&#9670;&#160;</a></span>spherical_to_cartesian_UU()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class data_t , class data2_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; CoordinateTransformations::spherical_to_cartesian_UU </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>spherical_g_UU</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const data_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const data2_t&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const data2_t&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3549ae47e09d93caed8076b64c83fba5" name="a3549ae47e09d93caed8076b64c83fba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3549ae47e09d93caed8076b64c83fba5">&#9670;&#160;</a></span>transform_covector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class data_t , class data2_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; CoordinateTransformations::transform_covector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec_L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data2_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>jacobian</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa890b30f039e5d96f3afe1321d3312ef" name="aa890b30f039e5d96f3afe1321d3312ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa890b30f039e5d96f3afe1321d3312ef">&#9670;&#160;</a></span>transform_tensor_LL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class data_t , class data2_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; CoordinateTransformations::transform_tensor_LL </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tensor_LL</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data2_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>jacobian</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95efe54128171641efe3085301488163" name="a95efe54128171641efe3085301488163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95efe54128171641efe3085301488163">&#9670;&#160;</a></span>transform_tensor_UU()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class data_t , class data2_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; CoordinateTransformations::transform_tensor_UU </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tensor_UU</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data2_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>jacobian</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8470bc3eadb253cf89fb15d4d4f36105" name="a8470bc3eadb253cf89fb15d4d4f36105"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8470bc3eadb253cf89fb15d4d4f36105">&#9670;&#160;</a></span>transform_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class data_t , class data2_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; CoordinateTransformations::transform_vector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 1, data_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec_U</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_tensor.html">Tensor</a>&lt; 2, data2_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>jacobian</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/BoxUtils/BoxPointers.hpp Source File</title>
+<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/BoxUtils/BoxPointers.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -145,16 +145,16 @@ $(function() {
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_box_pointers.html#ae7e6e68001dc79c2258a8218f0db7240">   75</a></span>    <a class="code hl_struct" href="struct_cell_index.html">CellIndexIn</a> <a class="code hl_function" href="class_box_pointers.html#ae7e6e68001dc79c2258a8218f0db7240">get_in_index</a>(IntVect integer_coords)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> (<a class="code hl_variable" href="class_box_pointers.html#a6f373105e5138e53806d3291569284a7">m_in_stride</a>[2] * (integer_coords[2] - <a class="code hl_variable" href="class_box_pointers.html#acb1fe07a36da320d65e900e9a96ede8e">m_in_lo</a>[2]) +</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <a class="code hl_variable" href="class_box_pointers.html#a6f373105e5138e53806d3291569284a7">m_in_stride</a>[1] * (integer_coords[1] - <a class="code hl_variable" href="class_box_pointers.html#acb1fe07a36da320d65e900e9a96ede8e">m_in_lo</a>[1]) +</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                (integer_coords[0] - <a class="code hl_variable" href="class_box_pointers.html#acb1fe07a36da320d65e900e9a96ede8e">m_in_lo</a>[0]));</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> (D_TERM((integer_coords[0] - <a class="code hl_variable" href="class_box_pointers.html#acb1fe07a36da320d65e900e9a96ede8e">m_in_lo</a>[0]),</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                       +<a class="code hl_variable" href="class_box_pointers.html#a6f373105e5138e53806d3291569284a7">m_in_stride</a>[1] * (integer_coords[1] - <a class="code hl_variable" href="class_box_pointers.html#acb1fe07a36da320d65e900e9a96ede8e">m_in_lo</a>[1]),</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                       +<a class="code hl_variable" href="class_box_pointers.html#a6f373105e5138e53806d3291569284a7">m_in_stride</a>[2] * (integer_coords[2] - <a class="code hl_variable" href="class_box_pointers.html#acb1fe07a36da320d65e900e9a96ede8e">m_in_lo</a>[2])));</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_box_pointers.html#a98558a22c9807439a1d2072e4e955d99">   82</a></span>    <a class="code hl_struct" href="struct_cell_index.html">CellIndexOut</a> <a class="code hl_function" href="class_box_pointers.html#a98558a22c9807439a1d2072e4e955d99">get_out_index</a>(IntVect integer_coords)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">return</span> (<a class="code hl_variable" href="class_box_pointers.html#ae21566f3ffe3682925935357c361bf04">m_out_stride</a>[2] * (integer_coords[2] - <a class="code hl_variable" href="class_box_pointers.html#ab3ba39e3ad6cea927ff5ff42e842fb82">m_out_lo</a>[2]) +</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <a class="code hl_variable" href="class_box_pointers.html#ae21566f3ffe3682925935357c361bf04">m_out_stride</a>[1] * (integer_coords[1] - <a class="code hl_variable" href="class_box_pointers.html#ab3ba39e3ad6cea927ff5ff42e842fb82">m_out_lo</a>[1]) +</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                (integer_coords[0] - <a class="code hl_variable" href="class_box_pointers.html#ab3ba39e3ad6cea927ff5ff42e842fb82">m_out_lo</a>[0]));</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">return</span> (D_TERM((integer_coords[0] - <a class="code hl_variable" href="class_box_pointers.html#ab3ba39e3ad6cea927ff5ff42e842fb82">m_out_lo</a>[0]),</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                       +<a class="code hl_variable" href="class_box_pointers.html#ae21566f3ffe3682925935357c361bf04">m_out_stride</a>[1] * (integer_coords[1] - <a class="code hl_variable" href="class_box_pointers.html#ab3ba39e3ad6cea927ff5ff42e842fb82">m_out_lo</a>[1]),</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                       +<a class="code hl_variable" href="class_box_pointers.html#ae21566f3ffe3682925935357c361bf04">m_out_stride</a>[2] * (integer_coords[2] - <a class="code hl_variable" href="class_box_pointers.html#ab3ba39e3ad6cea927ff5ff42e842fb82">m_out_lo</a>[2])));</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>

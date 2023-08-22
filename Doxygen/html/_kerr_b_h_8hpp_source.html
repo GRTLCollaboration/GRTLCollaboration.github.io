@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/InitialConditions/BlackHoles/KerrBH.hpp Source File</title>
+<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/InitialConditions/BlackHoles/KerrBH.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -107,42 +107,44 @@ $(function() {
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_kerr_b_h_1_1params__t.html#a6d44a663f2ac3b832c76deb1fa550dd5">   30</a></span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#a6d44a663f2ac3b832c76deb1fa550dd5">mass</a>;                            </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_kerr_b_h_1_1params__t.html#a1da69a98af7a33985ffdddd67ff3a477">   31</a></span>        std::array&lt;double, CH_SPACEDIM&gt; <a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#a1da69a98af7a33985ffdddd67ff3a477">center</a>; </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_kerr_b_h_1_1params__t.html#a36d8273b7bd3dc77e102de985269be26">   32</a></span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#a36d8273b7bd3dc77e102de985269be26">spin</a>; </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    };</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_kerr_b_h.html#a92219e35df04cbe46cf1cffff613d231">   36</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_kerr_b_h.html#a92219e35df04cbe46cf1cffff613d231">m_dx</a>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">   37</a></span>    <a class="code hl_struct" href="struct_kerr_b_h_1_1params__t.html">params_t</a> <a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_kerr_b_h.html#aaef3d03ccf4c496e98648eaa25e92d7f">   40</a></span>    <a class="code hl_function" href="class_kerr_b_h.html#aaef3d03ccf4c496e98648eaa25e92d7f">KerrBH</a>(<a class="code hl_struct" href="struct_kerr_b_h_1_1params__t.html">params_t</a> a_params, <span class="keywordtype">double</span> a_dx) : <a class="code hl_variable" href="class_kerr_b_h.html#a92219e35df04cbe46cf1cffff613d231">m_dx</a>(a_dx), <a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>(a_params)</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">// check this spin param is sensible</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">if</span> (std::abs(<a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>.<a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#a36d8273b7bd3dc77e102de985269be26">spin</a>) &gt; <a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>.<a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#a6d44a663f2ac3b832c76deb1fa550dd5">mass</a>)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            MayDay::Error(<span class="stringliteral">&quot;The spin parameter must satisfy |a| &lt;= M&quot;</span>);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt; <span class="keywordtype">void</span> <a class="code hl_function" href="class_kerr_b_h.html#acf92e493f88e443d53ef02230843eec7">compute</a>(<a class="code hl_class" href="class_cell.html">Cell&lt;data_t&gt;</a> current_cell) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_kerr_b_h_1_1params__t.html#ae38b57af9171b550564db4f4d4984ce7">   33</a></span>        std::array&lt;double, CH_SPACEDIM&gt; <a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#ae38b57af9171b550564db4f4d4984ce7">spin_direction</a> = {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            0., 0., 1.}; <span class="comment">// default to &#39;z&#39; axis; doesn&#39;t need to be normalized</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    };</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_kerr_b_h.html#a92219e35df04cbe46cf1cffff613d231">   38</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_kerr_b_h.html#a92219e35df04cbe46cf1cffff613d231">m_dx</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">   39</a></span>    <a class="code hl_struct" href="struct_kerr_b_h_1_1params__t.html">params_t</a> <a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_kerr_b_h.html#aaef3d03ccf4c496e98648eaa25e92d7f">   42</a></span>    <a class="code hl_function" href="class_kerr_b_h.html#aaef3d03ccf4c496e98648eaa25e92d7f">KerrBH</a>(<a class="code hl_struct" href="struct_kerr_b_h_1_1params__t.html">params_t</a> a_params, <span class="keywordtype">double</span> a_dx) : <a class="code hl_variable" href="class_kerr_b_h.html#a92219e35df04cbe46cf1cffff613d231">m_dx</a>(a_dx), <a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>(a_params)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="comment">// check this spin param is sensible</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">if</span> (std::abs(<a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>.<a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#a36d8273b7bd3dc77e102de985269be26">spin</a>) &gt; <a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>.<a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#a6d44a663f2ac3b832c76deb1fa550dd5">mass</a>)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            MayDay::Error(<span class="stringliteral">&quot;The spin parameter must satisfy |a| &lt;= M&quot;</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_kerr_b_h.html#a1592695c4f29b52c313879adc80d5872">compute_kerr</a>(</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            &amp;spherical_g, </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt; <span class="keywordtype">void</span> <a class="code hl_function" href="class_kerr_b_h.html#acf92e493f88e443d53ef02230843eec7">compute</a>(<a class="code hl_class" href="class_cell.html">Cell&lt;data_t&gt;</a> current_cell) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_kerr_b_h.html#a991afce9886f28253c839865ba7d9e43">compute_kerr</a>(</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            &amp;spherical_K, </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            &amp;spherical_shift, </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        data_t &amp;kerr_lapse,   </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_coordinates.html">Coordinates&lt;data_t&gt;</a> coords </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#include &quot;<a class="code" href="_kerr_b_h_8impl_8hpp.html">KerrBH.impl.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            &amp;spherical_g, </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            &amp;spherical_K, </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            &amp;spherical_shift, </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        data_t &amp;kerr_lapse,   </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> &amp;coords </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif </span><span class="comment">/* KERRBH_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#include &quot;<a class="code" href="_kerr_b_h_8impl_8hpp.html">KerrBH.impl.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif </span><span class="comment">/* KERRBH_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="a_a_d_m_conformal_vars_8hpp_html"><div class="ttname"><a href="_a_d_m_conformal_vars_8hpp.html">ADMConformalVars.hpp</a></div></div>
 <div class="ttc" id="a_cell_8hpp_html"><div class="ttname"><a href="_cell_8hpp.html">Cell.hpp</a></div></div>
 <div class="ttc" id="a_coordinate_transformations_8hpp_html"><div class="ttname"><a href="_coordinate_transformations_8hpp.html">CoordinateTransformations.hpp</a></div></div>
@@ -152,12 +154,11 @@ $(function() {
 <div class="ttc" id="a_tensor_algebra_8hpp_html"><div class="ttname"><a href="_tensor_algebra_8hpp.html">TensorAlgebra.hpp</a></div></div>
 <div class="ttc" id="a_vars_tools_8hpp_html"><div class="ttname"><a href="_vars_tools_8hpp.html">VarsTools.hpp</a></div></div>
 <div class="ttc" id="aclass_cell_html"><div class="ttname"><a href="class_cell.html">Cell</a></div><div class="ttdoc">Encapsulates information about the position of a cell.</div><div class="ttdef"><b>Definition:</b> Cell.hpp:29</div></div>
-<div class="ttc" id="aclass_coordinates_html"><div class="ttname"><a href="class_coordinates.html">Coordinates</a></div><div class="ttdef"><b>Definition:</b> Coordinates.hpp:21</div></div>
 <div class="ttc" id="aclass_kerr_b_h_html"><div class="ttname"><a href="class_kerr_b_h.html">KerrBH</a></div><div class="ttdoc">Class which computes the Kerr initial conditions per arXiv 1401.1548.</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:21</div></div>
-<div class="ttc" id="aclass_kerr_b_h_html_a1592695c4f29b52c313879adc80d5872"><div class="ttname"><a href="class_kerr_b_h.html#a1592695c4f29b52c313879adc80d5872">KerrBH::compute_kerr</a></div><div class="ttdeci">void compute_kerr(Tensor&lt; 2, data_t &gt; &amp;spherical_g, Tensor&lt; 2, data_t &gt; &amp;spherical_K, Tensor&lt; 1, data_t &gt; &amp;spherical_shift, data_t &amp;kerr_lapse, const Coordinates&lt; data_t &gt; coords) const</div><div class="ttdoc">Function which computes the components of the metric in spherical coords.</div><div class="ttdef"><b>Definition:</b> KerrBH.impl.hpp:75</div></div>
-<div class="ttc" id="aclass_kerr_b_h_html_a92219e35df04cbe46cf1cffff613d231"><div class="ttname"><a href="class_kerr_b_h.html#a92219e35df04cbe46cf1cffff613d231">KerrBH::m_dx</a></div><div class="ttdeci">double m_dx</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:36</div></div>
-<div class="ttc" id="aclass_kerr_b_h_html_aaef3d03ccf4c496e98648eaa25e92d7f"><div class="ttname"><a href="class_kerr_b_h.html#aaef3d03ccf4c496e98648eaa25e92d7f">KerrBH::KerrBH</a></div><div class="ttdeci">KerrBH(params_t a_params, double a_dx)</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:40</div></div>
-<div class="ttc" id="aclass_kerr_b_h_html_ac056e52651fcb7b6ceffb19b80ee5017"><div class="ttname"><a href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">KerrBH::m_params</a></div><div class="ttdeci">params_t m_params</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:37</div></div>
+<div class="ttc" id="aclass_kerr_b_h_html_a92219e35df04cbe46cf1cffff613d231"><div class="ttname"><a href="class_kerr_b_h.html#a92219e35df04cbe46cf1cffff613d231">KerrBH::m_dx</a></div><div class="ttdeci">double m_dx</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:38</div></div>
+<div class="ttc" id="aclass_kerr_b_h_html_a991afce9886f28253c839865ba7d9e43"><div class="ttname"><a href="class_kerr_b_h.html#a991afce9886f28253c839865ba7d9e43">KerrBH::compute_kerr</a></div><div class="ttdeci">void compute_kerr(Tensor&lt; 2, data_t &gt; &amp;spherical_g, Tensor&lt; 2, data_t &gt; &amp;spherical_K, Tensor&lt; 1, data_t &gt; &amp;spherical_shift, data_t &amp;kerr_lapse, const Tensor&lt; 1, data_t &gt; &amp;coords) const</div><div class="ttdoc">Function which computes the components of the metric in spherical coords.</div><div class="ttdef"><b>Definition:</b> KerrBH.impl.hpp:97</div></div>
+<div class="ttc" id="aclass_kerr_b_h_html_aaef3d03ccf4c496e98648eaa25e92d7f"><div class="ttname"><a href="class_kerr_b_h.html#aaef3d03ccf4c496e98648eaa25e92d7f">KerrBH::KerrBH</a></div><div class="ttdeci">KerrBH(params_t a_params, double a_dx)</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:42</div></div>
+<div class="ttc" id="aclass_kerr_b_h_html_ac056e52651fcb7b6ceffb19b80ee5017"><div class="ttname"><a href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">KerrBH::m_params</a></div><div class="ttdeci">params_t m_params</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:39</div></div>
 <div class="ttc" id="aclass_kerr_b_h_html_acf92e493f88e443d53ef02230843eec7"><div class="ttname"><a href="class_kerr_b_h.html#acf92e493f88e443d53ef02230843eec7">KerrBH::compute</a></div><div class="ttdeci">void compute(Cell&lt; data_t &gt; current_cell) const</div><div class="ttdef"><b>Definition:</b> KerrBH.impl.hpp:17</div></div>
 <div class="ttc" id="aclass_tensor_html"><div class="ttname"><a href="class_tensor.html">Tensor</a></div><div class="ttdoc">This class implements a Tensor with given rank, element data type, and dimension.</div><div class="ttdef"><b>Definition:</b> Tensor.hpp:15</div></div>
 <div class="ttc" id="asimd_8hpp_html"><div class="ttname"><a href="simd_8hpp.html">simd.hpp</a></div></div>
@@ -166,6 +167,7 @@ $(function() {
 <div class="ttc" id="astruct_kerr_b_h_1_1params__t_html_a1da69a98af7a33985ffdddd67ff3a477"><div class="ttname"><a href="struct_kerr_b_h_1_1params__t.html#a1da69a98af7a33985ffdddd67ff3a477">KerrBH::params_t::center</a></div><div class="ttdeci">std::array&lt; double, CH_SPACEDIM &gt; center</div><div class="ttdoc">The center of the Kerr BH.</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:31</div></div>
 <div class="ttc" id="astruct_kerr_b_h_1_1params__t_html_a36d8273b7bd3dc77e102de985269be26"><div class="ttname"><a href="struct_kerr_b_h_1_1params__t.html#a36d8273b7bd3dc77e102de985269be26">KerrBH::params_t::spin</a></div><div class="ttdeci">double spin</div><div class="ttdoc">The spin param a = J/M, so 0 &lt;= |a| &lt;= M.</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:32</div></div>
 <div class="ttc" id="astruct_kerr_b_h_1_1params__t_html_a6d44a663f2ac3b832c76deb1fa550dd5"><div class="ttname"><a href="struct_kerr_b_h_1_1params__t.html#a6d44a663f2ac3b832c76deb1fa550dd5">KerrBH::params_t::mass</a></div><div class="ttdeci">double mass</div><div class="ttdoc">&lt; The mass of the Kerr BH</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:30</div></div>
+<div class="ttc" id="astruct_kerr_b_h_1_1params__t_html_ae38b57af9171b550564db4f4d4984ce7"><div class="ttname"><a href="struct_kerr_b_h_1_1params__t.html#ae38b57af9171b550564db4f4d4984ce7">KerrBH::params_t::spin_direction</a></div><div class="ttdeci">std::array&lt; double, CH_SPACEDIM &gt; spin_direction</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

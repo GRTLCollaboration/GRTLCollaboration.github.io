@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/BoxUtils/AMRReductions.impl.hpp Source File</title>
+<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/BoxUtils/AMRReductions.impl.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,7 +93,7 @@ $(function() {
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_a_m_r_reductions.html#aaac24a5fa88d344a9eeaeedd838528bc">   14</a></span><a class="code hl_function" href="class_a_m_r_reductions.html#aaac24a5fa88d344a9eeaeedd838528bc">AMRReductions&lt;var_t&gt;::AMRReductions</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_g_r_a_m_r.html">GRAMR</a> &amp;a_gramr,</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                                    <span class="keyword">const</span> <span class="keywordtype">int</span> a_base_level)</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    : m_base_level(a_base_level),</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>      m_coarsest_dx(a_gramr.get_gramrlevels()[0]-&gt;get_dx())</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>      m_coarsest_dx(a_gramr.get_gramrlevels()[0]-&gt;<a class="code hl_function" href="_interpolator_test_8cpp.html#ad9c8e3ed6ea5202d8ebf8babf41f379d">get_dx</a>())</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_function" href="class_a_m_r_reductions.html#a0db696e15d3647d4f58c7d0001ef1184">set_level_data_vect</a>(a_gramr);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_function" href="class_a_m_r_reductions.html#a36539457c50fae1008359e19897ce0e1">set_ref_ratios_vect</a>(a_gramr);</div>
@@ -220,6 +220,7 @@ $(function() {
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>}</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_interpolator_test_8cpp_html_ad9c8e3ed6ea5202d8ebf8babf41f379d"><div class="ttname"><a href="_interpolator_test_8cpp.html#ad9c8e3ed6ea5202d8ebf8babf41f379d">get_dx</a></div><div class="ttdeci">double get_dx(double L, int num_points_u)</div><div class="ttdef"><b>Definition:</b> InterpolatorTest.cpp:41</div></div>
 <div class="ttc" id="aclass_a_m_r_reductions_html_a0db696e15d3647d4f58c7d0001ef1184"><div class="ttname"><a href="class_a_m_r_reductions.html#a0db696e15d3647d4f58c7d0001ef1184">AMRReductions::set_level_data_vect</a></div><div class="ttdeci">void set_level_data_vect(const GRAMR &amp;a_gramr)</div><div class="ttdoc">constructs a Vector of LevelData&lt;FArrayBox&gt; pointers and stores them</div><div class="ttdef"><b>Definition:</b> AMRReductions.impl.hpp:25</div></div>
 <div class="ttc" id="aclass_a_m_r_reductions_html_a1087786d8d3828510bafb51e6c9a13bd"><div class="ttname"><a href="class_a_m_r_reductions.html#a1087786d8d3828510bafb51e6c9a13bd">AMRReductions::min</a></div><div class="ttdeci">Real min(const Interval &amp;a_vars) const</div><div class="ttdoc">returns the minimum of an interval of variables</div><div class="ttdef"><b>Definition:</b> AMRReductions.impl.hpp:70</div></div>
 <div class="ttc" id="aclass_a_m_r_reductions_html_a1e619c1eb965e90fd094405c8bf7654c"><div class="ttname"><a href="class_a_m_r_reductions.html#a1e619c1eb965e90fd094405c8bf7654c">AMRReductions::norm</a></div><div class="ttdeci">Real norm(const Interval &amp;a_vars, const int a_norm_exponent=2, const bool a_normalize_by_volume=false) const</div><div class="ttdoc">returns the volume-weighted p-norm of an interval of variables p = a_norm_exponent</div><div class="ttdef"><b>Definition:</b> AMRReductions.impl.hpp:98</div></div>
@@ -230,7 +231,7 @@ $(function() {
 <div class="ttc" id="aclass_a_m_r_reductions_html_abcaace848838ba822020f689d05ea207"><div class="ttname"><a href="class_a_m_r_reductions.html#abcaace848838ba822020f689d05ea207">AMRReductions::max</a></div><div class="ttdeci">Real max(const Interval &amp;a_vars) const</div><div class="ttdoc">returns the maximum of an interval of variables</div><div class="ttdef"><b>Definition:</b> AMRReductions.impl.hpp:84</div></div>
 <div class="ttc" id="aclass_a_m_r_reductions_html_ad7dbc724e07d6d2132f08f6e89105fa5"><div class="ttname"><a href="class_a_m_r_reductions.html#ad7dbc724e07d6d2132f08f6e89105fa5">AMRReductions::get_domain_volume</a></div><div class="ttdeci">Real get_domain_volume() const</div><div class="ttdoc">returns the m_domain_volume member</div><div class="ttdef"><b>Definition:</b> AMRReductions.impl.hpp:138</div></div>
 <div class="ttc" id="aclass_g_r_a_m_r_html"><div class="ttname"><a href="class_g_r_a_m_r.html">GRAMR</a></div><div class="ttdef"><b>Definition:</b> GRAMR.hpp:38</div></div>
-<div class="ttc" id="aclass_g_r_a_m_r_html_a78fb98fa1d8ba1485d7a527b52b48bb8"><div class="ttname"><a href="class_g_r_a_m_r.html#a78fb98fa1d8ba1485d7a527b52b48bb8">GRAMR::get_gramrlevels</a></div><div class="ttdeci">std::vector&lt; GRAMRLevel * &gt; get_gramrlevels()</div><div class="ttdef"><b>Definition:</b> GRAMR.cpp:19</div></div>
+<div class="ttc" id="aclass_g_r_a_m_r_html_a78fb98fa1d8ba1485d7a527b52b48bb8"><div class="ttname"><a href="class_g_r_a_m_r.html#a78fb98fa1d8ba1485d7a527b52b48bb8">GRAMR::get_gramrlevels</a></div><div class="ttdeci">std::vector&lt; GRAMRLevel * &gt; get_gramrlevels()</div><div class="ttdef"><b>Definition:</b> GRAMR.cpp:21</div></div>
 <div class="ttc" id="aclass_g_r_level_data_html"><div class="ttname"><a href="class_g_r_level_data.html">GRLevelData</a></div><div class="ttdef"><b>Definition:</b> GRLevelData.hpp:17</div></div>
 <div class="ttc" id="asimd__base_8hpp_html_a4e1958250963d93ec53d100cb744c45d"><div class="ttname"><a href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a></div><div class="ttdeci">t1 ALWAYS_INLINE simd&lt; t &gt; pow(const simd&lt; t &gt; &amp;a, const t1 b)</div><div class="ttdef"><b>Definition:</b> simd_base.hpp:153</div></div>
 </div><!-- fragment --></div><!-- contents -->

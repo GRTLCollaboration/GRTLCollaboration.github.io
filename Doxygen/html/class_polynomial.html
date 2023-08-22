@@ -82,8 +82,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a30d17bf568aab09d2f152bf3560c797c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polynomial.html#a30d17bf568aab09d2f152bf3560c797c">Polynomial</a> (std::array&lt; double, CH_SPACEDIM &gt; &amp;a_center, double a_dx)</td></tr>
-<tr class="separator:a30d17bf568aab09d2f152bf3560c797c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bbe1205c299a2fdc0898596eca800d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polynomial.html#a6bbe1205c299a2fdc0898596eca800d2">Polynomial</a> (const std::array&lt; double, CH_SPACEDIM &gt; &amp;a_center, double a_dx)</td></tr>
+<tr class="separator:a6bbe1205c299a2fdc0898596eca800d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a502aed4c751bbb01d07c7f5b8de936c2"><td class="memTemplParams" colspan="2">template&lt;class data_t &gt; </td></tr>
 <tr class="memitem:a502aed4c751bbb01d07c7f5b8de936c2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_polynomial.html#a502aed4c751bbb01d07c7f5b8de936c2">compute</a> (<a class="el" href="class_cell.html">Cell</a>&lt; data_t &gt; current_cell) const</td></tr>
 <tr class="separator:a502aed4c751bbb01d07c7f5b8de936c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -92,12 +92,12 @@ Public Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aca29874648ee386d4cf6ea0e217c5341"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polynomial.html#aca29874648ee386d4cf6ea0e217c5341">m_dx</a></td></tr>
 <tr class="separator:aca29874648ee386d4cf6ea0e217c5341"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acedeb07e45de5ee97a30b65117595bff"><td class="memItemLeft" align="right" valign="top">const std::array&lt; double, CH_SPACEDIM &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polynomial.html#acedeb07e45de5ee97a30b65117595bff">m_center</a></td></tr>
-<tr class="separator:acedeb07e45de5ee97a30b65117595bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8333c73406bc715a6275f2ba0cfbde1"><td class="memItemLeft" align="right" valign="top">const std::array&lt; double, CH_SPACEDIM &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polynomial.html#ad8333c73406bc715a6275f2ba0cfbde1">m_center</a></td></tr>
+<tr class="separator:ad8333c73406bc715a6275f2ba0cfbde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a30d17bf568aab09d2f152bf3560c797c" name="a30d17bf568aab09d2f152bf3560c797c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30d17bf568aab09d2f152bf3560c797c">&#9670;&#160;</a></span>Polynomial()</h2>
+<a id="a6bbe1205c299a2fdc0898596eca800d2" name="a6bbe1205c299a2fdc0898596eca800d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bbe1205c299a2fdc0898596eca800d2">&#9670;&#160;</a></span>Polynomial()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -108,7 +108,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">Polynomial::Polynomial </td>
           <td>(</td>
-          <td class="paramtype">std::array&lt; double, CH_SPACEDIM &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::array&lt; double, CH_SPACEDIM &gt; &amp;&#160;</td>
           <td class="paramname"><em>a_center</em>, </td>
         </tr>
         <tr>
@@ -162,8 +162,8 @@ template&lt;class data_t &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="acedeb07e45de5ee97a30b65117595bff" name="acedeb07e45de5ee97a30b65117595bff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acedeb07e45de5ee97a30b65117595bff">&#9670;&#160;</a></span>m_center</h2>
+<a id="ad8333c73406bc715a6275f2ba0cfbde1" name="ad8333c73406bc715a6275f2ba0cfbde1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8333c73406bc715a6275f2ba0cfbde1">&#9670;&#160;</a></span>m_center</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,7 +172,7 @@ template&lt;class data_t &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::array&lt;double, CH_SPACEDIM&gt; Polynomial::m_center</td>
+          <td class="memname">const std::array&lt;double, CH_SPACEDIM&gt;&amp; Polynomial::m_center</td>
         </tr>
       </table>
   </td>
@@ -207,7 +207,7 @@ template&lt;class data_t &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Tests/AMRInterpolatorTest/<a class="el" href="_polynomial_8hpp_source.html">Polynomial.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Tests/AMRInterpolatorTest/<a class="el" href="_polynomial_8hpp_source.html">Polynomial.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

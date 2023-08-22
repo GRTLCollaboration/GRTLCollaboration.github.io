@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/InitialConditions/BlackHoles/KerrBH.impl.hpp Source File</title>
+<title>GRChombo: https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/InitialConditions/BlackHoles/KerrBH.impl.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -95,151 +95,175 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// 2010, arxiv gr-qc/1001.4077</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_kerr_b_h.html#acf92e493f88e443d53ef02230843eec7">   17</a></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt; <span class="keywordtype">void</span> <a class="code hl_function" href="class_kerr_b_h.html#acf92e493f88e443d53ef02230843eec7">KerrBH::compute</a>(<a class="code hl_class" href="class_cell.html">Cell&lt;data_t&gt;</a> current_cell)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">// set up vars for the metric and extrinsic curvature, shift and lapse in</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">// spherical coords</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> spherical_g;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> spherical_K;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> spherical_shift;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    data_t kerr_lapse;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">// The cartesian variables and coords</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_struct" href="struct_a_d_m_conformal_vars_1_1_vars_with_gauge.html">Vars&lt;data_t&gt;</a> vars;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_class" href="class_coordinates.html">Coordinates&lt;data_t&gt;</a> coords(current_cell, <a class="code hl_variable" href="class_kerr_b_h.html#a92219e35df04cbe46cf1cffff613d231">m_dx</a>, <a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>.<a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#a1da69a98af7a33985ffdddd67ff3a477">center</a>);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// Compute the components in spherical coords as per 1401.1548</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_function" href="class_kerr_b_h.html#a1592695c4f29b52c313879adc80d5872">compute_kerr</a>(spherical_g, spherical_K, spherical_shift, kerr_lapse, coords);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// work out where we are on the grid</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    data_t x = coords.<a class="code hl_variable" href="class_coordinates.html#a5f67051c8a3578bd27a5ef8f35905aa2">x</a>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">double</span> y = coords.<a class="code hl_variable" href="class_coordinates.html#a507ec57814a9832170f5157459dca11b">y</a>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">double</span> z = coords.<a class="code hl_variable" href="class_coordinates.html#a0060e190cc1d519f4f57ee796de031a2">z</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespace_coordinate_transformations.html">CoordinateTransformations</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespace_tensor_algebra.html">TensorAlgebra</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, double&gt;</a> z_dir = {0., 0., 1.};</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, double&gt;</a> spin_dir = {<a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>.<a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#ae38b57af9171b550564db4f4d4984ce7">spin_direction</a>[0],</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                                        <a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>.<a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#ae38b57af9171b550564db4f4d4984ce7">spin_direction</a>[1],</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                                        <a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>.<a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#ae38b57af9171b550564db4f4d4984ce7">spin_direction</a>[2]};</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// define the rotation matrix needed to transform standard Cartesian (x,y,z)</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// coordinates into the coordinates of the spin direction</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, double&gt;</a> R = rotation_matrix(spin_dir, z_dir);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// set up vars for the metric and extrinsic curvature, shift and lapse in</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// spherical coords</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> spherical_g;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> spherical_K;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> spherical_shift;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    data_t kerr_lapse;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespace_coordinate_transformations.html">CoordinateTransformations</a>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">// Convert spherical components to cartesian components using coordinate</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// transforms</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#a5a92e2c0034f46572edd1d2d7cab2f58">h</a> = spherical_to_cartesian_LL(spherical_g, x, y, z);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#ade9fa4aecae27018f0a28e26f1002729">A</a> = spherical_to_cartesian_LL(spherical_K, x, y, z);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_with_gauge.html#a5c0100005bb69b08e3b3a3aa4b4cc244">shift</a> = spherical_to_cartesian_U(spherical_shift, x, y, z);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespace_tensor_algebra.html">TensorAlgebra</a>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">// Convert to BSSN vars</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    data_t deth = compute_determinant(vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#a5a92e2c0034f46572edd1d2d7cab2f58">h</a>);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">auto</span> h_UU = compute_inverse_sym(vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#a5a92e2c0034f46572edd1d2d7cab2f58">h</a>);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#aca1b055f6d1d8c62e545eba14c177c67">chi</a> = <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(deth, -1. / 3.);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">// transform extrinsic curvature into A and TrK - note h is still non</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// conformal version which is what we need here</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#aef7ec217e4a1a779479cc1f4e4ef6d1f">K</a> = compute_trace(vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#ade9fa4aecae27018f0a28e26f1002729">A</a>, h_UU);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    make_trace_free(vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#ade9fa4aecae27018f0a28e26f1002729">A</a>, vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#a5a92e2c0034f46572edd1d2d7cab2f58">h</a>, h_UU);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// Make conformal</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i, j)</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#a5a92e2c0034f46572edd1d2d7cab2f58">h</a>[i][j] *= vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#aca1b055f6d1d8c62e545eba14c177c67">chi</a>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#ade9fa4aecae27018f0a28e26f1002729">A</a>[i][j] *= vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#aca1b055f6d1d8c62e545eba14c177c67">chi</a>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// The cartesian variables and coords</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_struct" href="struct_a_d_m_conformal_vars_1_1_vars_with_gauge.html">Vars&lt;data_t&gt;</a> vars;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_class" href="class_coordinates.html">Coordinates&lt;data_t&gt;</a> coords(current_cell, <a class="code hl_variable" href="class_kerr_b_h.html#a92219e35df04cbe46cf1cffff613d231">m_dx</a>, <a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>.<a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#a1da69a98af7a33985ffdddd67ff3a477">center</a>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// rotate point</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> xyz = {coords.<a class="code hl_variable" href="class_coordinates.html#a5f67051c8a3578bd27a5ef8f35905aa2">x</a>, coords.<a class="code hl_variable" href="class_coordinates.html#a507ec57814a9832170f5157459dca11b">y</a>, coords.<a class="code hl_variable" href="class_coordinates.html#a0060e190cc1d519f4f57ee796de031a2">z</a>};</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    xyz = transform_vector(xyz, R);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">// Compute the components in spherical coords as per 1401.1548</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_function" href="class_kerr_b_h.html#a991afce9886f28253c839865ba7d9e43">compute_kerr</a>(spherical_g, spherical_K, spherical_shift, kerr_lapse, xyz);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// work out where we are on the grid</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    data_t x = xyz[0];</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    data_t y = xyz[1];</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    data_t z = xyz[2];</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// Convert spherical components to cartesian components using coordinate</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// transform_tensor_UU</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> cartesian_h =</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        spherical_to_cartesian_LL(spherical_g, x, y, z);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> cartesian_K =</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        spherical_to_cartesian_LL(spherical_K, x, y, z);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> cartesian_shift =</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        spherical_to_cartesian_U(spherical_shift, x, y, z);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// use a pre collapsed lapse, could also use analytic one</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// vars.lapse = kerr_lapse;</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_with_gauge.html#a7808fc2df7345a61ce93833e4ffbca04">lapse</a> = <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#aca1b055f6d1d8c62e545eba14c177c67">chi</a>, 0.5);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// Populate the variables on the grid</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// NB We stil need to set Gamma^i which is NON ZERO</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// but we do this via a separate class/compute function</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// as we need the gradients of the metric which are not yet available</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    current_cell.<a class="code hl_function" href="class_cell.html#a5cc44e34dea9fd7e9ca497a5edf2b8ce">store_vars</a>(vars);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_kerr_b_h.html#a1592695c4f29b52c313879adc80d5872">   75</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_kerr_b_h.html#a1592695c4f29b52c313879adc80d5872">KerrBH::compute_kerr</a>(<a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> &amp;spherical_g,</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                          <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> &amp;spherical_K,</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                          <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> &amp;spherical_shift,</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                          data_t &amp;kerr_lapse,</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                          <span class="keyword">const</span> <a class="code hl_class" href="class_coordinates.html">Coordinates&lt;data_t&gt;</a> coords)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">// Kerr black hole params - mass M and spin a</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">double</span> M = <a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>.<a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#a6d44a663f2ac3b832c76deb1fa550dd5">mass</a>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">double</span> a = <a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>.<a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#a36d8273b7bd3dc77e102de985269be26">spin</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// now rotate tensors back to original coordinates</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#a5a92e2c0034f46572edd1d2d7cab2f58">h</a> = transform_tensor_LL(cartesian_h, R);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#ade9fa4aecae27018f0a28e26f1002729">A</a> = transform_tensor_LL(cartesian_K, R);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_with_gauge.html#a5c0100005bb69b08e3b3a3aa4b4cc244">shift</a> = transform_vector(cartesian_shift, R);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// Convert to BSSN vars</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    data_t deth = compute_determinant(vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#a5a92e2c0034f46572edd1d2d7cab2f58">h</a>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">auto</span> h_UU = compute_inverse_sym(vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#a5a92e2c0034f46572edd1d2d7cab2f58">h</a>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#aca1b055f6d1d8c62e545eba14c177c67">chi</a> = <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(deth, -1. / 3.);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">// transform extrinsic curvature into A and TrK - note h is still non</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// conformal version which is what we need here</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#aef7ec217e4a1a779479cc1f4e4ef6d1f">K</a> = compute_trace(vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#ade9fa4aecae27018f0a28e26f1002729">A</a>, h_UU);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    make_trace_free(vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#ade9fa4aecae27018f0a28e26f1002729">A</a>, vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#a5a92e2c0034f46572edd1d2d7cab2f58">h</a>, h_UU);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// Make conformal</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i, j)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#a5a92e2c0034f46572edd1d2d7cab2f58">h</a>[i][j] *= vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#aca1b055f6d1d8c62e545eba14c177c67">chi</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#ade9fa4aecae27018f0a28e26f1002729">A</a>[i][j] *= vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#aca1b055f6d1d8c62e545eba14c177c67">chi</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// work out where we are on the grid</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    data_t x = coords.<a class="code hl_variable" href="class_coordinates.html#a5f67051c8a3578bd27a5ef8f35905aa2">x</a>;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">double</span> y = coords.<a class="code hl_variable" href="class_coordinates.html#a507ec57814a9832170f5157459dca11b">y</a>;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">double</span> z = coords.<a class="code hl_variable" href="class_coordinates.html#a0060e190cc1d519f4f57ee796de031a2">z</a>;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// the radius, subject to a floor</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    data_t r = coords.<a class="code hl_function" href="class_coordinates.html#a8b089ba95fd8aa23d47f6511f78fc285">get_radius</a>();</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    data_t r2 = r * r;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// the radius in xy plane, subject to a floor</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    data_t rho2 = <a class="code hl_function" href="simd_8hpp.html#a83d0e74fe538c57c0bf86c906aa72ef2">simd_max</a>(x * x + y * y, 1e-12);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    data_t rho = sqrt(rho2);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">// calculate useful position quantities</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    data_t cos_theta = z / r;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    data_t sin_theta = rho / r;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    data_t cos_theta2 = cos_theta * cos_theta;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    data_t sin_theta2 = sin_theta * sin_theta;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="comment">// calculate useful metric quantities</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">double</span> r_plus = M + sqrt(M * M - a * a);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">double</span> r_minus = M - sqrt(M * M - a * a);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment">// The Boyer-Lindquist coordinate</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    data_t r_BL = r * <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(1.0 + 0.25 * r_plus / r, 2.0);</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="comment">// Other useful quantities per 1001.4077</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    data_t Sigma = r_BL * r_BL + a * a * cos_theta2;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    data_t Delta = r_BL * r_BL - 2.0 * M * r_BL + a * a;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="comment">// In the paper this is just &#39;A&#39;, but not to be confused with A_ij</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    data_t AA = <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(r_BL * r_BL + a * a, 2.0) - Delta * a * a * sin_theta2;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="comment">// The rr component of the conformal spatial matric</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    data_t gamma_rr =</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        Sigma * <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(r + 0.25 * r_plus, 2.0) / (r * r2 * (r_BL - r_minus));</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="comment">// Metric in semi isotropic Kerr-Schild coordinates, r, theta (t or th), phi</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="comment">// (p)</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i, j) { spherical_g[i][j] = 0.0; }</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    spherical_g[0][0] = gamma_rr;                <span class="comment">// gamma_rr</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    spherical_g[1][1] = Sigma;                   <span class="comment">// gamma_tt</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    spherical_g[2][2] = AA / Sigma * sin_theta2; <span class="comment">// gamma_pp</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="comment">// Extrinsic curvature</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i, j) { spherical_K[i][j] = 0.0; }</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="comment">// set non zero elements of Krtp - K_rp, K_tp</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    spherical_K[0][2] =</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        a * M * sin_theta2 / (Sigma * sqrt(AA * Sigma)) *</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        (3.0 * <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(r_BL, 4.0) + 2 * a * a * r_BL * r_BL - <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(a, 4.0) -</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>         a * a * (r_BL * r_BL - a * a) * sin_theta2) *</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        (1.0 + 0.25 * r_plus / r) / sqrt(r * r_BL - r * r_minus);</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    spherical_K[2][0] = spherical_K[0][2];</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    spherical_K[2][1] = -2.0 * <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(a, 3.0) * M * r_BL * cos_theta * sin_theta *</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                        sin_theta2 / (Sigma * sqrt(AA * Sigma)) *</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                        (r - 0.25 * r_plus) * sqrt(r_BL / r - r_minus / r);</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    spherical_K[1][2] = spherical_K[2][1];</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="comment">// set the analytic lapse</span></div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    kerr_lapse = sqrt(Delta * Sigma / AA);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// use a pre collapsed lapse, could also use analytic one</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// vars.lapse = kerr_lapse;</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_with_gauge.html#a7808fc2df7345a61ce93833e4ffbca04">lapse</a> = <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(vars.<a class="code hl_variable" href="struct_a_d_m_conformal_vars_1_1_vars_no_gauge.html#aca1b055f6d1d8c62e545eba14c177c67">chi</a>, 0.5);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="comment">// Populate the variables on the grid</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// NB We stil need to set Gamma^i which is NON ZERO</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment">// but we do this via a separate class/compute function</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">// as we need the gradients of the metric which are not yet available</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    current_cell.<a class="code hl_function" href="class_cell.html#a5cc44e34dea9fd7e9ca497a5edf2b8ce">store_vars</a>(vars);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> data_t&gt;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_kerr_b_h.html#a991afce9886f28253c839865ba7d9e43">   97</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_kerr_b_h.html#a991afce9886f28253c839865ba7d9e43">KerrBH::compute_kerr</a>(<a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> &amp;spherical_g,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                          <a class="code hl_class" href="class_tensor.html">Tensor&lt;2, data_t&gt;</a> &amp;spherical_K,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                          <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> &amp;spherical_shift,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                          data_t &amp;kerr_lapse,</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                          <span class="keyword">const</span> <a class="code hl_class" href="class_tensor.html">Tensor&lt;1, data_t&gt;</a> &amp;coords)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="comment">// Kerr black hole params - mass M and spin a</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">double</span> M = <a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>.<a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#a6d44a663f2ac3b832c76deb1fa550dd5">mass</a>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">double</span> a = <a class="code hl_variable" href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">m_params</a>.<a class="code hl_variable" href="struct_kerr_b_h_1_1params__t.html#a36d8273b7bd3dc77e102de985269be26">spin</a>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="comment">// work out where we are on the grid</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    data_t x = coords[0];</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    data_t y = coords[1];</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    data_t z = coords[2];</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="comment">// the radius, subject to a floor</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    data_t r = sqrt(D_TERM(x * x, +y * y, +z * z));</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> minimum_r = 1e-6;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    r = <a class="code hl_function" href="simd_8hpp.html#a83d0e74fe538c57c0bf86c906aa72ef2">simd_max</a>(r, minimum_r);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    data_t r2 = r * r;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="comment">// the radius in xy plane, subject to a floor</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    data_t rho2 = <a class="code hl_function" href="simd_8hpp.html#a83d0e74fe538c57c0bf86c906aa72ef2">simd_max</a>(x * x + y * y, 1e-12);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    data_t rho = sqrt(rho2);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="comment">// calculate useful position quantities</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    data_t cos_theta = z / r;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    data_t sin_theta = rho / r;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    data_t cos_theta2 = cos_theta * cos_theta;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    data_t sin_theta2 = sin_theta * sin_theta;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="comment">// calculate useful metric quantities</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">double</span> r_plus = M + sqrt(M * M - a * a);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordtype">double</span> r_minus = M - sqrt(M * M - a * a);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="comment">// The Boyer-Lindquist coordinate</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    data_t r_BL = r * <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(1.0 + 0.25 * r_plus / r, 2.0);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="comment">// Other useful quantities per 1001.4077</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    data_t Sigma = r_BL * r_BL + a * a * cos_theta2;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    data_t Delta = r_BL * r_BL - 2.0 * M * r_BL + a * a;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="comment">// In the paper this is just &#39;A&#39;, but not to be confused with A_ij</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    data_t AA = <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(r_BL * r_BL + a * a, 2.0) - Delta * a * a * sin_theta2;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="comment">// The rr component of the conformal spatial matric</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    data_t gamma_rr =</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        Sigma * <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(r + 0.25 * r_plus, 2.0) / (r * r2 * (r_BL - r_minus));</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="comment">// set the shift (only the phi component is non zero)</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    spherical_shift[0] = 0.0;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    spherical_shift[1] = 0.0;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    spherical_shift[2] = -2.0 * M * a * r_BL / AA;</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>}</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">#endif </span><span class="comment">/* KERRBH_IMPL_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="comment">// Metric in semi isotropic Kerr-Schild coordinates, r, theta (t or th), phi</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="comment">// (p)</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i, j) { spherical_g[i][j] = 0.0; }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    spherical_g[0][0] = gamma_rr;                <span class="comment">// gamma_rr</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    spherical_g[1][1] = Sigma;                   <span class="comment">// gamma_tt</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    spherical_g[2][2] = AA / Sigma * sin_theta2; <span class="comment">// gamma_pp</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="comment">// Extrinsic curvature</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <a class="code hl_define" href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a>(i, j) { spherical_K[i][j] = 0.0; }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="comment">// set non zero elements of Krtp - K_rp, K_tp</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    spherical_K[0][2] =</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        a * M * sin_theta2 / (Sigma * sqrt(AA * Sigma)) *</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        (3.0 * <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(r_BL, 4.0) + 2 * a * a * r_BL * r_BL - <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(a, 4.0) -</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>         a * a * (r_BL * r_BL - a * a) * sin_theta2) *</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        (1.0 + 0.25 * r_plus / r) / sqrt(r * r_BL - r * r_minus);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    spherical_K[2][0] = spherical_K[0][2];</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    spherical_K[2][1] = -2.0 * <a class="code hl_function" href="simd__base_8hpp.html#a4e1958250963d93ec53d100cb744c45d">pow</a>(a, 3.0) * M * r_BL * cos_theta * sin_theta *</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                        sin_theta2 / (Sigma * sqrt(AA * Sigma)) *</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                        (r - 0.25 * r_plus) * sqrt(r_BL / r - r_minus / r);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    spherical_K[1][2] = spherical_K[2][1];</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="comment">// set the analytic lapse</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    kerr_lapse = sqrt(Delta * Sigma / AA);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="comment">// set the shift (only the phi component is non zero)</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    spherical_shift[0] = 0.0;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    spherical_shift[1] = 0.0;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    spherical_shift[2] = -2.0 * M * a * r_BL / AA;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>}</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">#endif </span><span class="comment">/* KERRBH_IMPL_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="a_dimension_definitions_8hpp_html"><div class="ttname"><a href="_dimension_definitions_8hpp.html">DimensionDefinitions.hpp</a></div></div>
 <div class="ttc" id="a_dimension_definitions_8hpp_html_a2ace046866a89995cbafe2f3f7754ddd"><div class="ttname"><a href="_dimension_definitions_8hpp.html#a2ace046866a89995cbafe2f3f7754ddd">FOR</a></div><div class="ttdeci">#define FOR(...)</div><div class="ttdef"><b>Definition:</b> DimensionDefinitions.hpp:30</div></div>
 <div class="ttc" id="aclass_cell_html"><div class="ttname"><a href="class_cell.html">Cell</a></div><div class="ttdoc">Encapsulates information about the position of a cell.</div><div class="ttdef"><b>Definition:</b> Cell.hpp:29</div></div>
 <div class="ttc" id="aclass_cell_html_a5cc44e34dea9fd7e9ca497a5edf2b8ce"><div class="ttname"><a href="class_cell.html#a5cc44e34dea9fd7e9ca497a5edf2b8ce">Cell::store_vars</a></div><div class="ttdeci">void store_vars(const data_t &amp;value, const int ivar) const</div><div class="ttdoc">Stores a value into a given componenent of the chombo grid.</div><div class="ttdef"><b>Definition:</b> Cell.impl.hpp:58</div></div>
 <div class="ttc" id="aclass_coordinates_html"><div class="ttname"><a href="class_coordinates.html">Coordinates</a></div><div class="ttdef"><b>Definition:</b> Coordinates.hpp:21</div></div>
-<div class="ttc" id="aclass_coordinates_html_a0060e190cc1d519f4f57ee796de031a2"><div class="ttname"><a href="class_coordinates.html#a0060e190cc1d519f4f57ee796de031a2">Coordinates::z</a></div><div class="ttdeci">double z</div><div class="ttdef"><b>Definition:</b> Coordinates.hpp:25</div></div>
+<div class="ttc" id="aclass_coordinates_html_a0060e190cc1d519f4f57ee796de031a2"><div class="ttname"><a href="class_coordinates.html#a0060e190cc1d519f4f57ee796de031a2">Coordinates::z</a></div><div class="ttdeci">double z</div><div class="ttdef"><b>Definition:</b> Coordinates.hpp:27</div></div>
 <div class="ttc" id="aclass_coordinates_html_a507ec57814a9832170f5157459dca11b"><div class="ttname"><a href="class_coordinates.html#a507ec57814a9832170f5157459dca11b">Coordinates::y</a></div><div class="ttdeci">double y</div><div class="ttdef"><b>Definition:</b> Coordinates.hpp:24</div></div>
 <div class="ttc" id="aclass_coordinates_html_a5f67051c8a3578bd27a5ef8f35905aa2"><div class="ttname"><a href="class_coordinates.html#a5f67051c8a3578bd27a5ef8f35905aa2">Coordinates::x</a></div><div class="ttdeci">data_t x</div><div class="ttdef"><b>Definition:</b> Coordinates.hpp:23</div></div>
-<div class="ttc" id="aclass_coordinates_html_a8b089ba95fd8aa23d47f6511f78fc285"><div class="ttname"><a href="class_coordinates.html#a8b089ba95fd8aa23d47f6511f78fc285">Coordinates::get_radius</a></div><div class="ttdeci">data_t get_radius() const</div><div class="ttdoc">This function returns the radius subject to a floor for a given Coordinates object.</div><div class="ttdef"><b>Definition:</b> Coordinates.hpp:70</div></div>
-<div class="ttc" id="aclass_kerr_b_h_html_a1592695c4f29b52c313879adc80d5872"><div class="ttname"><a href="class_kerr_b_h.html#a1592695c4f29b52c313879adc80d5872">KerrBH::compute_kerr</a></div><div class="ttdeci">void compute_kerr(Tensor&lt; 2, data_t &gt; &amp;spherical_g, Tensor&lt; 2, data_t &gt; &amp;spherical_K, Tensor&lt; 1, data_t &gt; &amp;spherical_shift, data_t &amp;kerr_lapse, const Coordinates&lt; data_t &gt; coords) const</div><div class="ttdoc">Function which computes the components of the metric in spherical coords.</div><div class="ttdef"><b>Definition:</b> KerrBH.impl.hpp:75</div></div>
-<div class="ttc" id="aclass_kerr_b_h_html_a92219e35df04cbe46cf1cffff613d231"><div class="ttname"><a href="class_kerr_b_h.html#a92219e35df04cbe46cf1cffff613d231">KerrBH::m_dx</a></div><div class="ttdeci">double m_dx</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:36</div></div>
-<div class="ttc" id="aclass_kerr_b_h_html_ac056e52651fcb7b6ceffb19b80ee5017"><div class="ttname"><a href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">KerrBH::m_params</a></div><div class="ttdeci">params_t m_params</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:37</div></div>
+<div class="ttc" id="aclass_kerr_b_h_html_a92219e35df04cbe46cf1cffff613d231"><div class="ttname"><a href="class_kerr_b_h.html#a92219e35df04cbe46cf1cffff613d231">KerrBH::m_dx</a></div><div class="ttdeci">double m_dx</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:38</div></div>
+<div class="ttc" id="aclass_kerr_b_h_html_a991afce9886f28253c839865ba7d9e43"><div class="ttname"><a href="class_kerr_b_h.html#a991afce9886f28253c839865ba7d9e43">KerrBH::compute_kerr</a></div><div class="ttdeci">void compute_kerr(Tensor&lt; 2, data_t &gt; &amp;spherical_g, Tensor&lt; 2, data_t &gt; &amp;spherical_K, Tensor&lt; 1, data_t &gt; &amp;spherical_shift, data_t &amp;kerr_lapse, const Tensor&lt; 1, data_t &gt; &amp;coords) const</div><div class="ttdoc">Function which computes the components of the metric in spherical coords.</div><div class="ttdef"><b>Definition:</b> KerrBH.impl.hpp:97</div></div>
+<div class="ttc" id="aclass_kerr_b_h_html_ac056e52651fcb7b6ceffb19b80ee5017"><div class="ttname"><a href="class_kerr_b_h.html#ac056e52651fcb7b6ceffb19b80ee5017">KerrBH::m_params</a></div><div class="ttdeci">params_t m_params</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:39</div></div>
 <div class="ttc" id="aclass_kerr_b_h_html_acf92e493f88e443d53ef02230843eec7"><div class="ttname"><a href="class_kerr_b_h.html#acf92e493f88e443d53ef02230843eec7">KerrBH::compute</a></div><div class="ttdeci">void compute(Cell&lt; data_t &gt; current_cell) const</div><div class="ttdef"><b>Definition:</b> KerrBH.impl.hpp:17</div></div>
 <div class="ttc" id="aclass_tensor_html"><div class="ttname"><a href="class_tensor.html">Tensor</a></div><div class="ttdoc">This class implements a Tensor with given rank, element data type, and dimension.</div><div class="ttdef"><b>Definition:</b> Tensor.hpp:15</div></div>
 <div class="ttc" id="anamespace_coordinate_transformations_html"><div class="ttname"><a href="namespace_coordinate_transformations.html">CoordinateTransformations</a></div><div class="ttdef"><b>Definition:</b> CoordinateTransformations.hpp:15</div></div>
@@ -256,6 +280,7 @@ $(function() {
 <div class="ttc" id="astruct_kerr_b_h_1_1params__t_html_a1da69a98af7a33985ffdddd67ff3a477"><div class="ttname"><a href="struct_kerr_b_h_1_1params__t.html#a1da69a98af7a33985ffdddd67ff3a477">KerrBH::params_t::center</a></div><div class="ttdeci">std::array&lt; double, CH_SPACEDIM &gt; center</div><div class="ttdoc">The center of the Kerr BH.</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:31</div></div>
 <div class="ttc" id="astruct_kerr_b_h_1_1params__t_html_a36d8273b7bd3dc77e102de985269be26"><div class="ttname"><a href="struct_kerr_b_h_1_1params__t.html#a36d8273b7bd3dc77e102de985269be26">KerrBH::params_t::spin</a></div><div class="ttdeci">double spin</div><div class="ttdoc">The spin param a = J/M, so 0 &lt;= |a| &lt;= M.</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:32</div></div>
 <div class="ttc" id="astruct_kerr_b_h_1_1params__t_html_a6d44a663f2ac3b832c76deb1fa550dd5"><div class="ttname"><a href="struct_kerr_b_h_1_1params__t.html#a6d44a663f2ac3b832c76deb1fa550dd5">KerrBH::params_t::mass</a></div><div class="ttdeci">double mass</div><div class="ttdoc">&lt; The mass of the Kerr BH</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:30</div></div>
+<div class="ttc" id="astruct_kerr_b_h_1_1params__t_html_ae38b57af9171b550564db4f4d4984ce7"><div class="ttname"><a href="struct_kerr_b_h_1_1params__t.html#ae38b57af9171b550564db4f4d4984ce7">KerrBH::params_t::spin_direction</a></div><div class="ttdeci">std::array&lt; double, CH_SPACEDIM &gt; spin_direction</div><div class="ttdef"><b>Definition:</b> KerrBH.hpp:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

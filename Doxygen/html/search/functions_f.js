@@ -2,5 +2,5 @@ var searchData=
 [
   ['querycount_0',['queryCount',['../class_m_p_i_context.html#a68a59fe8e053d0f5e85040581f3a8ed5',1,'MPIContext']]],
   ['querydispl_1',['queryDispl',['../class_m_p_i_context.html#a516e57718fd46660220f62b95072754b',1,'MPIContext']]],
-  ['quinticconvolution_2',['QuinticConvolution',['../class_quintic_convolution.html#a0a7eb16e9f07bbf8133c4a4b1bc463ba',1,'QuinticConvolution']]]
+  ['quinticconvolution_2',['QuinticConvolution',['../class_quintic_convolution.html#a4e1e89cef0aa7261a6a5993ac90d10fc',1,'QuinticConvolution']]]
 ];

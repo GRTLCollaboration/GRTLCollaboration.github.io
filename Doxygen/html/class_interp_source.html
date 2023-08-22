@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GRChombo: InterpSource Class Reference</title>
+<title>GRChombo: InterpSource&lt; N_DIMS &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,47 +73,56 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_interp_source-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">InterpSource Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+  <div class="headertitle"><div class="title">InterpSource&lt; N_DIMS &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_interp_source_8hpp_source.html">InterpSource.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for InterpSource:</div>
+Inheritance diagram for InterpSource&lt; N_DIMS &gt;:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_interp_source.png" usemap="#InterpSource_map" alt=""/>
-  <map id="InterpSource_map" name="InterpSource_map">
-<area href="class_g_r_a_m_r_level.html" alt="GRAMRLevel" shape="rect" coords="372,56,548,80"/>
-<area href="class_binary_b_h_level.html" alt="BinaryBHLevel" shape="rect" coords="0,112,176,136"/>
-<area href="class_interpolator_test_level.html" alt="InterpolatorTestLevel" shape="rect" coords="186,112,362,136"/>
-<area href="class_kerr_b_h_level.html" alt="KerrBHLevel" shape="rect" coords="372,112,548,136"/>
-<area href="class_scalar_field_level.html" title="A class for the evolution of a scalar field, minimally coupled to gravity." alt="ScalarFieldLevel" shape="rect" coords="558,112,734,136"/>
-<area href="class_spherical_extraction_test_level.html" alt="SphericalExtractionTestLevel" shape="rect" coords="744,112,920,136"/>
+  <img src="class_interp_source.png" usemap="#InterpSource_3C_20N_5FDIMS_20_3E_map" alt=""/>
+  <map id="InterpSource_3C_20N_5FDIMS_20_3E_map" name="InterpSource_3C_20N_5FDIMS_20_3E_map">
+<area href="class_g_r_a_m_r_level.html" alt="GRAMRLevel" shape="rect" coords="0,56,178,80"/>
+<area href="class_apparent_horizon_test2_d_level.html" alt="ApparentHorizonTest2DLevel" shape="rect" coords="188,112,366,136"/>
+<area href="class_apparent_horizon_test3_d_level.html" alt="ApparentHorizonTest3DLevel" shape="rect" coords="188,168,366,192"/>
+<area href="class_binary_b_h_level.html" alt="BinaryBHLevel" shape="rect" coords="188,224,366,248"/>
+<area href="class_interpolator_test_level.html" alt="InterpolatorTestLevel" shape="rect" coords="188,280,366,304"/>
+<area href="class_kerr_b_h_level.html" alt="KerrBHLevel" shape="rect" coords="188,336,366,360"/>
+<area href="class_scalar_field_level.html" title="A class for the evolution of a scalar field, minimally coupled to gravity." alt="ScalarFieldLevel" shape="rect" coords="188,392,366,416"/>
+<area href="class_spherical_extraction_test_level.html" alt="SphericalExtractionTestLevel" shape="rect" coords="188,448,366,472"/>
+<area href="class_spherical_extraction_test_level.html" alt="SphericalExtractionTestLevel" shape="rect" coords="188,504,366,528"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6b78ebdd77e4edff70c2068f094d6a18"><td class="memItemLeft" align="right" valign="top">virtual const LevelData&lt; FArrayBox &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#a6b78ebdd77e4edff70c2068f094d6a18">getLevelData</a> (const <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a> var_type=VariableType::evolution) const =0</td></tr>
-<tr class="separator:a6b78ebdd77e4edff70c2068f094d6a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1621b9fe04678231e5fabf0d9c025cd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#aa1621b9fe04678231e5fabf0d9c025cd">contains</a> (const std::array&lt; double, CH_SPACEDIM &gt; &amp;point) const =0</td></tr>
-<tr class="separator:aa1621b9fe04678231e5fabf0d9c025cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43f5a10f228ed66f154b686c30aabc8a"><td class="memItemLeft" align="right" valign="top">virtual const LevelData&lt; FArrayBox &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#a43f5a10f228ed66f154b686c30aabc8a">getLevelData</a> (const <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a> var_type=VariableType::evolution) const =0</td></tr>
+<tr class="separator:a43f5a10f228ed66f154b686c30aabc8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7e2140fffb24b4616ae3bc4f8dd80c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#abd7e2140fffb24b4616ae3bc4f8dd80c">contains</a> (const std::array&lt; double, N_DIMS &gt; &amp;point) const =0</td></tr>
+<tr class="separator:abd7e2140fffb24b4616ae3bc4f8dd80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a434a951a185ba7b058fb28f36ec194fe"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#a434a951a185ba7b058fb28f36ec194fe">get_dx</a> (int dir) const =0</td></tr>
+<tr class="separator:a434a951a185ba7b058fb28f36ec194fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae1e33b3c1959a48a5aac6463193d217"><td class="memItemLeft" align="right" valign="top">virtual std::array&lt; double, N_DIMS &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interp_source.html#aae1e33b3c1959a48a5aac6463193d217">get_dxs</a> () const</td></tr>
+<tr class="separator:aae1e33b3c1959a48a5aac6463193d217"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa1621b9fe04678231e5fabf0d9c025cd" name="aa1621b9fe04678231e5fabf0d9c025cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1621b9fe04678231e5fabf0d9c025cd">&#9670;&#160;</a></span>contains()</h2>
+<a id="abd7e2140fffb24b4616ae3bc4f8dd80c" name="abd7e2140fffb24b4616ae3bc4f8dd80c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd7e2140fffb24b4616ae3bc4f8dd80c">&#9670;&#160;</a></span>contains()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;int N_DIMS = CH_SPACEDIM&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool InterpSource::contains </td>
+          <td class="memname">virtual bool <a class="el" href="class_interp_source.html">InterpSource</a>&lt; N_DIMS &gt;::contains </td>
           <td>(</td>
-          <td class="paramtype">const std::array&lt; double, CH_SPACEDIM &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::array&lt; double, N_DIMS &gt; &amp;&#160;</td>
           <td class="paramname"><em>point</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -125,21 +134,82 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_g_r_a_m_r_level.html#a99dfe941101093f9301973f6c1de4974">GRAMRLevel</a>.</p>
+<p>Implemented in <a class="el" href="class_simple_interp_source.html#aca8fd646e22d42a976d44b07389bc642">SimpleInterpSource&lt; N_DIMS &gt;</a>.</p>
 
 </div>
 </div>
-<a id="a6b78ebdd77e4edff70c2068f094d6a18" name="a6b78ebdd77e4edff70c2068f094d6a18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b78ebdd77e4edff70c2068f094d6a18">&#9670;&#160;</a></span>getLevelData()</h2>
+<a id="a434a951a185ba7b058fb28f36ec194fe" name="a434a951a185ba7b058fb28f36ec194fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a434a951a185ba7b058fb28f36ec194fe">&#9670;&#160;</a></span>get_dx()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;int N_DIMS = CH_SPACEDIM&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const LevelData&lt; FArrayBox &gt; &amp; InterpSource::getLevelData </td>
+          <td class="memname">virtual double <a class="el" href="class_interp_source.html">InterpSource</a>&lt; N_DIMS &gt;::get_dx </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_simple_interp_source.html#af720c3538b6b9d08491af1cc8df48ae5">SimpleInterpSource&lt; N_DIMS &gt;</a>, and <a class="el" href="class_g_r_a_m_r_level.html#afc760757540082319cad5345d351d375">GRAMRLevel</a>.</p>
+
+</div>
+</div>
+<a id="aae1e33b3c1959a48a5aac6463193d217" name="aae1e33b3c1959a48a5aac6463193d217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae1e33b3c1959a48a5aac6463193d217">&#9670;&#160;</a></span>get_dxs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int N_DIMS = CH_SPACEDIM&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::array&lt; double, N_DIMS &gt; <a class="el" href="class_interp_source.html">InterpSource</a>&lt; N_DIMS &gt;::get_dxs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_simple_interp_source.html#a2ff67f6e98f281a3203c69ac32851ace">SimpleInterpSource&lt; N_DIMS &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a43f5a10f228ed66f154b686c30aabc8a" name="a43f5a10f228ed66f154b686c30aabc8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43f5a10f228ed66f154b686c30aabc8a">&#9670;&#160;</a></span>getLevelData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int N_DIMS = CH_SPACEDIM&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const LevelData&lt; FArrayBox &gt; &amp; <a class="el" href="class_interp_source.html">InterpSource</a>&lt; N_DIMS &gt;::getLevelData </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="_variable_type_8hpp.html#ac62972ff1b21a037e56530cde67309ab">VariableType</a>&#160;</td>
           <td class="paramname"><em>var_type</em> = <code>VariableType::evolution</code></td><td>)</td>
@@ -153,12 +223,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_g_r_a_m_r_level.html#ab752b1dbafcd92e07d2eb3d1d5654360">GRAMRLevel</a>.</p>
+<p>Implemented in <a class="el" href="class_simple_interp_source.html#ae89c1dc32395ea9be1c799ced9bc098d">SimpleInterpSource&lt; N_DIMS &gt;</a>, and <a class="el" href="class_g_r_a_m_r_level.html#ab752b1dbafcd92e07d2eb3d1d5654360">GRAMRLevel</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>https://raw.githubusercontent.com/GRChombo/GRChombo/9e3435995bc785f8dac30708db7417b9c0ca5df1/Source/AMRInterpolator/<a class="el" href="_interp_source_8hpp_source.html">InterpSource.hpp</a></li>
+<li>https://raw.githubusercontent.com/GRChombo/GRChombo/fb6bb8bc3b33640ceba5be9d28e23b22de7ca3de/Source/AMRInterpolator/<a class="el" href="_interp_source_8hpp_source.html">InterpSource.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

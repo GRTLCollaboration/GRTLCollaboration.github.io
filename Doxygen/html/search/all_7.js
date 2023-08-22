@@ -7,6 +7,7 @@ var searchData=
   ['harmonictest_4',['HarmonicTest',['../class_harmonic_test.html',1,'HarmonicTest'],['../class_harmonic_test.html#a573ab76ce00cebce8de11f7298209ee6',1,'HarmonicTest::HarmonicTest()']]],
   ['harmonictest_2ehpp_5',['HarmonicTest.hpp',['../_harmonic_test_8hpp.html',1,'']]],
   ['harmonictest_2eimpl_2ehpp_6',['HarmonicTest.impl.hpp',['../_harmonic_test_8impl_8hpp.html',1,'']]],
-  ['hi_5fboundary_7',['hi_boundary',['../struct_boundary_conditions_1_1params__t.html#a0ae7646a47bdfb65a0071b58ff46152c',1,'BoundaryConditions::params_t']]],
-  ['hours_8',['Hours',['../class_g_r_a_m_r.html#a8c6713628bc0174b7fe23a046d6343cb',1,'GRAMR']]]
+  ['has_5fbeen_5ffound_7',['has_been_found',['../class_apparent_horizon.html#ac78cc2ef8632152e1333c3447570f675',1,'ApparentHorizon']]],
+  ['hi_5fboundary_8',['hi_boundary',['../struct_boundary_conditions_1_1params__t.html#a0ae7646a47bdfb65a0071b58ff46152c',1,'BoundaryConditions::params_t']]],
+  ['hours_9',['Hours',['../class_g_r_a_m_r.html#a8c6713628bc0174b7fe23a046d6343cb',1,'GRAMR']]]
 ];
